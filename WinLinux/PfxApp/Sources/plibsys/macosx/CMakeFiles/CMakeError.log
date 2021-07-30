@@ -1,0 +1,176 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Library/Developer/CommandLineTools/usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library not found for -lSystem
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Determining if the include file values.h exists failed with the following output:
+Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_1d602/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_1d602.dir/build.make CMakeFiles/cmTC_1d602.dir/build
+Building C object CMakeFiles/cmTC_1d602.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_1d602.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_1d602.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_1d602.dir/CheckIncludeFile.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'values.h' file not found
+#include <values.h>
+         ^~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_1d602.dir/CheckIncludeFile.c.o] Error 1
+make: *** [cmTC_1d602/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test PLIBSYS_HAS_CLOCKNANOSLEEP failed with the following output:
+Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e2cb8/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e2cb8.dir/build.make CMakeFiles/cmTC_e2cb8.dir/build
+Building C object CMakeFiles/cmTC_e2cb8.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_CLOCKNANOSLEEP -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_e2cb8.dir/src.c.o -MF CMakeFiles/cmTC_e2cb8.dir/src.c.o.d -o CMakeFiles/cmTC_e2cb8.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c:4:41: error: implicit declaration of function 'clock_nanosleep' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                                        clock_nanosleep (CLOCK_MONOTONIC, 0, &time_sp, NULL);
+                                        ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_e2cb8.dir/src.c.o] Error 1
+make: *** [cmTC_e2cb8/fast] Error 2
+
+
+Source file was:
+#include <time.h>
+                                 int main () {
+                                        struct timespec time_sp = {0, 500000000L};
+                                        clock_nanosleep (CLOCK_MONOTONIC, 0, &time_sp, NULL);
+                                        return 0;
+                                 }
+Performing C SOURCE FILE Test PLIBSYS_HAS_PTHREAD_NP failed with the following output:
+Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_b1f0c/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b1f0c.dir/build.make CMakeFiles/cmTC_b1f0c.dir/build
+Building C object CMakeFiles/cmTC_b1f0c.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_PTHREAD_NP -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_b1f0c.dir/src.c.o -MF CMakeFiles/cmTC_b1f0c.dir/src.c.o.d -o CMakeFiles/cmTC_b1f0c.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c:2:36: fatal error: 'pthread_np.h' file not found
+                          #include <pthread_np.h>
+                                   ^~~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_b1f0c.dir/src.c.o] Error 1
+make: *** [cmTC_b1f0c/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+                          #include <pthread_np.h>
+
+                         int main () {return 0;}
+Performing C SOURCE FILE Test PLIBSYS_HAS_GCC_VISIBILITY failed with the following output:
+Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_63571/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_63571.dir/build.make CMakeFiles/cmTC_63571.dir/build
+Building C object CMakeFiles/cmTC_63571.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_GCC_VISIBILITY -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_63571.dir/src.c.o -MF CMakeFiles/cmTC_63571.dir/src.c.o.d -o CMakeFiles/cmTC_63571.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c:8:45: error: token is not a valid binary operator in a preprocessor subexpression
+                                            !defined(_AIX)   && !defined(__CYGWIN__) && !defined(__MSYS__)
+                                            ^
+/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c:11:41: error: use of undeclared identifier 'stop_compile_here'
+                                        stop_compile_here
+                                        ^
+2 errors generated.
+make[1]: *** [CMakeFiles/cmTC_63571.dir/src.c.o] Error 1
+make: *** [cmTC_63571/fast] Error 2
+
+
+Source file was:
+int main () {
+                                        #if (__GNUC__ >= 4)   && !defined(_CRAYC) && \
+                                            !defined(__sun)   && !defined(sun)    && \
+                                            !defined(__hpux)  && !defined(hpux)   && \
+                                            !defined(__sgi)   && !defined(sgi)    && \
+                                            !defined(__osf__) && !defined(__osf)  && \
+                                            !defined(__OS2__)                        \
+                                            !defined(_AIX)   && !defined(__CYGWIN__) && !defined(__MSYS__)
+                                        return 0;
+                                        #else
+                                        stop_compile_here
+                                        #endif
+                                 }
+Performing C SOURCE FILE Test PLIBSYS_HAS_SUN_VISIBILITY failed with the following output:
+Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_b2003/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b2003.dir/build.make CMakeFiles/cmTC_b2003.dir/build
+Building C object CMakeFiles/cmTC_b2003.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_SUN_VISIBILITY -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_b2003.dir/src.c.o -MF CMakeFiles/cmTC_b2003.dir/src.c.o.d -o CMakeFiles/cmTC_b2003.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c:6:41: error: use of undeclared identifier 'stop_compile_here'
+                                        stop_compile_here
+                                        ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_b2003.dir/src.c.o] Error 1
+make: *** [cmTC_b2003/fast] Error 2
+
+
+Source file was:
+int main () {
+                                        #if (defined(__SUNPRO_C) && (__SUNPRO_C >= 0x550)) || \
+                                            (defined(__SUNPRO_CC) && (__SUNPRO_CC >= 0x5110))
+                                        return 0;
+                                        #else
+                                        stop_compile_here
+                                        #endif
+                                 }
+Performing C SOURCE FILE Test PLIBSYS_HAS_XLC_VISIBILITY failed with the following output:
+Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_df7a7/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_df7a7.dir/build.make CMakeFiles/cmTC_df7a7.dir/build
+Building C object CMakeFiles/cmTC_df7a7.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_XLC_VISIBILITY -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_df7a7.dir/src.c.o -MF CMakeFiles/cmTC_df7a7.dir/src.c.o.d -o CMakeFiles/cmTC_df7a7.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c:5:41: error: use of undeclared identifier 'stop_compile_here'
+                                        stop_compile_here
+                                        ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_df7a7.dir/src.c.o] Error 1
+make: *** [cmTC_df7a7/fast] Error 2
+
+
+Source file was:
+int main () {
+                                        #if (defined(__xlC__) && (__xlC__ >= 0x0D01))
+                                        return 0;
+                                        #else
+                                        stop_compile_here
+                                        #endif
+                                 }
+Performing C SOURCE FILE Test PLIBSYS_HAS_HP_VISIBILITY failed with the following output:
+Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e6c81/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e6c81.dir/build.make CMakeFiles/cmTC_e6c81.dir/build
+Building C object CMakeFiles/cmTC_e6c81.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_HP_VISIBILITY -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_e6c81.dir/src.c.o -MF CMakeFiles/cmTC_e6c81.dir/src.c.o.d -o CMakeFiles/cmTC_e6c81.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c:6:41: error: use of undeclared identifier 'stop_compile_here'
+                                        stop_compile_here
+                                        ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_e6c81.dir/src.c.o] Error 1
+make: *** [cmTC_e6c81/fast] Error 2
+
+
+Source file was:
+int main () {
+                                        #if (defined(__HP_cc)  && (__HP_cc >= 0x061500)) || \
+                                            (defined(__HP_aCC) && (__HP_aCC >= 0x061500))
+                                        return 0;
+                                        #else
+                                        stop_compile_here
+                                        #endif
+                                 }
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Library/Developer/CommandLineTools/usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library not found for -lc++
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+

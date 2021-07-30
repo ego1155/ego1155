@@ -2,10 +2,10 @@
 curDir=$(pwd)
 
 rm -rf ./plibsys
-rm -rf ./win
+rm -rf ./window
 git clone https://github.com/saprykin/plibsys.git
-mkdir ./win
-cd ./win
+mkdir ./window
+cd ./window
 cmake -G "MSYS Makefiles" -DCMAKE_BUILD_TYPE=Release ../plibsys
 make
 

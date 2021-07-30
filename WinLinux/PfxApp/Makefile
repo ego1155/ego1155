@@ -50,7 +50,7 @@ BUILD_DIR := ./Build
 OBJ_DIR := $(BUILD_DIR)/Objs
 
 # Files to be compiled
-SRCS := $(wildcard $(SRC_DIR)/*/*/*.c) $(wildcard $(SRC_DIR)/*/*.c) $(wildcard $(SRC_DIR)/*.c)
+SRCS := $(wildcard $(SRC_DIR)/libPfx/*/*.c) $(wildcard $(SRC_DIR)/libPfx/*.c) $(wildcard $(SRC_DIR)/*.c)
 OBJS := $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 BUILD := $(OBJS:$(OBJ_DIR)/%.o=$(BUILD_DIR)/%)
 INCLUDES = $(foreach src, $(SRCS), $(dir $(src)))

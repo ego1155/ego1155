@@ -1,0 +1,64 @@
+pacman -Syu
+pacman -Su
+pacman -S --needed base-devel gcc mingw-w64-x86_64-toolchain mingw-w64-x86_64-libssh2 mingw-w64-x86_64-libmicrohttpd
+//mingw-w64-x86_64-curl
+//mingw-w64-i686-toolchain
+
+sudo apt-get install build-essential gcc-multilib
+sudo apt-get install libssh2-1 libssh2-1-dev
+sudo apt-get install zlib1g zlib1g-dev
+sudo apt-get install libgcrypt20 libgcrypt20-dev
+
+sudo apt-get install libmicrohttpd12 libmicrohttpd-dev
+
+#sudo apt-get install libcurl4 libcurl4-openssl-dev
+
+sudo apt-get install libcurl4-openssl-dev libssl-dev libidn2-dev libnghttp2-dev libbrotli-dev libzstd-dev libpsl-dev libunistring-dev libldap2-dev libcrypt-dev
+libcurl4-gnutls-dev
+
+apt-cache depends libssh2-1
+dpkg -L libgcrypt20-dev
+
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install gcc
+brew install libssh2
+Ln -s gcc-11 gcc
+Ln -s gcc++-11 gcc++
+/usr/local/bin/
+
+gcc -Bstatic -m64 -no-pie -s SecureTcp-Np.c -lssh2 -o SecureTcp-Np -I/usr/local/include -L /usr/local/opt/libssh2/lib
+
+
+brew install dylibbundler
+dylibbundler -od -b -x ./compiled/SecureTcp-Np_x64_macOS_11.4 -d ./compiled/libs/ -p @executable_path/libs/
+
+brew install libmicrohttpd
+
+
+ldd SecureTcp-Np_x64.exe | grep "=> /mingw64" | awk '{print $3}' | xargs -I '{}' cp -v '{}' test/
+ldd Window/SecureTcp-Np_x64.exe | grep "=> /mingw64" | awk '{print $3}' | xargs -I '{}' cp -v '{}' Window/
+
+wget https://ftpmirror.gnu.org/libmicrohttpd/libmicrohttpd-latest.tar.gz
+tar xvf libmicrohttpd-latest.tar.gz
+cd libmicrohttpd-latest
+./configure --disable-messages --disable-postprocessor --disable-dauth
+make
+sudo make install  # installation puts .h files in /usr/local/include and library in /usr/local/lib
+sudo ldconfig      # just in case... it doesn't hurt :)
+
+export LD_LIBRARY_PATH=~/Desktop/Ubuntu_20.04
+
+
+pacman -S mingw-w64-x86_64-libnice
+gcc -o simple-example simple-example.c `pkg-config --cflags --libs nice`
+x86_64-w64-mingw32-gcc -c -no-pie -s simple-example.c -lnice -o simple-example.exe
+ldd simple-example.exe | grep "=> /mingw64" | awk '{print $3}' | xargs -I '{}' cp -v '{}' .
+
+x86_64-w64-mingw32-gcc -o simple-example.exe simple-example.c `pkg-config --cflags --libs nice`
+
+./configure --prefix=/usr/local/libssh2 --with-openssl CPPFLAGS="-I/usr/include/openssl" LDFLAGS="-L/usr/lib/x86_64-linux-gnu"
+
+xfreerdp /u:user2 /p:s@123456 /w:800 /h:600 /v:127.0.0.1:5000
+
+cmake  -G "MSYS Makefiles" -DCMAKE_BUILD_TYPE=Release ../plibsys

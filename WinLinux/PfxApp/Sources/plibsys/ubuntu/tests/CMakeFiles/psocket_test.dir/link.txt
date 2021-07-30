@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/psocket_test.dir/psocket_test.cpp.o  -o ../psocket_test  -Wl,-rpath,/home/nilesh/Desktop/plibsys/ubuntu ../libplibsys.so.0 -pthread -lrt -ldl 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/pspinlock_test.dir/pspinlock_test.cpp.o  -o ../pspinlock_test  -Wl,-rpath,/home/nilesh/Desktop/plibsys/ubuntu ../libplibsys.so.0 -pthread -lrt -ldl 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/pmain_test.dir/pmain_test.cpp.o  -o ../pmain_test  -Wl,-rpath,/home/nilesh/Desktop/plibsys/ubuntu ../libplibsys.so.0 -pthread -lrt -ldl 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/pcryptohash_test.dir/pcryptohash_test.cpp.o  -o ../pcryptohash_test  -Wl,-rpath,/home/nilesh/Desktop/plibsys/ubuntu ../libplibsys.so.0 -pthread -lrt -ldl 

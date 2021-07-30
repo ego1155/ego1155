@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nilesh/Desktop/plibsys/plibsys
+CMAKE_SOURCE_DIR = /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nilesh/Desktop/plibsys/ubuntu
+CMAKE_BINARY_DIR = /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -127,7 +127,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/nilesh/Desktop/plibsys/ubuntu && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/nilesh/Desktop/plibsys/ubuntu/CPackSourceConfig.cmake
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -149,7 +149,7 @@ test/fast: test
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/nilesh/Desktop/plibsys/ubuntu && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -159,14 +159,14 @@ package/fast: package
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles /home/nilesh/Desktop/plibsys/ubuntu/tests/CMakeFiles/progress.marks
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/tests/CMakeFiles/progress.marks
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/clean
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -176,22 +176,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 tests/CMakeFiles/pmacros_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pmacros_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pmacros_test.dir/rule
 .PHONY : tests/CMakeFiles/pmacros_test.dir/rule
 
 # Convenience name for target.
@@ -201,12 +201,12 @@ pmacros_test: tests/CMakeFiles/pmacros_test.dir/rule
 
 # fast build rule for target.
 pmacros_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmacros_test.dir/build.make tests/CMakeFiles/pmacros_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmacros_test.dir/build.make tests/CMakeFiles/pmacros_test.dir/build
 .PHONY : pmacros_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/pinifile_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pinifile_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pinifile_test.dir/rule
 .PHONY : tests/CMakeFiles/pinifile_test.dir/rule
 
 # Convenience name for target.
@@ -216,12 +216,12 @@ pinifile_test: tests/CMakeFiles/pinifile_test.dir/rule
 
 # fast build rule for target.
 pinifile_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pinifile_test.dir/build.make tests/CMakeFiles/pinifile_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pinifile_test.dir/build.make tests/CMakeFiles/pinifile_test.dir/build
 .PHONY : pinifile_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/phashtable_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/phashtable_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/phashtable_test.dir/rule
 .PHONY : tests/CMakeFiles/phashtable_test.dir/rule
 
 # Convenience name for target.
@@ -231,12 +231,12 @@ phashtable_test: tests/CMakeFiles/phashtable_test.dir/rule
 
 # fast build rule for target.
 phashtable_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/phashtable_test.dir/build.make tests/CMakeFiles/phashtable_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/phashtable_test.dir/build.make tests/CMakeFiles/phashtable_test.dir/build
 .PHONY : phashtable_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/pfile_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pfile_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pfile_test.dir/rule
 .PHONY : tests/CMakeFiles/pfile_test.dir/rule
 
 # Convenience name for target.
@@ -246,12 +246,12 @@ pfile_test: tests/CMakeFiles/pfile_test.dir/rule
 
 # fast build rule for target.
 pfile_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pfile_test.dir/build.make tests/CMakeFiles/pfile_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pfile_test.dir/build.make tests/CMakeFiles/pfile_test.dir/build
 .PHONY : pfile_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/pdir_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pdir_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pdir_test.dir/rule
 .PHONY : tests/CMakeFiles/pdir_test.dir/rule
 
 # Convenience name for target.
@@ -261,12 +261,12 @@ pdir_test: tests/CMakeFiles/pdir_test.dir/rule
 
 # fast build rule for target.
 pdir_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pdir_test.dir/build.make tests/CMakeFiles/pdir_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pdir_test.dir/build.make tests/CMakeFiles/pdir_test.dir/build
 .PHONY : pdir_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/puthread_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/puthread_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/puthread_test.dir/rule
 .PHONY : tests/CMakeFiles/puthread_test.dir/rule
 
 # Convenience name for target.
@@ -276,12 +276,12 @@ puthread_test: tests/CMakeFiles/puthread_test.dir/rule
 
 # fast build rule for target.
 puthread_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/puthread_test.dir/build.make tests/CMakeFiles/puthread_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/puthread_test.dir/build.make tests/CMakeFiles/puthread_test.dir/build
 .PHONY : puthread_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/pcryptohash_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pcryptohash_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pcryptohash_test.dir/rule
 .PHONY : tests/CMakeFiles/pcryptohash_test.dir/rule
 
 # Convenience name for target.
@@ -291,12 +291,12 @@ pcryptohash_test: tests/CMakeFiles/pcryptohash_test.dir/rule
 
 # fast build rule for target.
 pcryptohash_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pcryptohash_test.dir/build.make tests/CMakeFiles/pcryptohash_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pcryptohash_test.dir/build.make tests/CMakeFiles/pcryptohash_test.dir/build
 .PHONY : pcryptohash_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/pcondvariable_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pcondvariable_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pcondvariable_test.dir/rule
 .PHONY : tests/CMakeFiles/pcondvariable_test.dir/rule
 
 # Convenience name for target.
@@ -306,12 +306,12 @@ pcondvariable_test: tests/CMakeFiles/pcondvariable_test.dir/rule
 
 # fast build rule for target.
 pcondvariable_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pcondvariable_test.dir/build.make tests/CMakeFiles/pcondvariable_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pcondvariable_test.dir/build.make tests/CMakeFiles/pcondvariable_test.dir/build
 .PHONY : pcondvariable_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/pstring_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pstring_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pstring_test.dir/rule
 .PHONY : tests/CMakeFiles/pstring_test.dir/rule
 
 # Convenience name for target.
@@ -321,12 +321,12 @@ pstring_test: tests/CMakeFiles/pstring_test.dir/rule
 
 # fast build rule for target.
 pstring_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pstring_test.dir/build.make tests/CMakeFiles/pstring_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pstring_test.dir/build.make tests/CMakeFiles/pstring_test.dir/build
 .PHONY : pstring_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/pmutex_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pmutex_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pmutex_test.dir/rule
 .PHONY : tests/CMakeFiles/pmutex_test.dir/rule
 
 # Convenience name for target.
@@ -336,12 +336,12 @@ pmutex_test: tests/CMakeFiles/pmutex_test.dir/rule
 
 # fast build rule for target.
 pmutex_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmutex_test.dir/build.make tests/CMakeFiles/pmutex_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmutex_test.dir/build.make tests/CMakeFiles/pmutex_test.dir/build
 .PHONY : pmutex_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/plibraryloader_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/plibraryloader_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/plibraryloader_test.dir/rule
 .PHONY : tests/CMakeFiles/plibraryloader_test.dir/rule
 
 # Convenience name for target.
@@ -351,12 +351,12 @@ plibraryloader_test: tests/CMakeFiles/plibraryloader_test.dir/rule
 
 # fast build rule for target.
 plibraryloader_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/plibraryloader_test.dir/build.make tests/CMakeFiles/plibraryloader_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/plibraryloader_test.dir/build.make tests/CMakeFiles/plibraryloader_test.dir/build
 .PHONY : plibraryloader_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/pmain_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pmain_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pmain_test.dir/rule
 .PHONY : tests/CMakeFiles/pmain_test.dir/rule
 
 # Convenience name for target.
@@ -366,12 +366,12 @@ pmain_test: tests/CMakeFiles/pmain_test.dir/rule
 
 # fast build rule for target.
 pmain_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmain_test.dir/build.make tests/CMakeFiles/pmain_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmain_test.dir/build.make tests/CMakeFiles/pmain_test.dir/build
 .PHONY : pmain_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/pprocess_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pprocess_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pprocess_test.dir/rule
 .PHONY : tests/CMakeFiles/pprocess_test.dir/rule
 
 # Convenience name for target.
@@ -381,12 +381,12 @@ pprocess_test: tests/CMakeFiles/pprocess_test.dir/rule
 
 # fast build rule for target.
 pprocess_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pprocess_test.dir/build.make tests/CMakeFiles/pprocess_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pprocess_test.dir/build.make tests/CMakeFiles/pprocess_test.dir/build
 .PHONY : pprocess_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/prwlock_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/prwlock_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/prwlock_test.dir/rule
 .PHONY : tests/CMakeFiles/prwlock_test.dir/rule
 
 # Convenience name for target.
@@ -396,12 +396,12 @@ prwlock_test: tests/CMakeFiles/prwlock_test.dir/rule
 
 # fast build rule for target.
 prwlock_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/prwlock_test.dir/build.make tests/CMakeFiles/prwlock_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/prwlock_test.dir/build.make tests/CMakeFiles/prwlock_test.dir/build
 .PHONY : prwlock_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/psemaphore_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/psemaphore_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/psemaphore_test.dir/rule
 .PHONY : tests/CMakeFiles/psemaphore_test.dir/rule
 
 # Convenience name for target.
@@ -411,12 +411,12 @@ psemaphore_test: tests/CMakeFiles/psemaphore_test.dir/rule
 
 # fast build rule for target.
 psemaphore_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psemaphore_test.dir/build.make tests/CMakeFiles/psemaphore_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psemaphore_test.dir/build.make tests/CMakeFiles/psemaphore_test.dir/build
 .PHONY : psemaphore_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/pshmbuffer_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pshmbuffer_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pshmbuffer_test.dir/rule
 .PHONY : tests/CMakeFiles/pshmbuffer_test.dir/rule
 
 # Convenience name for target.
@@ -426,12 +426,12 @@ pshmbuffer_test: tests/CMakeFiles/pshmbuffer_test.dir/rule
 
 # fast build rule for target.
 pshmbuffer_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pshmbuffer_test.dir/build.make tests/CMakeFiles/pshmbuffer_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pshmbuffer_test.dir/build.make tests/CMakeFiles/pshmbuffer_test.dir/build
 .PHONY : pshmbuffer_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/pshm_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pshm_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pshm_test.dir/rule
 .PHONY : tests/CMakeFiles/pshm_test.dir/rule
 
 # Convenience name for target.
@@ -441,12 +441,12 @@ pshm_test: tests/CMakeFiles/pshm_test.dir/rule
 
 # fast build rule for target.
 pshm_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pshm_test.dir/build.make tests/CMakeFiles/pshm_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pshm_test.dir/build.make tests/CMakeFiles/pshm_test.dir/build
 .PHONY : pshm_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/psocket_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/psocket_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/psocket_test.dir/rule
 .PHONY : tests/CMakeFiles/psocket_test.dir/rule
 
 # Convenience name for target.
@@ -456,12 +456,12 @@ psocket_test: tests/CMakeFiles/psocket_test.dir/rule
 
 # fast build rule for target.
 psocket_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psocket_test.dir/build.make tests/CMakeFiles/psocket_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psocket_test.dir/build.make tests/CMakeFiles/psocket_test.dir/build
 .PHONY : psocket_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/pmem_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pmem_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pmem_test.dir/rule
 .PHONY : tests/CMakeFiles/pmem_test.dir/rule
 
 # Convenience name for target.
@@ -471,12 +471,12 @@ pmem_test: tests/CMakeFiles/pmem_test.dir/rule
 
 # fast build rule for target.
 pmem_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmem_test.dir/build.make tests/CMakeFiles/pmem_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmem_test.dir/build.make tests/CMakeFiles/pmem_test.dir/build
 .PHONY : pmem_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/psocketaddress_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/psocketaddress_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/psocketaddress_test.dir/rule
 .PHONY : tests/CMakeFiles/psocketaddress_test.dir/rule
 
 # Convenience name for target.
@@ -486,12 +486,12 @@ psocketaddress_test: tests/CMakeFiles/psocketaddress_test.dir/rule
 
 # fast build rule for target.
 psocketaddress_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psocketaddress_test.dir/build.make tests/CMakeFiles/psocketaddress_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psocketaddress_test.dir/build.make tests/CMakeFiles/psocketaddress_test.dir/build
 .PHONY : psocketaddress_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/ptimeprofiler_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/ptimeprofiler_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/ptimeprofiler_test.dir/rule
 .PHONY : tests/CMakeFiles/ptimeprofiler_test.dir/rule
 
 # Convenience name for target.
@@ -501,12 +501,12 @@ ptimeprofiler_test: tests/CMakeFiles/ptimeprofiler_test.dir/rule
 
 # fast build rule for target.
 ptimeprofiler_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptimeprofiler_test.dir/build.make tests/CMakeFiles/ptimeprofiler_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptimeprofiler_test.dir/build.make tests/CMakeFiles/ptimeprofiler_test.dir/build
 .PHONY : ptimeprofiler_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/patomic_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/patomic_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/patomic_test.dir/rule
 .PHONY : tests/CMakeFiles/patomic_test.dir/rule
 
 # Convenience name for target.
@@ -516,12 +516,12 @@ patomic_test: tests/CMakeFiles/patomic_test.dir/rule
 
 # fast build rule for target.
 patomic_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/patomic_test.dir/build.make tests/CMakeFiles/patomic_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/patomic_test.dir/build.make tests/CMakeFiles/patomic_test.dir/build
 .PHONY : patomic_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/ptree_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/ptree_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/ptree_test.dir/rule
 .PHONY : tests/CMakeFiles/ptree_test.dir/rule
 
 # Convenience name for target.
@@ -531,12 +531,12 @@ ptree_test: tests/CMakeFiles/ptree_test.dir/rule
 
 # fast build rule for target.
 ptree_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptree_test.dir/build.make tests/CMakeFiles/ptree_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptree_test.dir/build.make tests/CMakeFiles/ptree_test.dir/build
 .PHONY : ptree_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/perror_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/perror_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/perror_test.dir/rule
 .PHONY : tests/CMakeFiles/perror_test.dir/rule
 
 # Convenience name for target.
@@ -546,12 +546,12 @@ perror_test: tests/CMakeFiles/perror_test.dir/rule
 
 # fast build rule for target.
 perror_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/perror_test.dir/build.make tests/CMakeFiles/perror_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/perror_test.dir/build.make tests/CMakeFiles/perror_test.dir/build
 .PHONY : perror_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/pspinlock_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pspinlock_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pspinlock_test.dir/rule
 .PHONY : tests/CMakeFiles/pspinlock_test.dir/rule
 
 # Convenience name for target.
@@ -561,12 +561,12 @@ pspinlock_test: tests/CMakeFiles/pspinlock_test.dir/rule
 
 # fast build rule for target.
 pspinlock_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pspinlock_test.dir/build.make tests/CMakeFiles/pspinlock_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pspinlock_test.dir/build.make tests/CMakeFiles/pspinlock_test.dir/build
 .PHONY : pspinlock_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/pstdarg_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pstdarg_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pstdarg_test.dir/rule
 .PHONY : tests/CMakeFiles/pstdarg_test.dir/rule
 
 # Convenience name for target.
@@ -576,12 +576,12 @@ pstdarg_test: tests/CMakeFiles/pstdarg_test.dir/rule
 
 # fast build rule for target.
 pstdarg_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pstdarg_test.dir/build.make tests/CMakeFiles/pstdarg_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pstdarg_test.dir/build.make tests/CMakeFiles/pstdarg_test.dir/build
 .PHONY : pstdarg_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/plist_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/plist_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/plist_test.dir/rule
 .PHONY : tests/CMakeFiles/plist_test.dir/rule
 
 # Convenience name for target.
@@ -591,12 +591,12 @@ plist_test: tests/CMakeFiles/plist_test.dir/rule
 
 # fast build rule for target.
 plist_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/plist_test.dir/build.make tests/CMakeFiles/plist_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/plist_test.dir/build.make tests/CMakeFiles/plist_test.dir/build
 .PHONY : plist_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/ptypes_test.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/ptypes_test.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/ptypes_test.dir/rule
 .PHONY : tests/CMakeFiles/ptypes_test.dir/rule
 
 # Convenience name for target.
@@ -606,7 +606,7 @@ ptypes_test: tests/CMakeFiles/ptypes_test.dir/rule
 
 # fast build rule for target.
 ptypes_test/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptypes_test.dir/build.make tests/CMakeFiles/ptypes_test.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptypes_test.dir/build.make tests/CMakeFiles/ptypes_test.dir/build
 .PHONY : ptypes_test/fast
 
 patomic_test.o: patomic_test.cpp.o
@@ -615,7 +615,7 @@ patomic_test.o: patomic_test.cpp.o
 
 # target to build an object file
 patomic_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/patomic_test.dir/build.make tests/CMakeFiles/patomic_test.dir/patomic_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/patomic_test.dir/build.make tests/CMakeFiles/patomic_test.dir/patomic_test.cpp.o
 .PHONY : patomic_test.cpp.o
 
 patomic_test.i: patomic_test.cpp.i
@@ -624,7 +624,7 @@ patomic_test.i: patomic_test.cpp.i
 
 # target to preprocess a source file
 patomic_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/patomic_test.dir/build.make tests/CMakeFiles/patomic_test.dir/patomic_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/patomic_test.dir/build.make tests/CMakeFiles/patomic_test.dir/patomic_test.cpp.i
 .PHONY : patomic_test.cpp.i
 
 patomic_test.s: patomic_test.cpp.s
@@ -633,7 +633,7 @@ patomic_test.s: patomic_test.cpp.s
 
 # target to generate assembly for a file
 patomic_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/patomic_test.dir/build.make tests/CMakeFiles/patomic_test.dir/patomic_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/patomic_test.dir/build.make tests/CMakeFiles/patomic_test.dir/patomic_test.cpp.s
 .PHONY : patomic_test.cpp.s
 
 pcondvariable_test.o: pcondvariable_test.cpp.o
@@ -642,7 +642,7 @@ pcondvariable_test.o: pcondvariable_test.cpp.o
 
 # target to build an object file
 pcondvariable_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pcondvariable_test.dir/build.make tests/CMakeFiles/pcondvariable_test.dir/pcondvariable_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pcondvariable_test.dir/build.make tests/CMakeFiles/pcondvariable_test.dir/pcondvariable_test.cpp.o
 .PHONY : pcondvariable_test.cpp.o
 
 pcondvariable_test.i: pcondvariable_test.cpp.i
@@ -651,7 +651,7 @@ pcondvariable_test.i: pcondvariable_test.cpp.i
 
 # target to preprocess a source file
 pcondvariable_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pcondvariable_test.dir/build.make tests/CMakeFiles/pcondvariable_test.dir/pcondvariable_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pcondvariable_test.dir/build.make tests/CMakeFiles/pcondvariable_test.dir/pcondvariable_test.cpp.i
 .PHONY : pcondvariable_test.cpp.i
 
 pcondvariable_test.s: pcondvariable_test.cpp.s
@@ -660,7 +660,7 @@ pcondvariable_test.s: pcondvariable_test.cpp.s
 
 # target to generate assembly for a file
 pcondvariable_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pcondvariable_test.dir/build.make tests/CMakeFiles/pcondvariable_test.dir/pcondvariable_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pcondvariable_test.dir/build.make tests/CMakeFiles/pcondvariable_test.dir/pcondvariable_test.cpp.s
 .PHONY : pcondvariable_test.cpp.s
 
 pcryptohash_test.o: pcryptohash_test.cpp.o
@@ -669,7 +669,7 @@ pcryptohash_test.o: pcryptohash_test.cpp.o
 
 # target to build an object file
 pcryptohash_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pcryptohash_test.dir/build.make tests/CMakeFiles/pcryptohash_test.dir/pcryptohash_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pcryptohash_test.dir/build.make tests/CMakeFiles/pcryptohash_test.dir/pcryptohash_test.cpp.o
 .PHONY : pcryptohash_test.cpp.o
 
 pcryptohash_test.i: pcryptohash_test.cpp.i
@@ -678,7 +678,7 @@ pcryptohash_test.i: pcryptohash_test.cpp.i
 
 # target to preprocess a source file
 pcryptohash_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pcryptohash_test.dir/build.make tests/CMakeFiles/pcryptohash_test.dir/pcryptohash_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pcryptohash_test.dir/build.make tests/CMakeFiles/pcryptohash_test.dir/pcryptohash_test.cpp.i
 .PHONY : pcryptohash_test.cpp.i
 
 pcryptohash_test.s: pcryptohash_test.cpp.s
@@ -687,7 +687,7 @@ pcryptohash_test.s: pcryptohash_test.cpp.s
 
 # target to generate assembly for a file
 pcryptohash_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pcryptohash_test.dir/build.make tests/CMakeFiles/pcryptohash_test.dir/pcryptohash_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pcryptohash_test.dir/build.make tests/CMakeFiles/pcryptohash_test.dir/pcryptohash_test.cpp.s
 .PHONY : pcryptohash_test.cpp.s
 
 pdir_test.o: pdir_test.cpp.o
@@ -696,7 +696,7 @@ pdir_test.o: pdir_test.cpp.o
 
 # target to build an object file
 pdir_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pdir_test.dir/build.make tests/CMakeFiles/pdir_test.dir/pdir_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pdir_test.dir/build.make tests/CMakeFiles/pdir_test.dir/pdir_test.cpp.o
 .PHONY : pdir_test.cpp.o
 
 pdir_test.i: pdir_test.cpp.i
@@ -705,7 +705,7 @@ pdir_test.i: pdir_test.cpp.i
 
 # target to preprocess a source file
 pdir_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pdir_test.dir/build.make tests/CMakeFiles/pdir_test.dir/pdir_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pdir_test.dir/build.make tests/CMakeFiles/pdir_test.dir/pdir_test.cpp.i
 .PHONY : pdir_test.cpp.i
 
 pdir_test.s: pdir_test.cpp.s
@@ -714,7 +714,7 @@ pdir_test.s: pdir_test.cpp.s
 
 # target to generate assembly for a file
 pdir_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pdir_test.dir/build.make tests/CMakeFiles/pdir_test.dir/pdir_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pdir_test.dir/build.make tests/CMakeFiles/pdir_test.dir/pdir_test.cpp.s
 .PHONY : pdir_test.cpp.s
 
 perror_test.o: perror_test.cpp.o
@@ -723,7 +723,7 @@ perror_test.o: perror_test.cpp.o
 
 # target to build an object file
 perror_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/perror_test.dir/build.make tests/CMakeFiles/perror_test.dir/perror_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/perror_test.dir/build.make tests/CMakeFiles/perror_test.dir/perror_test.cpp.o
 .PHONY : perror_test.cpp.o
 
 perror_test.i: perror_test.cpp.i
@@ -732,7 +732,7 @@ perror_test.i: perror_test.cpp.i
 
 # target to preprocess a source file
 perror_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/perror_test.dir/build.make tests/CMakeFiles/perror_test.dir/perror_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/perror_test.dir/build.make tests/CMakeFiles/perror_test.dir/perror_test.cpp.i
 .PHONY : perror_test.cpp.i
 
 perror_test.s: perror_test.cpp.s
@@ -741,7 +741,7 @@ perror_test.s: perror_test.cpp.s
 
 # target to generate assembly for a file
 perror_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/perror_test.dir/build.make tests/CMakeFiles/perror_test.dir/perror_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/perror_test.dir/build.make tests/CMakeFiles/perror_test.dir/perror_test.cpp.s
 .PHONY : perror_test.cpp.s
 
 pfile_test.o: pfile_test.cpp.o
@@ -750,7 +750,7 @@ pfile_test.o: pfile_test.cpp.o
 
 # target to build an object file
 pfile_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pfile_test.dir/build.make tests/CMakeFiles/pfile_test.dir/pfile_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pfile_test.dir/build.make tests/CMakeFiles/pfile_test.dir/pfile_test.cpp.o
 .PHONY : pfile_test.cpp.o
 
 pfile_test.i: pfile_test.cpp.i
@@ -759,7 +759,7 @@ pfile_test.i: pfile_test.cpp.i
 
 # target to preprocess a source file
 pfile_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pfile_test.dir/build.make tests/CMakeFiles/pfile_test.dir/pfile_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pfile_test.dir/build.make tests/CMakeFiles/pfile_test.dir/pfile_test.cpp.i
 .PHONY : pfile_test.cpp.i
 
 pfile_test.s: pfile_test.cpp.s
@@ -768,7 +768,7 @@ pfile_test.s: pfile_test.cpp.s
 
 # target to generate assembly for a file
 pfile_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pfile_test.dir/build.make tests/CMakeFiles/pfile_test.dir/pfile_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pfile_test.dir/build.make tests/CMakeFiles/pfile_test.dir/pfile_test.cpp.s
 .PHONY : pfile_test.cpp.s
 
 phashtable_test.o: phashtable_test.cpp.o
@@ -777,7 +777,7 @@ phashtable_test.o: phashtable_test.cpp.o
 
 # target to build an object file
 phashtable_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/phashtable_test.dir/build.make tests/CMakeFiles/phashtable_test.dir/phashtable_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/phashtable_test.dir/build.make tests/CMakeFiles/phashtable_test.dir/phashtable_test.cpp.o
 .PHONY : phashtable_test.cpp.o
 
 phashtable_test.i: phashtable_test.cpp.i
@@ -786,7 +786,7 @@ phashtable_test.i: phashtable_test.cpp.i
 
 # target to preprocess a source file
 phashtable_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/phashtable_test.dir/build.make tests/CMakeFiles/phashtable_test.dir/phashtable_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/phashtable_test.dir/build.make tests/CMakeFiles/phashtable_test.dir/phashtable_test.cpp.i
 .PHONY : phashtable_test.cpp.i
 
 phashtable_test.s: phashtable_test.cpp.s
@@ -795,7 +795,7 @@ phashtable_test.s: phashtable_test.cpp.s
 
 # target to generate assembly for a file
 phashtable_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/phashtable_test.dir/build.make tests/CMakeFiles/phashtable_test.dir/phashtable_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/phashtable_test.dir/build.make tests/CMakeFiles/phashtable_test.dir/phashtable_test.cpp.s
 .PHONY : phashtable_test.cpp.s
 
 pinifile_test.o: pinifile_test.cpp.o
@@ -804,7 +804,7 @@ pinifile_test.o: pinifile_test.cpp.o
 
 # target to build an object file
 pinifile_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pinifile_test.dir/build.make tests/CMakeFiles/pinifile_test.dir/pinifile_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pinifile_test.dir/build.make tests/CMakeFiles/pinifile_test.dir/pinifile_test.cpp.o
 .PHONY : pinifile_test.cpp.o
 
 pinifile_test.i: pinifile_test.cpp.i
@@ -813,7 +813,7 @@ pinifile_test.i: pinifile_test.cpp.i
 
 # target to preprocess a source file
 pinifile_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pinifile_test.dir/build.make tests/CMakeFiles/pinifile_test.dir/pinifile_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pinifile_test.dir/build.make tests/CMakeFiles/pinifile_test.dir/pinifile_test.cpp.i
 .PHONY : pinifile_test.cpp.i
 
 pinifile_test.s: pinifile_test.cpp.s
@@ -822,7 +822,7 @@ pinifile_test.s: pinifile_test.cpp.s
 
 # target to generate assembly for a file
 pinifile_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pinifile_test.dir/build.make tests/CMakeFiles/pinifile_test.dir/pinifile_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pinifile_test.dir/build.make tests/CMakeFiles/pinifile_test.dir/pinifile_test.cpp.s
 .PHONY : pinifile_test.cpp.s
 
 plibraryloader_test.o: plibraryloader_test.cpp.o
@@ -831,7 +831,7 @@ plibraryloader_test.o: plibraryloader_test.cpp.o
 
 # target to build an object file
 plibraryloader_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/plibraryloader_test.dir/build.make tests/CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/plibraryloader_test.dir/build.make tests/CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.o
 .PHONY : plibraryloader_test.cpp.o
 
 plibraryloader_test.i: plibraryloader_test.cpp.i
@@ -840,7 +840,7 @@ plibraryloader_test.i: plibraryloader_test.cpp.i
 
 # target to preprocess a source file
 plibraryloader_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/plibraryloader_test.dir/build.make tests/CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/plibraryloader_test.dir/build.make tests/CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.i
 .PHONY : plibraryloader_test.cpp.i
 
 plibraryloader_test.s: plibraryloader_test.cpp.s
@@ -849,7 +849,7 @@ plibraryloader_test.s: plibraryloader_test.cpp.s
 
 # target to generate assembly for a file
 plibraryloader_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/plibraryloader_test.dir/build.make tests/CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/plibraryloader_test.dir/build.make tests/CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.s
 .PHONY : plibraryloader_test.cpp.s
 
 plist_test.o: plist_test.cpp.o
@@ -858,7 +858,7 @@ plist_test.o: plist_test.cpp.o
 
 # target to build an object file
 plist_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/plist_test.dir/build.make tests/CMakeFiles/plist_test.dir/plist_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/plist_test.dir/build.make tests/CMakeFiles/plist_test.dir/plist_test.cpp.o
 .PHONY : plist_test.cpp.o
 
 plist_test.i: plist_test.cpp.i
@@ -867,7 +867,7 @@ plist_test.i: plist_test.cpp.i
 
 # target to preprocess a source file
 plist_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/plist_test.dir/build.make tests/CMakeFiles/plist_test.dir/plist_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/plist_test.dir/build.make tests/CMakeFiles/plist_test.dir/plist_test.cpp.i
 .PHONY : plist_test.cpp.i
 
 plist_test.s: plist_test.cpp.s
@@ -876,7 +876,7 @@ plist_test.s: plist_test.cpp.s
 
 # target to generate assembly for a file
 plist_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/plist_test.dir/build.make tests/CMakeFiles/plist_test.dir/plist_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/plist_test.dir/build.make tests/CMakeFiles/plist_test.dir/plist_test.cpp.s
 .PHONY : plist_test.cpp.s
 
 pmacros_test.o: pmacros_test.cpp.o
@@ -885,7 +885,7 @@ pmacros_test.o: pmacros_test.cpp.o
 
 # target to build an object file
 pmacros_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmacros_test.dir/build.make tests/CMakeFiles/pmacros_test.dir/pmacros_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmacros_test.dir/build.make tests/CMakeFiles/pmacros_test.dir/pmacros_test.cpp.o
 .PHONY : pmacros_test.cpp.o
 
 pmacros_test.i: pmacros_test.cpp.i
@@ -894,7 +894,7 @@ pmacros_test.i: pmacros_test.cpp.i
 
 # target to preprocess a source file
 pmacros_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmacros_test.dir/build.make tests/CMakeFiles/pmacros_test.dir/pmacros_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmacros_test.dir/build.make tests/CMakeFiles/pmacros_test.dir/pmacros_test.cpp.i
 .PHONY : pmacros_test.cpp.i
 
 pmacros_test.s: pmacros_test.cpp.s
@@ -903,7 +903,7 @@ pmacros_test.s: pmacros_test.cpp.s
 
 # target to generate assembly for a file
 pmacros_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmacros_test.dir/build.make tests/CMakeFiles/pmacros_test.dir/pmacros_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmacros_test.dir/build.make tests/CMakeFiles/pmacros_test.dir/pmacros_test.cpp.s
 .PHONY : pmacros_test.cpp.s
 
 pmain_test.o: pmain_test.cpp.o
@@ -912,7 +912,7 @@ pmain_test.o: pmain_test.cpp.o
 
 # target to build an object file
 pmain_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmain_test.dir/build.make tests/CMakeFiles/pmain_test.dir/pmain_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmain_test.dir/build.make tests/CMakeFiles/pmain_test.dir/pmain_test.cpp.o
 .PHONY : pmain_test.cpp.o
 
 pmain_test.i: pmain_test.cpp.i
@@ -921,7 +921,7 @@ pmain_test.i: pmain_test.cpp.i
 
 # target to preprocess a source file
 pmain_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmain_test.dir/build.make tests/CMakeFiles/pmain_test.dir/pmain_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmain_test.dir/build.make tests/CMakeFiles/pmain_test.dir/pmain_test.cpp.i
 .PHONY : pmain_test.cpp.i
 
 pmain_test.s: pmain_test.cpp.s
@@ -930,7 +930,7 @@ pmain_test.s: pmain_test.cpp.s
 
 # target to generate assembly for a file
 pmain_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmain_test.dir/build.make tests/CMakeFiles/pmain_test.dir/pmain_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmain_test.dir/build.make tests/CMakeFiles/pmain_test.dir/pmain_test.cpp.s
 .PHONY : pmain_test.cpp.s
 
 pmem_test.o: pmem_test.cpp.o
@@ -939,7 +939,7 @@ pmem_test.o: pmem_test.cpp.o
 
 # target to build an object file
 pmem_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmem_test.dir/build.make tests/CMakeFiles/pmem_test.dir/pmem_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmem_test.dir/build.make tests/CMakeFiles/pmem_test.dir/pmem_test.cpp.o
 .PHONY : pmem_test.cpp.o
 
 pmem_test.i: pmem_test.cpp.i
@@ -948,7 +948,7 @@ pmem_test.i: pmem_test.cpp.i
 
 # target to preprocess a source file
 pmem_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmem_test.dir/build.make tests/CMakeFiles/pmem_test.dir/pmem_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmem_test.dir/build.make tests/CMakeFiles/pmem_test.dir/pmem_test.cpp.i
 .PHONY : pmem_test.cpp.i
 
 pmem_test.s: pmem_test.cpp.s
@@ -957,7 +957,7 @@ pmem_test.s: pmem_test.cpp.s
 
 # target to generate assembly for a file
 pmem_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmem_test.dir/build.make tests/CMakeFiles/pmem_test.dir/pmem_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmem_test.dir/build.make tests/CMakeFiles/pmem_test.dir/pmem_test.cpp.s
 .PHONY : pmem_test.cpp.s
 
 pmutex_test.o: pmutex_test.cpp.o
@@ -966,7 +966,7 @@ pmutex_test.o: pmutex_test.cpp.o
 
 # target to build an object file
 pmutex_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmutex_test.dir/build.make tests/CMakeFiles/pmutex_test.dir/pmutex_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmutex_test.dir/build.make tests/CMakeFiles/pmutex_test.dir/pmutex_test.cpp.o
 .PHONY : pmutex_test.cpp.o
 
 pmutex_test.i: pmutex_test.cpp.i
@@ -975,7 +975,7 @@ pmutex_test.i: pmutex_test.cpp.i
 
 # target to preprocess a source file
 pmutex_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmutex_test.dir/build.make tests/CMakeFiles/pmutex_test.dir/pmutex_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmutex_test.dir/build.make tests/CMakeFiles/pmutex_test.dir/pmutex_test.cpp.i
 .PHONY : pmutex_test.cpp.i
 
 pmutex_test.s: pmutex_test.cpp.s
@@ -984,7 +984,7 @@ pmutex_test.s: pmutex_test.cpp.s
 
 # target to generate assembly for a file
 pmutex_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmutex_test.dir/build.make tests/CMakeFiles/pmutex_test.dir/pmutex_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pmutex_test.dir/build.make tests/CMakeFiles/pmutex_test.dir/pmutex_test.cpp.s
 .PHONY : pmutex_test.cpp.s
 
 pprocess_test.o: pprocess_test.cpp.o
@@ -993,7 +993,7 @@ pprocess_test.o: pprocess_test.cpp.o
 
 # target to build an object file
 pprocess_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pprocess_test.dir/build.make tests/CMakeFiles/pprocess_test.dir/pprocess_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pprocess_test.dir/build.make tests/CMakeFiles/pprocess_test.dir/pprocess_test.cpp.o
 .PHONY : pprocess_test.cpp.o
 
 pprocess_test.i: pprocess_test.cpp.i
@@ -1002,7 +1002,7 @@ pprocess_test.i: pprocess_test.cpp.i
 
 # target to preprocess a source file
 pprocess_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pprocess_test.dir/build.make tests/CMakeFiles/pprocess_test.dir/pprocess_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pprocess_test.dir/build.make tests/CMakeFiles/pprocess_test.dir/pprocess_test.cpp.i
 .PHONY : pprocess_test.cpp.i
 
 pprocess_test.s: pprocess_test.cpp.s
@@ -1011,7 +1011,7 @@ pprocess_test.s: pprocess_test.cpp.s
 
 # target to generate assembly for a file
 pprocess_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pprocess_test.dir/build.make tests/CMakeFiles/pprocess_test.dir/pprocess_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pprocess_test.dir/build.make tests/CMakeFiles/pprocess_test.dir/pprocess_test.cpp.s
 .PHONY : pprocess_test.cpp.s
 
 prwlock_test.o: prwlock_test.cpp.o
@@ -1020,7 +1020,7 @@ prwlock_test.o: prwlock_test.cpp.o
 
 # target to build an object file
 prwlock_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/prwlock_test.dir/build.make tests/CMakeFiles/prwlock_test.dir/prwlock_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/prwlock_test.dir/build.make tests/CMakeFiles/prwlock_test.dir/prwlock_test.cpp.o
 .PHONY : prwlock_test.cpp.o
 
 prwlock_test.i: prwlock_test.cpp.i
@@ -1029,7 +1029,7 @@ prwlock_test.i: prwlock_test.cpp.i
 
 # target to preprocess a source file
 prwlock_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/prwlock_test.dir/build.make tests/CMakeFiles/prwlock_test.dir/prwlock_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/prwlock_test.dir/build.make tests/CMakeFiles/prwlock_test.dir/prwlock_test.cpp.i
 .PHONY : prwlock_test.cpp.i
 
 prwlock_test.s: prwlock_test.cpp.s
@@ -1038,7 +1038,7 @@ prwlock_test.s: prwlock_test.cpp.s
 
 # target to generate assembly for a file
 prwlock_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/prwlock_test.dir/build.make tests/CMakeFiles/prwlock_test.dir/prwlock_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/prwlock_test.dir/build.make tests/CMakeFiles/prwlock_test.dir/prwlock_test.cpp.s
 .PHONY : prwlock_test.cpp.s
 
 psemaphore_test.o: psemaphore_test.cpp.o
@@ -1047,7 +1047,7 @@ psemaphore_test.o: psemaphore_test.cpp.o
 
 # target to build an object file
 psemaphore_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psemaphore_test.dir/build.make tests/CMakeFiles/psemaphore_test.dir/psemaphore_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psemaphore_test.dir/build.make tests/CMakeFiles/psemaphore_test.dir/psemaphore_test.cpp.o
 .PHONY : psemaphore_test.cpp.o
 
 psemaphore_test.i: psemaphore_test.cpp.i
@@ -1056,7 +1056,7 @@ psemaphore_test.i: psemaphore_test.cpp.i
 
 # target to preprocess a source file
 psemaphore_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psemaphore_test.dir/build.make tests/CMakeFiles/psemaphore_test.dir/psemaphore_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psemaphore_test.dir/build.make tests/CMakeFiles/psemaphore_test.dir/psemaphore_test.cpp.i
 .PHONY : psemaphore_test.cpp.i
 
 psemaphore_test.s: psemaphore_test.cpp.s
@@ -1065,7 +1065,7 @@ psemaphore_test.s: psemaphore_test.cpp.s
 
 # target to generate assembly for a file
 psemaphore_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psemaphore_test.dir/build.make tests/CMakeFiles/psemaphore_test.dir/psemaphore_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psemaphore_test.dir/build.make tests/CMakeFiles/psemaphore_test.dir/psemaphore_test.cpp.s
 .PHONY : psemaphore_test.cpp.s
 
 pshm_test.o: pshm_test.cpp.o
@@ -1074,7 +1074,7 @@ pshm_test.o: pshm_test.cpp.o
 
 # target to build an object file
 pshm_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pshm_test.dir/build.make tests/CMakeFiles/pshm_test.dir/pshm_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pshm_test.dir/build.make tests/CMakeFiles/pshm_test.dir/pshm_test.cpp.o
 .PHONY : pshm_test.cpp.o
 
 pshm_test.i: pshm_test.cpp.i
@@ -1083,7 +1083,7 @@ pshm_test.i: pshm_test.cpp.i
 
 # target to preprocess a source file
 pshm_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pshm_test.dir/build.make tests/CMakeFiles/pshm_test.dir/pshm_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pshm_test.dir/build.make tests/CMakeFiles/pshm_test.dir/pshm_test.cpp.i
 .PHONY : pshm_test.cpp.i
 
 pshm_test.s: pshm_test.cpp.s
@@ -1092,7 +1092,7 @@ pshm_test.s: pshm_test.cpp.s
 
 # target to generate assembly for a file
 pshm_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pshm_test.dir/build.make tests/CMakeFiles/pshm_test.dir/pshm_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pshm_test.dir/build.make tests/CMakeFiles/pshm_test.dir/pshm_test.cpp.s
 .PHONY : pshm_test.cpp.s
 
 pshmbuffer_test.o: pshmbuffer_test.cpp.o
@@ -1101,7 +1101,7 @@ pshmbuffer_test.o: pshmbuffer_test.cpp.o
 
 # target to build an object file
 pshmbuffer_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pshmbuffer_test.dir/build.make tests/CMakeFiles/pshmbuffer_test.dir/pshmbuffer_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pshmbuffer_test.dir/build.make tests/CMakeFiles/pshmbuffer_test.dir/pshmbuffer_test.cpp.o
 .PHONY : pshmbuffer_test.cpp.o
 
 pshmbuffer_test.i: pshmbuffer_test.cpp.i
@@ -1110,7 +1110,7 @@ pshmbuffer_test.i: pshmbuffer_test.cpp.i
 
 # target to preprocess a source file
 pshmbuffer_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pshmbuffer_test.dir/build.make tests/CMakeFiles/pshmbuffer_test.dir/pshmbuffer_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pshmbuffer_test.dir/build.make tests/CMakeFiles/pshmbuffer_test.dir/pshmbuffer_test.cpp.i
 .PHONY : pshmbuffer_test.cpp.i
 
 pshmbuffer_test.s: pshmbuffer_test.cpp.s
@@ -1119,7 +1119,7 @@ pshmbuffer_test.s: pshmbuffer_test.cpp.s
 
 # target to generate assembly for a file
 pshmbuffer_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pshmbuffer_test.dir/build.make tests/CMakeFiles/pshmbuffer_test.dir/pshmbuffer_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pshmbuffer_test.dir/build.make tests/CMakeFiles/pshmbuffer_test.dir/pshmbuffer_test.cpp.s
 .PHONY : pshmbuffer_test.cpp.s
 
 psocket_test.o: psocket_test.cpp.o
@@ -1128,7 +1128,7 @@ psocket_test.o: psocket_test.cpp.o
 
 # target to build an object file
 psocket_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psocket_test.dir/build.make tests/CMakeFiles/psocket_test.dir/psocket_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psocket_test.dir/build.make tests/CMakeFiles/psocket_test.dir/psocket_test.cpp.o
 .PHONY : psocket_test.cpp.o
 
 psocket_test.i: psocket_test.cpp.i
@@ -1137,7 +1137,7 @@ psocket_test.i: psocket_test.cpp.i
 
 # target to preprocess a source file
 psocket_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psocket_test.dir/build.make tests/CMakeFiles/psocket_test.dir/psocket_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psocket_test.dir/build.make tests/CMakeFiles/psocket_test.dir/psocket_test.cpp.i
 .PHONY : psocket_test.cpp.i
 
 psocket_test.s: psocket_test.cpp.s
@@ -1146,7 +1146,7 @@ psocket_test.s: psocket_test.cpp.s
 
 # target to generate assembly for a file
 psocket_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psocket_test.dir/build.make tests/CMakeFiles/psocket_test.dir/psocket_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psocket_test.dir/build.make tests/CMakeFiles/psocket_test.dir/psocket_test.cpp.s
 .PHONY : psocket_test.cpp.s
 
 psocketaddress_test.o: psocketaddress_test.cpp.o
@@ -1155,7 +1155,7 @@ psocketaddress_test.o: psocketaddress_test.cpp.o
 
 # target to build an object file
 psocketaddress_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psocketaddress_test.dir/build.make tests/CMakeFiles/psocketaddress_test.dir/psocketaddress_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psocketaddress_test.dir/build.make tests/CMakeFiles/psocketaddress_test.dir/psocketaddress_test.cpp.o
 .PHONY : psocketaddress_test.cpp.o
 
 psocketaddress_test.i: psocketaddress_test.cpp.i
@@ -1164,7 +1164,7 @@ psocketaddress_test.i: psocketaddress_test.cpp.i
 
 # target to preprocess a source file
 psocketaddress_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psocketaddress_test.dir/build.make tests/CMakeFiles/psocketaddress_test.dir/psocketaddress_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psocketaddress_test.dir/build.make tests/CMakeFiles/psocketaddress_test.dir/psocketaddress_test.cpp.i
 .PHONY : psocketaddress_test.cpp.i
 
 psocketaddress_test.s: psocketaddress_test.cpp.s
@@ -1173,7 +1173,7 @@ psocketaddress_test.s: psocketaddress_test.cpp.s
 
 # target to generate assembly for a file
 psocketaddress_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psocketaddress_test.dir/build.make tests/CMakeFiles/psocketaddress_test.dir/psocketaddress_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/psocketaddress_test.dir/build.make tests/CMakeFiles/psocketaddress_test.dir/psocketaddress_test.cpp.s
 .PHONY : psocketaddress_test.cpp.s
 
 pspinlock_test.o: pspinlock_test.cpp.o
@@ -1182,7 +1182,7 @@ pspinlock_test.o: pspinlock_test.cpp.o
 
 # target to build an object file
 pspinlock_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pspinlock_test.dir/build.make tests/CMakeFiles/pspinlock_test.dir/pspinlock_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pspinlock_test.dir/build.make tests/CMakeFiles/pspinlock_test.dir/pspinlock_test.cpp.o
 .PHONY : pspinlock_test.cpp.o
 
 pspinlock_test.i: pspinlock_test.cpp.i
@@ -1191,7 +1191,7 @@ pspinlock_test.i: pspinlock_test.cpp.i
 
 # target to preprocess a source file
 pspinlock_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pspinlock_test.dir/build.make tests/CMakeFiles/pspinlock_test.dir/pspinlock_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pspinlock_test.dir/build.make tests/CMakeFiles/pspinlock_test.dir/pspinlock_test.cpp.i
 .PHONY : pspinlock_test.cpp.i
 
 pspinlock_test.s: pspinlock_test.cpp.s
@@ -1200,7 +1200,7 @@ pspinlock_test.s: pspinlock_test.cpp.s
 
 # target to generate assembly for a file
 pspinlock_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pspinlock_test.dir/build.make tests/CMakeFiles/pspinlock_test.dir/pspinlock_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pspinlock_test.dir/build.make tests/CMakeFiles/pspinlock_test.dir/pspinlock_test.cpp.s
 .PHONY : pspinlock_test.cpp.s
 
 pstdarg_test.o: pstdarg_test.cpp.o
@@ -1209,7 +1209,7 @@ pstdarg_test.o: pstdarg_test.cpp.o
 
 # target to build an object file
 pstdarg_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pstdarg_test.dir/build.make tests/CMakeFiles/pstdarg_test.dir/pstdarg_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pstdarg_test.dir/build.make tests/CMakeFiles/pstdarg_test.dir/pstdarg_test.cpp.o
 .PHONY : pstdarg_test.cpp.o
 
 pstdarg_test.i: pstdarg_test.cpp.i
@@ -1218,7 +1218,7 @@ pstdarg_test.i: pstdarg_test.cpp.i
 
 # target to preprocess a source file
 pstdarg_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pstdarg_test.dir/build.make tests/CMakeFiles/pstdarg_test.dir/pstdarg_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pstdarg_test.dir/build.make tests/CMakeFiles/pstdarg_test.dir/pstdarg_test.cpp.i
 .PHONY : pstdarg_test.cpp.i
 
 pstdarg_test.s: pstdarg_test.cpp.s
@@ -1227,7 +1227,7 @@ pstdarg_test.s: pstdarg_test.cpp.s
 
 # target to generate assembly for a file
 pstdarg_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pstdarg_test.dir/build.make tests/CMakeFiles/pstdarg_test.dir/pstdarg_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pstdarg_test.dir/build.make tests/CMakeFiles/pstdarg_test.dir/pstdarg_test.cpp.s
 .PHONY : pstdarg_test.cpp.s
 
 pstring_test.o: pstring_test.cpp.o
@@ -1236,7 +1236,7 @@ pstring_test.o: pstring_test.cpp.o
 
 # target to build an object file
 pstring_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pstring_test.dir/build.make tests/CMakeFiles/pstring_test.dir/pstring_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pstring_test.dir/build.make tests/CMakeFiles/pstring_test.dir/pstring_test.cpp.o
 .PHONY : pstring_test.cpp.o
 
 pstring_test.i: pstring_test.cpp.i
@@ -1245,7 +1245,7 @@ pstring_test.i: pstring_test.cpp.i
 
 # target to preprocess a source file
 pstring_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pstring_test.dir/build.make tests/CMakeFiles/pstring_test.dir/pstring_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pstring_test.dir/build.make tests/CMakeFiles/pstring_test.dir/pstring_test.cpp.i
 .PHONY : pstring_test.cpp.i
 
 pstring_test.s: pstring_test.cpp.s
@@ -1254,7 +1254,7 @@ pstring_test.s: pstring_test.cpp.s
 
 # target to generate assembly for a file
 pstring_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pstring_test.dir/build.make tests/CMakeFiles/pstring_test.dir/pstring_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/pstring_test.dir/build.make tests/CMakeFiles/pstring_test.dir/pstring_test.cpp.s
 .PHONY : pstring_test.cpp.s
 
 ptimeprofiler_test.o: ptimeprofiler_test.cpp.o
@@ -1263,7 +1263,7 @@ ptimeprofiler_test.o: ptimeprofiler_test.cpp.o
 
 # target to build an object file
 ptimeprofiler_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptimeprofiler_test.dir/build.make tests/CMakeFiles/ptimeprofiler_test.dir/ptimeprofiler_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptimeprofiler_test.dir/build.make tests/CMakeFiles/ptimeprofiler_test.dir/ptimeprofiler_test.cpp.o
 .PHONY : ptimeprofiler_test.cpp.o
 
 ptimeprofiler_test.i: ptimeprofiler_test.cpp.i
@@ -1272,7 +1272,7 @@ ptimeprofiler_test.i: ptimeprofiler_test.cpp.i
 
 # target to preprocess a source file
 ptimeprofiler_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptimeprofiler_test.dir/build.make tests/CMakeFiles/ptimeprofiler_test.dir/ptimeprofiler_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptimeprofiler_test.dir/build.make tests/CMakeFiles/ptimeprofiler_test.dir/ptimeprofiler_test.cpp.i
 .PHONY : ptimeprofiler_test.cpp.i
 
 ptimeprofiler_test.s: ptimeprofiler_test.cpp.s
@@ -1281,7 +1281,7 @@ ptimeprofiler_test.s: ptimeprofiler_test.cpp.s
 
 # target to generate assembly for a file
 ptimeprofiler_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptimeprofiler_test.dir/build.make tests/CMakeFiles/ptimeprofiler_test.dir/ptimeprofiler_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptimeprofiler_test.dir/build.make tests/CMakeFiles/ptimeprofiler_test.dir/ptimeprofiler_test.cpp.s
 .PHONY : ptimeprofiler_test.cpp.s
 
 ptree_test.o: ptree_test.cpp.o
@@ -1290,7 +1290,7 @@ ptree_test.o: ptree_test.cpp.o
 
 # target to build an object file
 ptree_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptree_test.dir/build.make tests/CMakeFiles/ptree_test.dir/ptree_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptree_test.dir/build.make tests/CMakeFiles/ptree_test.dir/ptree_test.cpp.o
 .PHONY : ptree_test.cpp.o
 
 ptree_test.i: ptree_test.cpp.i
@@ -1299,7 +1299,7 @@ ptree_test.i: ptree_test.cpp.i
 
 # target to preprocess a source file
 ptree_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptree_test.dir/build.make tests/CMakeFiles/ptree_test.dir/ptree_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptree_test.dir/build.make tests/CMakeFiles/ptree_test.dir/ptree_test.cpp.i
 .PHONY : ptree_test.cpp.i
 
 ptree_test.s: ptree_test.cpp.s
@@ -1308,7 +1308,7 @@ ptree_test.s: ptree_test.cpp.s
 
 # target to generate assembly for a file
 ptree_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptree_test.dir/build.make tests/CMakeFiles/ptree_test.dir/ptree_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptree_test.dir/build.make tests/CMakeFiles/ptree_test.dir/ptree_test.cpp.s
 .PHONY : ptree_test.cpp.s
 
 ptypes_test.o: ptypes_test.cpp.o
@@ -1317,7 +1317,7 @@ ptypes_test.o: ptypes_test.cpp.o
 
 # target to build an object file
 ptypes_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptypes_test.dir/build.make tests/CMakeFiles/ptypes_test.dir/ptypes_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptypes_test.dir/build.make tests/CMakeFiles/ptypes_test.dir/ptypes_test.cpp.o
 .PHONY : ptypes_test.cpp.o
 
 ptypes_test.i: ptypes_test.cpp.i
@@ -1326,7 +1326,7 @@ ptypes_test.i: ptypes_test.cpp.i
 
 # target to preprocess a source file
 ptypes_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptypes_test.dir/build.make tests/CMakeFiles/ptypes_test.dir/ptypes_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptypes_test.dir/build.make tests/CMakeFiles/ptypes_test.dir/ptypes_test.cpp.i
 .PHONY : ptypes_test.cpp.i
 
 ptypes_test.s: ptypes_test.cpp.s
@@ -1335,7 +1335,7 @@ ptypes_test.s: ptypes_test.cpp.s
 
 # target to generate assembly for a file
 ptypes_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptypes_test.dir/build.make tests/CMakeFiles/ptypes_test.dir/ptypes_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/ptypes_test.dir/build.make tests/CMakeFiles/ptypes_test.dir/ptypes_test.cpp.s
 .PHONY : ptypes_test.cpp.s
 
 puthread_test.o: puthread_test.cpp.o
@@ -1344,7 +1344,7 @@ puthread_test.o: puthread_test.cpp.o
 
 # target to build an object file
 puthread_test.cpp.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/puthread_test.dir/build.make tests/CMakeFiles/puthread_test.dir/puthread_test.cpp.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/puthread_test.dir/build.make tests/CMakeFiles/puthread_test.dir/puthread_test.cpp.o
 .PHONY : puthread_test.cpp.o
 
 puthread_test.i: puthread_test.cpp.i
@@ -1353,7 +1353,7 @@ puthread_test.i: puthread_test.cpp.i
 
 # target to preprocess a source file
 puthread_test.cpp.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/puthread_test.dir/build.make tests/CMakeFiles/puthread_test.dir/puthread_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/puthread_test.dir/build.make tests/CMakeFiles/puthread_test.dir/puthread_test.cpp.i
 .PHONY : puthread_test.cpp.i
 
 puthread_test.s: puthread_test.cpp.s
@@ -1362,7 +1362,7 @@ puthread_test.s: puthread_test.cpp.s
 
 # target to generate assembly for a file
 puthread_test.cpp.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/puthread_test.dir/build.make tests/CMakeFiles/puthread_test.dir/puthread_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f tests/CMakeFiles/puthread_test.dir/build.make tests/CMakeFiles/puthread_test.dir/puthread_test.cpp.s
 .PHONY : puthread_test.cpp.s
 
 # Help Target
@@ -1503,6 +1503,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

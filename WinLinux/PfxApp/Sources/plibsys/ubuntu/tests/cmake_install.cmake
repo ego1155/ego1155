@@ -1,4 +1,4 @@
-# Install script for directory: /home/nilesh/Desktop/plibsys/plibsys/tests
+# Install script for directory: /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

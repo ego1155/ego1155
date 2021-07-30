@@ -6,5 +6,5 @@ CXX_FLAGS = -O3 -DNDEBUG
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/nilesh/Desktop/plibsys/plibsys/tests/../src -I/home/nilesh/Desktop/plibsys/ubuntu -I/home/nilesh/Desktop/plibsys/plibsys/src 
+CXX_INCLUDES = -I/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/tests/../src -I/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu -I/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src 
 

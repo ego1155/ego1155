@@ -1,1 +1,1 @@
-/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.o  -o ../plibraryloader_test  -Wl,-rpath,/home/nilesh/Desktop/plibsys/ubuntu ../libplibsys.so.0 -pthread -lrt -ldl 
+/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.o  -o ../plibraryloader_test  -Wl,-rpath,/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu ../libplibsys.so.0 -pthread -lrt -ldl 

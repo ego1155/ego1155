@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nilesh/Desktop/plibsys/plibsys
+CMAKE_SOURCE_DIR = /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nilesh/Desktop/plibsys/ubuntu
+CMAKE_BINARY_DIR = /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -71,7 +71,7 @@ install/strip/fast: preinstall/fast
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/nilesh/Desktop/plibsys/ubuntu && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/nilesh/Desktop/plibsys/ubuntu/CPackSourceConfig.cmake
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -115,7 +115,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/nilesh/Desktop/plibsys/ubuntu && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -159,14 +159,14 @@ install/local/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles /home/nilesh/Desktop/plibsys/ubuntu/src/CMakeFiles/progress.marks
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/src/CMakeFiles/progress.marks
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -176,22 +176,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/plibsysstatic.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/plibsysstatic.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/plibsysstatic.dir/rule
 .PHONY : src/CMakeFiles/plibsysstatic.dir/rule
 
 # Convenience name for target.
@@ -201,12 +201,12 @@ plibsysstatic: src/CMakeFiles/plibsysstatic.dir/rule
 
 # fast build rule for target.
 plibsysstatic/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/build
 .PHONY : plibsysstatic/fast
 
 # Convenience name for target.
 src/CMakeFiles/plibsys.dir/rule:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/plibsys.dir/rule
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/plibsys.dir/rule
 .PHONY : src/CMakeFiles/plibsys.dir/rule
 
 # Convenience name for target.
@@ -216,7 +216,7 @@ plibsys: src/CMakeFiles/plibsys.dir/rule
 
 # fast build rule for target.
 plibsys/fast:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/build
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/build
 .PHONY : plibsys/fast
 
 patomic-c11.o: patomic-c11.c.o
@@ -225,8 +225,8 @@ patomic-c11.o: patomic-c11.c.o
 
 # target to build an object file
 patomic-c11.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/patomic-c11.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/patomic-c11.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/patomic-c11.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/patomic-c11.c.o
 .PHONY : patomic-c11.c.o
 
 patomic-c11.i: patomic-c11.c.i
@@ -235,8 +235,8 @@ patomic-c11.i: patomic-c11.c.i
 
 # target to preprocess a source file
 patomic-c11.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/patomic-c11.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/patomic-c11.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/patomic-c11.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/patomic-c11.c.i
 .PHONY : patomic-c11.c.i
 
 patomic-c11.s: patomic-c11.c.s
@@ -245,8 +245,8 @@ patomic-c11.s: patomic-c11.c.s
 
 # target to generate assembly for a file
 patomic-c11.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/patomic-c11.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/patomic-c11.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/patomic-c11.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/patomic-c11.c.s
 .PHONY : patomic-c11.c.s
 
 pcondvariable-posix.o: pcondvariable-posix.c.o
@@ -255,8 +255,8 @@ pcondvariable-posix.o: pcondvariable-posix.c.o
 
 # target to build an object file
 pcondvariable-posix.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcondvariable-posix.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcondvariable-posix.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcondvariable-posix.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcondvariable-posix.c.o
 .PHONY : pcondvariable-posix.c.o
 
 pcondvariable-posix.i: pcondvariable-posix.c.i
@@ -265,8 +265,8 @@ pcondvariable-posix.i: pcondvariable-posix.c.i
 
 # target to preprocess a source file
 pcondvariable-posix.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcondvariable-posix.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcondvariable-posix.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcondvariable-posix.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcondvariable-posix.c.i
 .PHONY : pcondvariable-posix.c.i
 
 pcondvariable-posix.s: pcondvariable-posix.c.s
@@ -275,8 +275,8 @@ pcondvariable-posix.s: pcondvariable-posix.c.s
 
 # target to generate assembly for a file
 pcondvariable-posix.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcondvariable-posix.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcondvariable-posix.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcondvariable-posix.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcondvariable-posix.c.s
 .PHONY : pcondvariable-posix.c.s
 
 pcryptohash-gost3411.o: pcryptohash-gost3411.c.o
@@ -285,8 +285,8 @@ pcryptohash-gost3411.o: pcryptohash-gost3411.c.o
 
 # target to build an object file
 pcryptohash-gost3411.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-gost3411.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-gost3411.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-gost3411.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-gost3411.c.o
 .PHONY : pcryptohash-gost3411.c.o
 
 pcryptohash-gost3411.i: pcryptohash-gost3411.c.i
@@ -295,8 +295,8 @@ pcryptohash-gost3411.i: pcryptohash-gost3411.c.i
 
 # target to preprocess a source file
 pcryptohash-gost3411.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-gost3411.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-gost3411.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-gost3411.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-gost3411.c.i
 .PHONY : pcryptohash-gost3411.c.i
 
 pcryptohash-gost3411.s: pcryptohash-gost3411.c.s
@@ -305,8 +305,8 @@ pcryptohash-gost3411.s: pcryptohash-gost3411.c.s
 
 # target to generate assembly for a file
 pcryptohash-gost3411.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-gost3411.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-gost3411.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-gost3411.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-gost3411.c.s
 .PHONY : pcryptohash-gost3411.c.s
 
 pcryptohash-md5.o: pcryptohash-md5.c.o
@@ -315,8 +315,8 @@ pcryptohash-md5.o: pcryptohash-md5.c.o
 
 # target to build an object file
 pcryptohash-md5.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-md5.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-md5.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-md5.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-md5.c.o
 .PHONY : pcryptohash-md5.c.o
 
 pcryptohash-md5.i: pcryptohash-md5.c.i
@@ -325,8 +325,8 @@ pcryptohash-md5.i: pcryptohash-md5.c.i
 
 # target to preprocess a source file
 pcryptohash-md5.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-md5.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-md5.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-md5.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-md5.c.i
 .PHONY : pcryptohash-md5.c.i
 
 pcryptohash-md5.s: pcryptohash-md5.c.s
@@ -335,8 +335,8 @@ pcryptohash-md5.s: pcryptohash-md5.c.s
 
 # target to generate assembly for a file
 pcryptohash-md5.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-md5.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-md5.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-md5.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-md5.c.s
 .PHONY : pcryptohash-md5.c.s
 
 pcryptohash-sha1.o: pcryptohash-sha1.c.o
@@ -345,8 +345,8 @@ pcryptohash-sha1.o: pcryptohash-sha1.c.o
 
 # target to build an object file
 pcryptohash-sha1.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha1.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha1.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha1.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha1.c.o
 .PHONY : pcryptohash-sha1.c.o
 
 pcryptohash-sha1.i: pcryptohash-sha1.c.i
@@ -355,8 +355,8 @@ pcryptohash-sha1.i: pcryptohash-sha1.c.i
 
 # target to preprocess a source file
 pcryptohash-sha1.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha1.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha1.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha1.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha1.c.i
 .PHONY : pcryptohash-sha1.c.i
 
 pcryptohash-sha1.s: pcryptohash-sha1.c.s
@@ -365,8 +365,8 @@ pcryptohash-sha1.s: pcryptohash-sha1.c.s
 
 # target to generate assembly for a file
 pcryptohash-sha1.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha1.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha1.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha1.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha1.c.s
 .PHONY : pcryptohash-sha1.c.s
 
 pcryptohash-sha2-256.o: pcryptohash-sha2-256.c.o
@@ -375,8 +375,8 @@ pcryptohash-sha2-256.o: pcryptohash-sha2-256.c.o
 
 # target to build an object file
 pcryptohash-sha2-256.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha2-256.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha2-256.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha2-256.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha2-256.c.o
 .PHONY : pcryptohash-sha2-256.c.o
 
 pcryptohash-sha2-256.i: pcryptohash-sha2-256.c.i
@@ -385,8 +385,8 @@ pcryptohash-sha2-256.i: pcryptohash-sha2-256.c.i
 
 # target to preprocess a source file
 pcryptohash-sha2-256.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha2-256.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha2-256.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha2-256.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha2-256.c.i
 .PHONY : pcryptohash-sha2-256.c.i
 
 pcryptohash-sha2-256.s: pcryptohash-sha2-256.c.s
@@ -395,8 +395,8 @@ pcryptohash-sha2-256.s: pcryptohash-sha2-256.c.s
 
 # target to generate assembly for a file
 pcryptohash-sha2-256.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha2-256.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha2-256.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha2-256.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha2-256.c.s
 .PHONY : pcryptohash-sha2-256.c.s
 
 pcryptohash-sha2-512.o: pcryptohash-sha2-512.c.o
@@ -405,8 +405,8 @@ pcryptohash-sha2-512.o: pcryptohash-sha2-512.c.o
 
 # target to build an object file
 pcryptohash-sha2-512.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha2-512.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha2-512.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha2-512.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha2-512.c.o
 .PHONY : pcryptohash-sha2-512.c.o
 
 pcryptohash-sha2-512.i: pcryptohash-sha2-512.c.i
@@ -415,8 +415,8 @@ pcryptohash-sha2-512.i: pcryptohash-sha2-512.c.i
 
 # target to preprocess a source file
 pcryptohash-sha2-512.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha2-512.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha2-512.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha2-512.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha2-512.c.i
 .PHONY : pcryptohash-sha2-512.c.i
 
 pcryptohash-sha2-512.s: pcryptohash-sha2-512.c.s
@@ -425,8 +425,8 @@ pcryptohash-sha2-512.s: pcryptohash-sha2-512.c.s
 
 # target to generate assembly for a file
 pcryptohash-sha2-512.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha2-512.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha2-512.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha2-512.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha2-512.c.s
 .PHONY : pcryptohash-sha2-512.c.s
 
 pcryptohash-sha3.o: pcryptohash-sha3.c.o
@@ -435,8 +435,8 @@ pcryptohash-sha3.o: pcryptohash-sha3.c.o
 
 # target to build an object file
 pcryptohash-sha3.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha3.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha3.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha3.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha3.c.o
 .PHONY : pcryptohash-sha3.c.o
 
 pcryptohash-sha3.i: pcryptohash-sha3.c.i
@@ -445,8 +445,8 @@ pcryptohash-sha3.i: pcryptohash-sha3.c.i
 
 # target to preprocess a source file
 pcryptohash-sha3.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha3.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha3.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha3.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha3.c.i
 .PHONY : pcryptohash-sha3.c.i
 
 pcryptohash-sha3.s: pcryptohash-sha3.c.s
@@ -455,8 +455,8 @@ pcryptohash-sha3.s: pcryptohash-sha3.c.s
 
 # target to generate assembly for a file
 pcryptohash-sha3.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha3.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha3.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash-sha3.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash-sha3.c.s
 .PHONY : pcryptohash-sha3.c.s
 
 pcryptohash.o: pcryptohash.c.o
@@ -465,8 +465,8 @@ pcryptohash.o: pcryptohash.c.o
 
 # target to build an object file
 pcryptohash.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash.c.o
 .PHONY : pcryptohash.c.o
 
 pcryptohash.i: pcryptohash.c.i
@@ -475,8 +475,8 @@ pcryptohash.i: pcryptohash.c.i
 
 # target to preprocess a source file
 pcryptohash.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash.c.i
 .PHONY : pcryptohash.c.i
 
 pcryptohash.s: pcryptohash.c.s
@@ -485,8 +485,8 @@ pcryptohash.s: pcryptohash.c.s
 
 # target to generate assembly for a file
 pcryptohash.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pcryptohash.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pcryptohash.c.s
 .PHONY : pcryptohash.c.s
 
 pdir-posix.o: pdir-posix.c.o
@@ -495,8 +495,8 @@ pdir-posix.o: pdir-posix.c.o
 
 # target to build an object file
 pdir-posix.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pdir-posix.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pdir-posix.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pdir-posix.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pdir-posix.c.o
 .PHONY : pdir-posix.c.o
 
 pdir-posix.i: pdir-posix.c.i
@@ -505,8 +505,8 @@ pdir-posix.i: pdir-posix.c.i
 
 # target to preprocess a source file
 pdir-posix.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pdir-posix.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pdir-posix.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pdir-posix.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pdir-posix.c.i
 .PHONY : pdir-posix.c.i
 
 pdir-posix.s: pdir-posix.c.s
@@ -515,8 +515,8 @@ pdir-posix.s: pdir-posix.c.s
 
 # target to generate assembly for a file
 pdir-posix.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pdir-posix.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pdir-posix.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pdir-posix.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pdir-posix.c.s
 .PHONY : pdir-posix.c.s
 
 pdir.o: pdir.c.o
@@ -525,8 +525,8 @@ pdir.o: pdir.c.o
 
 # target to build an object file
 pdir.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pdir.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pdir.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pdir.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pdir.c.o
 .PHONY : pdir.c.o
 
 pdir.i: pdir.c.i
@@ -535,8 +535,8 @@ pdir.i: pdir.c.i
 
 # target to preprocess a source file
 pdir.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pdir.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pdir.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pdir.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pdir.c.i
 .PHONY : pdir.c.i
 
 pdir.s: pdir.c.s
@@ -545,8 +545,8 @@ pdir.s: pdir.c.s
 
 # target to generate assembly for a file
 pdir.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pdir.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pdir.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pdir.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pdir.c.s
 .PHONY : pdir.c.s
 
 perror.o: perror.c.o
@@ -555,8 +555,8 @@ perror.o: perror.c.o
 
 # target to build an object file
 perror.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/perror.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/perror.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/perror.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/perror.c.o
 .PHONY : perror.c.o
 
 perror.i: perror.c.i
@@ -565,8 +565,8 @@ perror.i: perror.c.i
 
 # target to preprocess a source file
 perror.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/perror.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/perror.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/perror.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/perror.c.i
 .PHONY : perror.c.i
 
 perror.s: perror.c.s
@@ -575,8 +575,8 @@ perror.s: perror.c.s
 
 # target to generate assembly for a file
 perror.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/perror.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/perror.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/perror.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/perror.c.s
 .PHONY : perror.c.s
 
 pfile.o: pfile.c.o
@@ -585,8 +585,8 @@ pfile.o: pfile.c.o
 
 # target to build an object file
 pfile.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pfile.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pfile.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pfile.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pfile.c.o
 .PHONY : pfile.c.o
 
 pfile.i: pfile.c.i
@@ -595,8 +595,8 @@ pfile.i: pfile.c.i
 
 # target to preprocess a source file
 pfile.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pfile.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pfile.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pfile.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pfile.c.i
 .PHONY : pfile.c.i
 
 pfile.s: pfile.c.s
@@ -605,8 +605,8 @@ pfile.s: pfile.c.s
 
 # target to generate assembly for a file
 pfile.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pfile.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pfile.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pfile.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pfile.c.s
 .PHONY : pfile.c.s
 
 phashtable.o: phashtable.c.o
@@ -615,8 +615,8 @@ phashtable.o: phashtable.c.o
 
 # target to build an object file
 phashtable.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/phashtable.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/phashtable.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/phashtable.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/phashtable.c.o
 .PHONY : phashtable.c.o
 
 phashtable.i: phashtable.c.i
@@ -625,8 +625,8 @@ phashtable.i: phashtable.c.i
 
 # target to preprocess a source file
 phashtable.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/phashtable.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/phashtable.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/phashtable.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/phashtable.c.i
 .PHONY : phashtable.c.i
 
 phashtable.s: phashtable.c.s
@@ -635,8 +635,8 @@ phashtable.s: phashtable.c.s
 
 # target to generate assembly for a file
 phashtable.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/phashtable.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/phashtable.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/phashtable.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/phashtable.c.s
 .PHONY : phashtable.c.s
 
 pinifile.o: pinifile.c.o
@@ -645,8 +645,8 @@ pinifile.o: pinifile.c.o
 
 # target to build an object file
 pinifile.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pinifile.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pinifile.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pinifile.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pinifile.c.o
 .PHONY : pinifile.c.o
 
 pinifile.i: pinifile.c.i
@@ -655,8 +655,8 @@ pinifile.i: pinifile.c.i
 
 # target to preprocess a source file
 pinifile.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pinifile.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pinifile.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pinifile.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pinifile.c.i
 .PHONY : pinifile.c.i
 
 pinifile.s: pinifile.c.s
@@ -665,8 +665,8 @@ pinifile.s: pinifile.c.s
 
 # target to generate assembly for a file
 pinifile.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pinifile.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pinifile.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pinifile.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pinifile.c.s
 .PHONY : pinifile.c.s
 
 pipc.o: pipc.c.o
@@ -675,8 +675,8 @@ pipc.o: pipc.c.o
 
 # target to build an object file
 pipc.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pipc.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pipc.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pipc.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pipc.c.o
 .PHONY : pipc.c.o
 
 pipc.i: pipc.c.i
@@ -685,8 +685,8 @@ pipc.i: pipc.c.i
 
 # target to preprocess a source file
 pipc.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pipc.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pipc.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pipc.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pipc.c.i
 .PHONY : pipc.c.i
 
 pipc.s: pipc.c.s
@@ -695,8 +695,8 @@ pipc.s: pipc.c.s
 
 # target to generate assembly for a file
 pipc.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pipc.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pipc.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pipc.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pipc.c.s
 .PHONY : pipc.c.s
 
 plibraryloader-posix.o: plibraryloader-posix.c.o
@@ -705,8 +705,8 @@ plibraryloader-posix.o: plibraryloader-posix.c.o
 
 # target to build an object file
 plibraryloader-posix.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/plibraryloader-posix.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/plibraryloader-posix.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/plibraryloader-posix.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/plibraryloader-posix.c.o
 .PHONY : plibraryloader-posix.c.o
 
 plibraryloader-posix.i: plibraryloader-posix.c.i
@@ -715,8 +715,8 @@ plibraryloader-posix.i: plibraryloader-posix.c.i
 
 # target to preprocess a source file
 plibraryloader-posix.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/plibraryloader-posix.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/plibraryloader-posix.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/plibraryloader-posix.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/plibraryloader-posix.c.i
 .PHONY : plibraryloader-posix.c.i
 
 plibraryloader-posix.s: plibraryloader-posix.c.s
@@ -725,8 +725,8 @@ plibraryloader-posix.s: plibraryloader-posix.c.s
 
 # target to generate assembly for a file
 plibraryloader-posix.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/plibraryloader-posix.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/plibraryloader-posix.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/plibraryloader-posix.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/plibraryloader-posix.c.s
 .PHONY : plibraryloader-posix.c.s
 
 plist.o: plist.c.o
@@ -735,8 +735,8 @@ plist.o: plist.c.o
 
 # target to build an object file
 plist.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/plist.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/plist.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/plist.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/plist.c.o
 .PHONY : plist.c.o
 
 plist.i: plist.c.i
@@ -745,8 +745,8 @@ plist.i: plist.c.i
 
 # target to preprocess a source file
 plist.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/plist.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/plist.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/plist.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/plist.c.i
 .PHONY : plist.c.i
 
 plist.s: plist.c.s
@@ -755,8 +755,8 @@ plist.s: plist.c.s
 
 # target to generate assembly for a file
 plist.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/plist.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/plist.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/plist.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/plist.c.s
 .PHONY : plist.c.s
 
 pmain.o: pmain.c.o
@@ -765,8 +765,8 @@ pmain.o: pmain.c.o
 
 # target to build an object file
 pmain.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pmain.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pmain.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pmain.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pmain.c.o
 .PHONY : pmain.c.o
 
 pmain.i: pmain.c.i
@@ -775,8 +775,8 @@ pmain.i: pmain.c.i
 
 # target to preprocess a source file
 pmain.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pmain.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pmain.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pmain.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pmain.c.i
 .PHONY : pmain.c.i
 
 pmain.s: pmain.c.s
@@ -785,8 +785,8 @@ pmain.s: pmain.c.s
 
 # target to generate assembly for a file
 pmain.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pmain.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pmain.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pmain.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pmain.c.s
 .PHONY : pmain.c.s
 
 pmem.o: pmem.c.o
@@ -795,8 +795,8 @@ pmem.o: pmem.c.o
 
 # target to build an object file
 pmem.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pmem.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pmem.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pmem.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pmem.c.o
 .PHONY : pmem.c.o
 
 pmem.i: pmem.c.i
@@ -805,8 +805,8 @@ pmem.i: pmem.c.i
 
 # target to preprocess a source file
 pmem.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pmem.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pmem.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pmem.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pmem.c.i
 .PHONY : pmem.c.i
 
 pmem.s: pmem.c.s
@@ -815,8 +815,8 @@ pmem.s: pmem.c.s
 
 # target to generate assembly for a file
 pmem.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pmem.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pmem.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pmem.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pmem.c.s
 .PHONY : pmem.c.s
 
 pmutex-posix.o: pmutex-posix.c.o
@@ -825,8 +825,8 @@ pmutex-posix.o: pmutex-posix.c.o
 
 # target to build an object file
 pmutex-posix.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pmutex-posix.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pmutex-posix.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pmutex-posix.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pmutex-posix.c.o
 .PHONY : pmutex-posix.c.o
 
 pmutex-posix.i: pmutex-posix.c.i
@@ -835,8 +835,8 @@ pmutex-posix.i: pmutex-posix.c.i
 
 # target to preprocess a source file
 pmutex-posix.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pmutex-posix.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pmutex-posix.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pmutex-posix.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pmutex-posix.c.i
 .PHONY : pmutex-posix.c.i
 
 pmutex-posix.s: pmutex-posix.c.s
@@ -845,8 +845,8 @@ pmutex-posix.s: pmutex-posix.c.s
 
 # target to generate assembly for a file
 pmutex-posix.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pmutex-posix.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pmutex-posix.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pmutex-posix.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pmutex-posix.c.s
 .PHONY : pmutex-posix.c.s
 
 pprocess.o: pprocess.c.o
@@ -855,8 +855,8 @@ pprocess.o: pprocess.c.o
 
 # target to build an object file
 pprocess.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pprocess.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pprocess.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pprocess.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pprocess.c.o
 .PHONY : pprocess.c.o
 
 pprocess.i: pprocess.c.i
@@ -865,8 +865,8 @@ pprocess.i: pprocess.c.i
 
 # target to preprocess a source file
 pprocess.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pprocess.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pprocess.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pprocess.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pprocess.c.i
 .PHONY : pprocess.c.i
 
 pprocess.s: pprocess.c.s
@@ -875,8 +875,8 @@ pprocess.s: pprocess.c.s
 
 # target to generate assembly for a file
 pprocess.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pprocess.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pprocess.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pprocess.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pprocess.c.s
 .PHONY : pprocess.c.s
 
 prwlock-posix.o: prwlock-posix.c.o
@@ -885,8 +885,8 @@ prwlock-posix.o: prwlock-posix.c.o
 
 # target to build an object file
 prwlock-posix.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/prwlock-posix.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/prwlock-posix.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/prwlock-posix.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/prwlock-posix.c.o
 .PHONY : prwlock-posix.c.o
 
 prwlock-posix.i: prwlock-posix.c.i
@@ -895,8 +895,8 @@ prwlock-posix.i: prwlock-posix.c.i
 
 # target to preprocess a source file
 prwlock-posix.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/prwlock-posix.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/prwlock-posix.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/prwlock-posix.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/prwlock-posix.c.i
 .PHONY : prwlock-posix.c.i
 
 prwlock-posix.s: prwlock-posix.c.s
@@ -905,8 +905,8 @@ prwlock-posix.s: prwlock-posix.c.s
 
 # target to generate assembly for a file
 prwlock-posix.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/prwlock-posix.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/prwlock-posix.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/prwlock-posix.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/prwlock-posix.c.s
 .PHONY : prwlock-posix.c.s
 
 psemaphore-posix.o: psemaphore-posix.c.o
@@ -915,8 +915,8 @@ psemaphore-posix.o: psemaphore-posix.c.o
 
 # target to build an object file
 psemaphore-posix.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psemaphore-posix.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psemaphore-posix.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psemaphore-posix.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psemaphore-posix.c.o
 .PHONY : psemaphore-posix.c.o
 
 psemaphore-posix.i: psemaphore-posix.c.i
@@ -925,8 +925,8 @@ psemaphore-posix.i: psemaphore-posix.c.i
 
 # target to preprocess a source file
 psemaphore-posix.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psemaphore-posix.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psemaphore-posix.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psemaphore-posix.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psemaphore-posix.c.i
 .PHONY : psemaphore-posix.c.i
 
 psemaphore-posix.s: psemaphore-posix.c.s
@@ -935,8 +935,8 @@ psemaphore-posix.s: psemaphore-posix.c.s
 
 # target to generate assembly for a file
 psemaphore-posix.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psemaphore-posix.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psemaphore-posix.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psemaphore-posix.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psemaphore-posix.c.s
 .PHONY : psemaphore-posix.c.s
 
 pshm-posix.o: pshm-posix.c.o
@@ -945,8 +945,8 @@ pshm-posix.o: pshm-posix.c.o
 
 # target to build an object file
 pshm-posix.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pshm-posix.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pshm-posix.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pshm-posix.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pshm-posix.c.o
 .PHONY : pshm-posix.c.o
 
 pshm-posix.i: pshm-posix.c.i
@@ -955,8 +955,8 @@ pshm-posix.i: pshm-posix.c.i
 
 # target to preprocess a source file
 pshm-posix.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pshm-posix.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pshm-posix.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pshm-posix.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pshm-posix.c.i
 .PHONY : pshm-posix.c.i
 
 pshm-posix.s: pshm-posix.c.s
@@ -965,8 +965,8 @@ pshm-posix.s: pshm-posix.c.s
 
 # target to generate assembly for a file
 pshm-posix.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pshm-posix.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pshm-posix.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pshm-posix.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pshm-posix.c.s
 .PHONY : pshm-posix.c.s
 
 pshmbuffer.o: pshmbuffer.c.o
@@ -975,8 +975,8 @@ pshmbuffer.o: pshmbuffer.c.o
 
 # target to build an object file
 pshmbuffer.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pshmbuffer.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pshmbuffer.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pshmbuffer.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pshmbuffer.c.o
 .PHONY : pshmbuffer.c.o
 
 pshmbuffer.i: pshmbuffer.c.i
@@ -985,8 +985,8 @@ pshmbuffer.i: pshmbuffer.c.i
 
 # target to preprocess a source file
 pshmbuffer.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pshmbuffer.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pshmbuffer.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pshmbuffer.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pshmbuffer.c.i
 .PHONY : pshmbuffer.c.i
 
 pshmbuffer.s: pshmbuffer.c.s
@@ -995,8 +995,8 @@ pshmbuffer.s: pshmbuffer.c.s
 
 # target to generate assembly for a file
 pshmbuffer.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pshmbuffer.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pshmbuffer.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pshmbuffer.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pshmbuffer.c.s
 .PHONY : pshmbuffer.c.s
 
 psocket.o: psocket.c.o
@@ -1005,8 +1005,8 @@ psocket.o: psocket.c.o
 
 # target to build an object file
 psocket.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psocket.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psocket.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psocket.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psocket.c.o
 .PHONY : psocket.c.o
 
 psocket.i: psocket.c.i
@@ -1015,8 +1015,8 @@ psocket.i: psocket.c.i
 
 # target to preprocess a source file
 psocket.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psocket.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psocket.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psocket.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psocket.c.i
 .PHONY : psocket.c.i
 
 psocket.s: psocket.c.s
@@ -1025,8 +1025,8 @@ psocket.s: psocket.c.s
 
 # target to generate assembly for a file
 psocket.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psocket.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psocket.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psocket.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psocket.c.s
 .PHONY : psocket.c.s
 
 psocketaddress.o: psocketaddress.c.o
@@ -1035,8 +1035,8 @@ psocketaddress.o: psocketaddress.c.o
 
 # target to build an object file
 psocketaddress.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psocketaddress.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psocketaddress.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psocketaddress.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psocketaddress.c.o
 .PHONY : psocketaddress.c.o
 
 psocketaddress.i: psocketaddress.c.i
@@ -1045,8 +1045,8 @@ psocketaddress.i: psocketaddress.c.i
 
 # target to preprocess a source file
 psocketaddress.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psocketaddress.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psocketaddress.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psocketaddress.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psocketaddress.c.i
 .PHONY : psocketaddress.c.i
 
 psocketaddress.s: psocketaddress.c.s
@@ -1055,8 +1055,8 @@ psocketaddress.s: psocketaddress.c.s
 
 # target to generate assembly for a file
 psocketaddress.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psocketaddress.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psocketaddress.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psocketaddress.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psocketaddress.c.s
 .PHONY : psocketaddress.c.s
 
 pspinlock-c11.o: pspinlock-c11.c.o
@@ -1065,8 +1065,8 @@ pspinlock-c11.o: pspinlock-c11.c.o
 
 # target to build an object file
 pspinlock-c11.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pspinlock-c11.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pspinlock-c11.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pspinlock-c11.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pspinlock-c11.c.o
 .PHONY : pspinlock-c11.c.o
 
 pspinlock-c11.i: pspinlock-c11.c.i
@@ -1075,8 +1075,8 @@ pspinlock-c11.i: pspinlock-c11.c.i
 
 # target to preprocess a source file
 pspinlock-c11.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pspinlock-c11.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pspinlock-c11.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pspinlock-c11.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pspinlock-c11.c.i
 .PHONY : pspinlock-c11.c.i
 
 pspinlock-c11.s: pspinlock-c11.c.s
@@ -1085,8 +1085,8 @@ pspinlock-c11.s: pspinlock-c11.c.s
 
 # target to generate assembly for a file
 pspinlock-c11.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pspinlock-c11.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pspinlock-c11.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pspinlock-c11.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pspinlock-c11.c.s
 .PHONY : pspinlock-c11.c.s
 
 pstring.o: pstring.c.o
@@ -1095,8 +1095,8 @@ pstring.o: pstring.c.o
 
 # target to build an object file
 pstring.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pstring.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pstring.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pstring.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pstring.c.o
 .PHONY : pstring.c.o
 
 pstring.i: pstring.c.i
@@ -1105,8 +1105,8 @@ pstring.i: pstring.c.i
 
 # target to preprocess a source file
 pstring.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pstring.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pstring.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pstring.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pstring.c.i
 .PHONY : pstring.c.i
 
 pstring.s: pstring.c.s
@@ -1115,8 +1115,8 @@ pstring.s: pstring.c.s
 
 # target to generate assembly for a file
 pstring.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pstring.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pstring.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/pstring.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/pstring.c.s
 .PHONY : pstring.c.s
 
 psysclose-unix.o: psysclose-unix.c.o
@@ -1125,8 +1125,8 @@ psysclose-unix.o: psysclose-unix.c.o
 
 # target to build an object file
 psysclose-unix.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psysclose-unix.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psysclose-unix.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psysclose-unix.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psysclose-unix.c.o
 .PHONY : psysclose-unix.c.o
 
 psysclose-unix.i: psysclose-unix.c.i
@@ -1135,8 +1135,8 @@ psysclose-unix.i: psysclose-unix.c.i
 
 # target to preprocess a source file
 psysclose-unix.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psysclose-unix.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psysclose-unix.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psysclose-unix.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psysclose-unix.c.i
 .PHONY : psysclose-unix.c.i
 
 psysclose-unix.s: psysclose-unix.c.s
@@ -1145,8 +1145,8 @@ psysclose-unix.s: psysclose-unix.c.s
 
 # target to generate assembly for a file
 psysclose-unix.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psysclose-unix.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psysclose-unix.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/psysclose-unix.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/psysclose-unix.c.s
 .PHONY : psysclose-unix.c.s
 
 ptimeprofiler-posix.o: ptimeprofiler-posix.c.o
@@ -1155,8 +1155,8 @@ ptimeprofiler-posix.o: ptimeprofiler-posix.c.o
 
 # target to build an object file
 ptimeprofiler-posix.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptimeprofiler-posix.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptimeprofiler-posix.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptimeprofiler-posix.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptimeprofiler-posix.c.o
 .PHONY : ptimeprofiler-posix.c.o
 
 ptimeprofiler-posix.i: ptimeprofiler-posix.c.i
@@ -1165,8 +1165,8 @@ ptimeprofiler-posix.i: ptimeprofiler-posix.c.i
 
 # target to preprocess a source file
 ptimeprofiler-posix.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptimeprofiler-posix.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptimeprofiler-posix.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptimeprofiler-posix.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptimeprofiler-posix.c.i
 .PHONY : ptimeprofiler-posix.c.i
 
 ptimeprofiler-posix.s: ptimeprofiler-posix.c.s
@@ -1175,8 +1175,8 @@ ptimeprofiler-posix.s: ptimeprofiler-posix.c.s
 
 # target to generate assembly for a file
 ptimeprofiler-posix.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptimeprofiler-posix.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptimeprofiler-posix.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptimeprofiler-posix.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptimeprofiler-posix.c.s
 .PHONY : ptimeprofiler-posix.c.s
 
 ptimeprofiler.o: ptimeprofiler.c.o
@@ -1185,8 +1185,8 @@ ptimeprofiler.o: ptimeprofiler.c.o
 
 # target to build an object file
 ptimeprofiler.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptimeprofiler.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptimeprofiler.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptimeprofiler.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptimeprofiler.c.o
 .PHONY : ptimeprofiler.c.o
 
 ptimeprofiler.i: ptimeprofiler.c.i
@@ -1195,8 +1195,8 @@ ptimeprofiler.i: ptimeprofiler.c.i
 
 # target to preprocess a source file
 ptimeprofiler.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptimeprofiler.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptimeprofiler.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptimeprofiler.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptimeprofiler.c.i
 .PHONY : ptimeprofiler.c.i
 
 ptimeprofiler.s: ptimeprofiler.c.s
@@ -1205,8 +1205,8 @@ ptimeprofiler.s: ptimeprofiler.c.s
 
 # target to generate assembly for a file
 ptimeprofiler.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptimeprofiler.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptimeprofiler.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptimeprofiler.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptimeprofiler.c.s
 .PHONY : ptimeprofiler.c.s
 
 ptree-avl.o: ptree-avl.c.o
@@ -1215,8 +1215,8 @@ ptree-avl.o: ptree-avl.c.o
 
 # target to build an object file
 ptree-avl.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree-avl.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree-avl.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree-avl.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree-avl.c.o
 .PHONY : ptree-avl.c.o
 
 ptree-avl.i: ptree-avl.c.i
@@ -1225,8 +1225,8 @@ ptree-avl.i: ptree-avl.c.i
 
 # target to preprocess a source file
 ptree-avl.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree-avl.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree-avl.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree-avl.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree-avl.c.i
 .PHONY : ptree-avl.c.i
 
 ptree-avl.s: ptree-avl.c.s
@@ -1235,8 +1235,8 @@ ptree-avl.s: ptree-avl.c.s
 
 # target to generate assembly for a file
 ptree-avl.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree-avl.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree-avl.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree-avl.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree-avl.c.s
 .PHONY : ptree-avl.c.s
 
 ptree-bst.o: ptree-bst.c.o
@@ -1245,8 +1245,8 @@ ptree-bst.o: ptree-bst.c.o
 
 # target to build an object file
 ptree-bst.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree-bst.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree-bst.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree-bst.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree-bst.c.o
 .PHONY : ptree-bst.c.o
 
 ptree-bst.i: ptree-bst.c.i
@@ -1255,8 +1255,8 @@ ptree-bst.i: ptree-bst.c.i
 
 # target to preprocess a source file
 ptree-bst.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree-bst.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree-bst.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree-bst.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree-bst.c.i
 .PHONY : ptree-bst.c.i
 
 ptree-bst.s: ptree-bst.c.s
@@ -1265,8 +1265,8 @@ ptree-bst.s: ptree-bst.c.s
 
 # target to generate assembly for a file
 ptree-bst.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree-bst.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree-bst.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree-bst.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree-bst.c.s
 .PHONY : ptree-bst.c.s
 
 ptree-rb.o: ptree-rb.c.o
@@ -1275,8 +1275,8 @@ ptree-rb.o: ptree-rb.c.o
 
 # target to build an object file
 ptree-rb.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree-rb.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree-rb.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree-rb.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree-rb.c.o
 .PHONY : ptree-rb.c.o
 
 ptree-rb.i: ptree-rb.c.i
@@ -1285,8 +1285,8 @@ ptree-rb.i: ptree-rb.c.i
 
 # target to preprocess a source file
 ptree-rb.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree-rb.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree-rb.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree-rb.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree-rb.c.i
 .PHONY : ptree-rb.c.i
 
 ptree-rb.s: ptree-rb.c.s
@@ -1295,8 +1295,8 @@ ptree-rb.s: ptree-rb.c.s
 
 # target to generate assembly for a file
 ptree-rb.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree-rb.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree-rb.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree-rb.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree-rb.c.s
 .PHONY : ptree-rb.c.s
 
 ptree.o: ptree.c.o
@@ -1305,8 +1305,8 @@ ptree.o: ptree.c.o
 
 # target to build an object file
 ptree.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree.c.o
 .PHONY : ptree.c.o
 
 ptree.i: ptree.c.i
@@ -1315,8 +1315,8 @@ ptree.i: ptree.c.i
 
 # target to preprocess a source file
 ptree.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree.c.i
 .PHONY : ptree.c.i
 
 ptree.s: ptree.c.s
@@ -1325,8 +1325,8 @@ ptree.s: ptree.c.s
 
 # target to generate assembly for a file
 ptree.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/ptree.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/ptree.c.s
 .PHONY : ptree.c.s
 
 puthread-posix.o: puthread-posix.c.o
@@ -1335,8 +1335,8 @@ puthread-posix.o: puthread-posix.c.o
 
 # target to build an object file
 puthread-posix.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/puthread-posix.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/puthread-posix.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/puthread-posix.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/puthread-posix.c.o
 .PHONY : puthread-posix.c.o
 
 puthread-posix.i: puthread-posix.c.i
@@ -1345,8 +1345,8 @@ puthread-posix.i: puthread-posix.c.i
 
 # target to preprocess a source file
 puthread-posix.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/puthread-posix.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/puthread-posix.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/puthread-posix.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/puthread-posix.c.i
 .PHONY : puthread-posix.c.i
 
 puthread-posix.s: puthread-posix.c.s
@@ -1355,8 +1355,8 @@ puthread-posix.s: puthread-posix.c.s
 
 # target to generate assembly for a file
 puthread-posix.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/puthread-posix.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/puthread-posix.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/puthread-posix.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/puthread-posix.c.s
 .PHONY : puthread-posix.c.s
 
 puthread.o: puthread.c.o
@@ -1365,8 +1365,8 @@ puthread.o: puthread.c.o
 
 # target to build an object file
 puthread.c.o:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/puthread.c.o
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/puthread.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/puthread.c.o
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/puthread.c.o
 .PHONY : puthread.c.o
 
 puthread.i: puthread.c.i
@@ -1375,8 +1375,8 @@ puthread.i: puthread.c.i
 
 # target to preprocess a source file
 puthread.c.i:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/puthread.c.i
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/puthread.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/puthread.c.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/puthread.c.i
 .PHONY : puthread.c.i
 
 puthread.s: puthread.c.s
@@ -1385,8 +1385,8 @@ puthread.s: puthread.c.s
 
 # target to generate assembly for a file
 puthread.c.s:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/puthread.c.s
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/puthread.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/puthread.c.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/puthread.c.s
 .PHONY : puthread.c.s
 
 # Help Target
@@ -1534,6 +1534,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

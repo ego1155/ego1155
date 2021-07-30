@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nilesh/Desktop/plibsys/plibsys
+CMAKE_SOURCE_DIR = /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nilesh/Desktop/plibsys/ubuntu
+CMAKE_BINARY_DIR = /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu
 
 # Include any dependencies generated for this target.
 include tests/CMakeFiles/plibraryloader_test.dir/depend.make
@@ -58,17 +58,17 @@ include tests/CMakeFiles/plibraryloader_test.dir/progress.make
 include tests/CMakeFiles/plibraryloader_test.dir/flags.make
 
 tests/CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.o: tests/CMakeFiles/plibraryloader_test.dir/flags.make
-tests/CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.o: /home/nilesh/Desktop/plibsys/plibsys/tests/plibraryloader_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.o"
-	cd /home/nilesh/Desktop/plibsys/ubuntu/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.o -c /home/nilesh/Desktop/plibsys/plibsys/tests/plibraryloader_test.cpp
+tests/CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.o: /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/tests/plibraryloader_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.o"
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.o -c /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/tests/plibraryloader_test.cpp
 
 tests/CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.i"
-	cd /home/nilesh/Desktop/plibsys/ubuntu/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nilesh/Desktop/plibsys/plibsys/tests/plibraryloader_test.cpp > CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.i
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/tests/plibraryloader_test.cpp > CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.i
 
 tests/CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.s"
-	cd /home/nilesh/Desktop/plibsys/ubuntu/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nilesh/Desktop/plibsys/plibsys/tests/plibraryloader_test.cpp -o CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.s
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/tests/plibraryloader_test.cpp -o CMakeFiles/plibraryloader_test.dir/plibraryloader_test.cpp.s
 
 # Object files for target plibraryloader_test
 plibraryloader_test_OBJECTS = \
@@ -81,8 +81,8 @@ plibraryloader_test: tests/CMakeFiles/plibraryloader_test.dir/plibraryloader_tes
 plibraryloader_test: tests/CMakeFiles/plibraryloader_test.dir/build.make
 plibraryloader_test: libplibsys.so.0
 plibraryloader_test: tests/CMakeFiles/plibraryloader_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../plibraryloader_test"
-	cd /home/nilesh/Desktop/plibsys/ubuntu/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/plibraryloader_test.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../plibraryloader_test"
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/plibraryloader_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tests/CMakeFiles/plibraryloader_test.dir/build: plibraryloader_test
@@ -90,10 +90,10 @@ tests/CMakeFiles/plibraryloader_test.dir/build: plibraryloader_test
 .PHONY : tests/CMakeFiles/plibraryloader_test.dir/build
 
 tests/CMakeFiles/plibraryloader_test.dir/clean:
-	cd /home/nilesh/Desktop/plibsys/ubuntu/tests && $(CMAKE_COMMAND) -P CMakeFiles/plibraryloader_test.dir/cmake_clean.cmake
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/tests && $(CMAKE_COMMAND) -P CMakeFiles/plibraryloader_test.dir/cmake_clean.cmake
 .PHONY : tests/CMakeFiles/plibraryloader_test.dir/clean
 
 tests/CMakeFiles/plibraryloader_test.dir/depend:
-	cd /home/nilesh/Desktop/plibsys/ubuntu && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nilesh/Desktop/plibsys/plibsys /home/nilesh/Desktop/plibsys/plibsys/tests /home/nilesh/Desktop/plibsys/ubuntu /home/nilesh/Desktop/plibsys/ubuntu/tests /home/nilesh/Desktop/plibsys/ubuntu/tests/CMakeFiles/plibraryloader_test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/tests /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/tests /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/tests/CMakeFiles/plibraryloader_test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tests/CMakeFiles/plibraryloader_test.dir/depend
 

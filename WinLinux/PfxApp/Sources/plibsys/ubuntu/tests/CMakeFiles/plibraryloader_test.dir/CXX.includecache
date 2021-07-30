@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/nilesh/Desktop/plibsys/plibsys/src/patomic.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/patomic.h
 ptypes.h
 -
 pmacros.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/pcondvariable.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pcondvariable.h
 pmacros.h
 -
 ptypes.h
@@ -20,13 +20,13 @@ ptypes.h
 pmutex.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/pcryptohash.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pcryptohash.h
 pmacros.h
 -
 ptypes.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/pdir.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pdir.h
 pmacros.h
 -
 ptypes.h
@@ -34,7 +34,7 @@ ptypes.h
 perror.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/perror.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/perror.h
 pmacros.h
 -
 ptypes.h
@@ -42,11 +42,11 @@ ptypes.h
 perrortypes.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/perrortypes.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/perrortypes.h
 pmacros.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/pfile.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pfile.h
 pmacros.h
 -
 ptypes.h
@@ -54,7 +54,7 @@ ptypes.h
 perror.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/phashtable.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/phashtable.h
 pmacros.h
 -
 ptypes.h
@@ -62,7 +62,7 @@ ptypes.h
 plist.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/pinifile.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pinifile.h
 pmacros.h
 -
 ptypes.h
@@ -72,85 +72,85 @@ plist.h
 perror.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/plibraryloader.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/plibraryloader.h
 pmacros.h
 -
 ptypes.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/plibsys.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/plibsys.h
 plibsysconfig.h
-/home/nilesh/Desktop/plibsys/plibsys/src/plibsysconfig.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/plibsysconfig.h
 patomic.h
-/home/nilesh/Desktop/plibsys/plibsys/src/patomic.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/patomic.h
 pcondvariable.h
-/home/nilesh/Desktop/plibsys/plibsys/src/pcondvariable.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pcondvariable.h
 pcryptohash.h
-/home/nilesh/Desktop/plibsys/plibsys/src/pcryptohash.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pcryptohash.h
 pdir.h
-/home/nilesh/Desktop/plibsys/plibsys/src/pdir.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pdir.h
 perror.h
-/home/nilesh/Desktop/plibsys/plibsys/src/perror.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/perror.h
 pfile.h
-/home/nilesh/Desktop/plibsys/plibsys/src/pfile.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pfile.h
 phashtable.h
-/home/nilesh/Desktop/plibsys/plibsys/src/phashtable.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/phashtable.h
 pinifile.h
-/home/nilesh/Desktop/plibsys/plibsys/src/pinifile.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pinifile.h
 plibraryloader.h
-/home/nilesh/Desktop/plibsys/plibsys/src/plibraryloader.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/plibraryloader.h
 plist.h
-/home/nilesh/Desktop/plibsys/plibsys/src/plist.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/plist.h
 pmacros.h
-/home/nilesh/Desktop/plibsys/plibsys/src/pmacros.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pmacros.h
 pmacroscompiler.h
-/home/nilesh/Desktop/plibsys/plibsys/src/pmacroscompiler.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pmacroscompiler.h
 pmacroscpu.h
-/home/nilesh/Desktop/plibsys/plibsys/src/pmacroscpu.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pmacroscpu.h
 pmacrosos.h
-/home/nilesh/Desktop/plibsys/plibsys/src/pmacrosos.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pmacrosos.h
 pmain.h
-/home/nilesh/Desktop/plibsys/plibsys/src/pmain.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pmain.h
 pmem.h
-/home/nilesh/Desktop/plibsys/plibsys/src/pmem.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pmem.h
 pmutex.h
-/home/nilesh/Desktop/plibsys/plibsys/src/pmutex.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pmutex.h
 pprocess.h
-/home/nilesh/Desktop/plibsys/plibsys/src/pprocess.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pprocess.h
 prwlock.h
-/home/nilesh/Desktop/plibsys/plibsys/src/prwlock.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/prwlock.h
 psemaphore.h
-/home/nilesh/Desktop/plibsys/plibsys/src/psemaphore.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/psemaphore.h
 pshm.h
-/home/nilesh/Desktop/plibsys/plibsys/src/pshm.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pshm.h
 pshmbuffer.h
-/home/nilesh/Desktop/plibsys/plibsys/src/pshmbuffer.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pshmbuffer.h
 psocket.h
-/home/nilesh/Desktop/plibsys/plibsys/src/psocket.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/psocket.h
 psocketaddress.h
-/home/nilesh/Desktop/plibsys/plibsys/src/psocketaddress.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/psocketaddress.h
 pspinlock.h
-/home/nilesh/Desktop/plibsys/plibsys/src/pspinlock.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pspinlock.h
 pstdarg.h
-/home/nilesh/Desktop/plibsys/plibsys/src/pstdarg.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pstdarg.h
 pstring.h
-/home/nilesh/Desktop/plibsys/plibsys/src/pstring.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pstring.h
 ptimeprofiler.h
-/home/nilesh/Desktop/plibsys/plibsys/src/ptimeprofiler.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/ptimeprofiler.h
 ptree.h
-/home/nilesh/Desktop/plibsys/plibsys/src/ptree.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/ptree.h
 ptypes.h
-/home/nilesh/Desktop/plibsys/plibsys/src/ptypes.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/ptypes.h
 puthread.h
-/home/nilesh/Desktop/plibsys/plibsys/src/puthread.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/puthread.h
 
-/home/nilesh/Desktop/plibsys/plibsys/src/plist.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/plist.h
 pmacros.h
 -
 ptypes.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/pmacros.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pmacros.h
 pmacroscompiler.h
 -
 pmacroscpu.h
@@ -160,19 +160,19 @@ pmacrosos.h
 stdio.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/pmacroscompiler.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pmacroscompiler.h
 
-/home/nilesh/Desktop/plibsys/plibsys/src/pmacroscpu.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pmacroscpu.h
 
-/home/nilesh/Desktop/plibsys/plibsys/src/pmacrosos.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pmacrosos.h
 
-/home/nilesh/Desktop/plibsys/plibsys/src/pmain.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pmain.h
 pmacros.h
 -
 pmem.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/pmem.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pmem.h
 ptypes.h
 -
 pmacros.h
@@ -180,33 +180,25 @@ pmacros.h
 perror.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/pmutex.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pmutex.h
 pmacros.h
 -
 ptypes.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/pprocess.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pprocess.h
 pmacros.h
 -
 ptypes.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/prwlock.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/prwlock.h
 pmacros.h
 -
 ptypes.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/psemaphore.h
-pmacros.h
--
-ptypes.h
--
-perror.h
--
-
-/home/nilesh/Desktop/plibsys/plibsys/src/pshm.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/psemaphore.h
 pmacros.h
 -
 ptypes.h
@@ -214,7 +206,15 @@ ptypes.h
 perror.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/pshmbuffer.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pshm.h
+pmacros.h
+-
+ptypes.h
+-
+perror.h
+-
+
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pshmbuffer.h
 ptypes.h
 -
 pmacros.h
@@ -222,7 +222,7 @@ pmacros.h
 perror.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/psocket.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/psocket.h
 pmacros.h
 -
 psocketaddress.h
@@ -230,7 +230,7 @@ psocketaddress.h
 perror.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/psocketaddress.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/psocketaddress.h
 pmacros.h
 -
 ptypes.h
@@ -242,13 +242,13 @@ sys/socket.h
 netinet/in.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/pspinlock.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pspinlock.h
 pmacros.h
 -
 ptypes.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/pstdarg.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pstdarg.h
 pmacros.h
 -
 ptypes.h
@@ -260,45 +260,45 @@ stdarg.h
 string.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/pstring.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/pstring.h
 pmacros.h
 -
 ptypes.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/ptimeprofiler.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/ptimeprofiler.h
 pmacros.h
 -
 ptypes.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/ptree.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/ptree.h
 pmacros.h
 -
 ptypes.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/ptypes.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/ptypes.h
 plibsysconfig.h
 -
 pmacros.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/src/puthread.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/src/puthread.h
 pmacros.h
 -
 ptypes.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/tests/plibraryloader_test.cpp
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/tests/plibraryloader_test.cpp
 plibsys.h
-/home/nilesh/Desktop/plibsys/plibsys/tests/plibsys.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/tests/plibsys.h
 ptestmacros.h
-/home/nilesh/Desktop/plibsys/plibsys/tests/ptestmacros.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/tests/ptestmacros.h
 stdio.h
 -
 
-/home/nilesh/Desktop/plibsys/plibsys/tests/ptestmacros.h
+/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys/tests/ptestmacros.h
 stdlib.h
 -
 plibsys.h

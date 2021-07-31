@@ -106,7 +106,6 @@ copy_libs_win:
 
 dylibbundler_osx:
 	$(HIDE)dylibbundler -od -b -x $(TARGET_DIR)/$(TARGET) -d $(TARGET_DIR)/libs/ -p @executable_path/libs/
-	cp -v $(SRC_DIR)/plibsys/macosx/libplibsys.0.dylib $(TARGET_DIR)/libs/
 
 preHeader:
 	@echo ++++++++++++++++++ $(TARGET) ++++++++++++++++++

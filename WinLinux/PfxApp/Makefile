@@ -5,7 +5,7 @@ VERBOSE = FALSE
 CC := gcc
 LD := gcc
 WINDRES := windres -i
-CFLAGS := -lssh
+CFLAGS := -lssh -lplibsys -I./Sources/plibsys/plibsys/src -L./Sources/plibsys/window
 RM := rm -rf
 RMDIR := rm -rf
 MKDIR := mkdir -p
@@ -99,6 +99,7 @@ copy_libs_lnx:
 		
 copy_libs_win:
 	$(HIDE)ldd $(TARGET_DIR)/$(TARGET) | grep "=> /mingw64" | awk '{print $$3}' | xargs -I '{}' cp -v '{}' $(TARGET_DIR)/
+	cp -v $(SRC_DIR)/plibsys/window/libplibsys.dll $(TARGET_DIR)/
 
 dylibbundler_osx:
 	$(HIDE)dylibbundler -od -b -x $(TARGET_DIR)/$(TARGET) -d $(TARGET_DIR)/libs/ -p @executable_path/libs/

@@ -9,7 +9,7 @@ cd ./macosx
 cmake -DCMAKE_BUILD_TYPE=Release ../plibsys
 make
 cd ..
-prefix="./plibsys/src/"
+prefix="./plibsys/src"
 echo "" > "$prefix"plibsysconfig.h
 for file in "`find "$prefix" -name "p*.h"`"
 do {
@@ -24,4 +24,3 @@ do {
 } done
 
 cd "$curDir"
-find "./plibsys/src/" -name "p*.h

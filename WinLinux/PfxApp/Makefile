@@ -5,7 +5,9 @@ VERBOSE = FALSE
 CC := gcc
 LD := gcc
 WINDRES := windres -i
-CFLAGS := -lssh
+#CFLAGS := -lssh -lplibsys -I./Sources/plibsys/plibsys/src -L./Sources/plibsys/window
+CFLAGS := -lssh -lplibsys -I./Sources/plibsys/plibsys/src -L./Sources/plibsys/ubuntu
+#CFLAGS := -lssh -lplibsys -I./Sources/plibsys/plibsys/src -L./Sources/plibsys/macosx
 RM := rm -rf
 RMDIR := rm -rf
 MKDIR := mkdir -p
@@ -50,7 +52,7 @@ BUILD_DIR := ./Build
 OBJ_DIR := $(BUILD_DIR)/Objs
 
 # Files to be compiled
-SRCS := $(wildcard $(SRC_DIR)/*/*/*.c) $(wildcard $(SRC_DIR)/*/*.c) $(wildcard $(SRC_DIR)/*.c)
+SRCS := $(wildcard $(SRC_DIR)/libPfx/*/*.c) $(wildcard $(SRC_DIR)/libPfx/*.c) $(wildcard $(SRC_DIR)/*.c)
 OBJS := $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 BUILD := $(OBJS:$(OBJ_DIR)/%.o=$(BUILD_DIR)/%)
 INCLUDES = $(foreach src, $(SRCS), $(dir $(src)))
@@ -96,9 +98,11 @@ clean:
 copy_libs_lnx:
 	$(HIDE)$(MKDIR) -p $(TARGET_DIR)/libs
 	$(HIDE)ldd $(TARGET_DIR)/$(TARGET) | grep "=> /" | awk '{print $$3}' | xargs -I '{}' cp -v '{}' $(TARGET_DIR)/libs/
+	cp -v $(SRC_DIR)/plibsys/ubuntu/libplibsys.so.0 $(TARGET_DIR)/libs/
 		
 copy_libs_win:
 	$(HIDE)ldd $(TARGET_DIR)/$(TARGET) | grep "=> /mingw64" | awk '{print $$3}' | xargs -I '{}' cp -v '{}' $(TARGET_DIR)/
+	cp -v $(SRC_DIR)/plibsys/window/libplibsys.dll $(TARGET_DIR)/
 
 dylibbundler_osx:
 	$(HIDE)dylibbundler -od -b -x $(TARGET_DIR)/$(TARGET) -d $(TARGET_DIR)/libs/ -p @executable_path/libs/

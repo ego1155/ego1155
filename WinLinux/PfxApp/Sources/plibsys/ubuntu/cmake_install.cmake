@@ -1,4 +1,4 @@
-# Install script for directory: /home/nilesh/Desktop/plibsys/plibsys
+# Install script for directory: /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/nilesh/Desktop/plibsys/ubuntu/src/cmake_install.cmake")
-  include("/home/nilesh/Desktop/plibsys/ubuntu/tests/cmake_install.cmake")
+  include("/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/src/cmake_install.cmake")
+  include("/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/tests/cmake_install.cmake")
 
 endif()
 
@@ -52,5 +52,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/nilesh/Desktop/plibsys/ubuntu/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nilesh/Desktop/plibsys/plibsys
+CMAKE_SOURCE_DIR = /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/plibsys
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nilesh/Desktop/plibsys/ubuntu
+CMAKE_BINARY_DIR = /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -169,14 +169,14 @@ tests/clean: tests/CMakeFiles/ptypes_test.dir/clean
 src/CMakeFiles/plibsysstatic.dir/all:
 	$(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/depend
 	$(MAKE) -f src/CMakeFiles/plibsysstatic.dir/build.make src/CMakeFiles/plibsysstatic.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72 "Built target plibsysstatic"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72 "Built target plibsysstatic"
 .PHONY : src/CMakeFiles/plibsysstatic.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/plibsysstatic.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 30
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/plibsysstatic.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : src/CMakeFiles/plibsysstatic.dir/rule
 
 # Convenience name for target.
@@ -196,14 +196,14 @@ src/CMakeFiles/plibsysstatic.dir/clean:
 src/CMakeFiles/plibsys.dir/all:
 	$(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/depend
 	$(MAKE) -f src/CMakeFiles/plibsys.dir/build.make src/CMakeFiles/plibsys.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42 "Built target plibsys"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42 "Built target plibsys"
 .PHONY : src/CMakeFiles/plibsys.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/plibsys.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 29
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/plibsys.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : src/CMakeFiles/plibsys.dir/rule
 
 # Convenience name for target.
@@ -223,14 +223,14 @@ src/CMakeFiles/plibsys.dir/clean:
 tests/CMakeFiles/pmacros_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/pmacros_test.dir/build.make tests/CMakeFiles/pmacros_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/pmacros_test.dir/build.make tests/CMakeFiles/pmacros_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=74,75 "Built target pmacros_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=74,75 "Built target pmacros_test"
 .PHONY : tests/CMakeFiles/pmacros_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/pmacros_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pmacros_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/pmacros_test.dir/rule
 
 # Convenience name for target.
@@ -250,14 +250,14 @@ tests/CMakeFiles/pmacros_test.dir/clean:
 tests/CMakeFiles/pinifile_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/pinifile_test.dir/build.make tests/CMakeFiles/pinifile_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/pinifile_test.dir/build.make tests/CMakeFiles/pinifile_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=11 "Built target pinifile_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=11 "Built target pinifile_test"
 .PHONY : tests/CMakeFiles/pinifile_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/pinifile_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 30
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pinifile_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/pinifile_test.dir/rule
 
 # Convenience name for target.
@@ -277,14 +277,14 @@ tests/CMakeFiles/pinifile_test.dir/clean:
 tests/CMakeFiles/phashtable_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/phashtable_test.dir/build.make tests/CMakeFiles/phashtable_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/phashtable_test.dir/build.make tests/CMakeFiles/phashtable_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=9,10 "Built target phashtable_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=9,10 "Built target phashtable_test"
 .PHONY : tests/CMakeFiles/phashtable_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/phashtable_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/phashtable_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/phashtable_test.dir/rule
 
 # Convenience name for target.
@@ -304,14 +304,14 @@ tests/CMakeFiles/phashtable_test.dir/clean:
 tests/CMakeFiles/pfile_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/pfile_test.dir/build.make tests/CMakeFiles/pfile_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/pfile_test.dir/build.make tests/CMakeFiles/pfile_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=8 "Built target pfile_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=8 "Built target pfile_test"
 .PHONY : tests/CMakeFiles/pfile_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/pfile_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 30
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pfile_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/pfile_test.dir/rule
 
 # Convenience name for target.
@@ -331,14 +331,14 @@ tests/CMakeFiles/pfile_test.dir/clean:
 tests/CMakeFiles/pdir_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/pdir_test.dir/build.make tests/CMakeFiles/pdir_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/pdir_test.dir/build.make tests/CMakeFiles/pdir_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=5 "Built target pdir_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=5 "Built target pdir_test"
 .PHONY : tests/CMakeFiles/pdir_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/pdir_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 30
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pdir_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/pdir_test.dir/rule
 
 # Convenience name for target.
@@ -358,14 +358,14 @@ tests/CMakeFiles/pdir_test.dir/clean:
 tests/CMakeFiles/puthread_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/puthread_test.dir/build.make tests/CMakeFiles/puthread_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/puthread_test.dir/build.make tests/CMakeFiles/puthread_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=99,100 "Built target puthread_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=99,100 "Built target puthread_test"
 .PHONY : tests/CMakeFiles/puthread_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/puthread_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/puthread_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/puthread_test.dir/rule
 
 # Convenience name for target.
@@ -385,14 +385,14 @@ tests/CMakeFiles/puthread_test.dir/clean:
 tests/CMakeFiles/pcryptohash_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/pcryptohash_test.dir/build.make tests/CMakeFiles/pcryptohash_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/pcryptohash_test.dir/build.make tests/CMakeFiles/pcryptohash_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=3,4 "Built target pcryptohash_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=3,4 "Built target pcryptohash_test"
 .PHONY : tests/CMakeFiles/pcryptohash_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/pcryptohash_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pcryptohash_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/pcryptohash_test.dir/rule
 
 # Convenience name for target.
@@ -412,14 +412,14 @@ tests/CMakeFiles/pcryptohash_test.dir/clean:
 tests/CMakeFiles/pcondvariable_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/pcondvariable_test.dir/build.make tests/CMakeFiles/pcondvariable_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/pcondvariable_test.dir/build.make tests/CMakeFiles/pcondvariable_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=2 "Built target pcondvariable_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=2 "Built target pcondvariable_test"
 .PHONY : tests/CMakeFiles/pcondvariable_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/pcondvariable_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 30
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pcondvariable_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/pcondvariable_test.dir/rule
 
 # Convenience name for target.
@@ -439,14 +439,14 @@ tests/CMakeFiles/pcondvariable_test.dir/clean:
 tests/CMakeFiles/pstring_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/pstring_test.dir/build.make tests/CMakeFiles/pstring_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/pstring_test.dir/build.make tests/CMakeFiles/pstring_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=93,94 "Built target pstring_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=93,94 "Built target pstring_test"
 .PHONY : tests/CMakeFiles/pstring_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/pstring_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pstring_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/pstring_test.dir/rule
 
 # Convenience name for target.
@@ -466,14 +466,14 @@ tests/CMakeFiles/pstring_test.dir/clean:
 tests/CMakeFiles/pmutex_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/pmutex_test.dir/build.make tests/CMakeFiles/pmutex_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/pmutex_test.dir/build.make tests/CMakeFiles/pmutex_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=78,79 "Built target pmutex_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=78,79 "Built target pmutex_test"
 .PHONY : tests/CMakeFiles/pmutex_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/pmutex_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pmutex_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/pmutex_test.dir/rule
 
 # Convenience name for target.
@@ -493,14 +493,14 @@ tests/CMakeFiles/pmutex_test.dir/clean:
 tests/CMakeFiles/plibraryloader_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/plibraryloader_test.dir/build.make tests/CMakeFiles/plibraryloader_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/plibraryloader_test.dir/build.make tests/CMakeFiles/plibraryloader_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=12,13 "Built target plibraryloader_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=12,13 "Built target plibraryloader_test"
 .PHONY : tests/CMakeFiles/plibraryloader_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/plibraryloader_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/plibraryloader_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/plibraryloader_test.dir/rule
 
 # Convenience name for target.
@@ -520,14 +520,14 @@ tests/CMakeFiles/plibraryloader_test.dir/clean:
 tests/CMakeFiles/pmain_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/pmain_test.dir/build.make tests/CMakeFiles/pmain_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/pmain_test.dir/build.make tests/CMakeFiles/pmain_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=76 "Built target pmain_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=76 "Built target pmain_test"
 .PHONY : tests/CMakeFiles/pmain_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/pmain_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 30
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pmain_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/pmain_test.dir/rule
 
 # Convenience name for target.
@@ -547,14 +547,14 @@ tests/CMakeFiles/pmain_test.dir/clean:
 tests/CMakeFiles/pprocess_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/pprocess_test.dir/build.make tests/CMakeFiles/pprocess_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/pprocess_test.dir/build.make tests/CMakeFiles/pprocess_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=80 "Built target pprocess_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=80 "Built target pprocess_test"
 .PHONY : tests/CMakeFiles/pprocess_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/pprocess_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 30
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pprocess_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/pprocess_test.dir/rule
 
 # Convenience name for target.
@@ -574,14 +574,14 @@ tests/CMakeFiles/pprocess_test.dir/clean:
 tests/CMakeFiles/prwlock_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/prwlock_test.dir/build.make tests/CMakeFiles/prwlock_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/prwlock_test.dir/build.make tests/CMakeFiles/prwlock_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=81,82 "Built target prwlock_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=81,82 "Built target prwlock_test"
 .PHONY : tests/CMakeFiles/prwlock_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/prwlock_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/prwlock_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/prwlock_test.dir/rule
 
 # Convenience name for target.
@@ -601,14 +601,14 @@ tests/CMakeFiles/prwlock_test.dir/clean:
 tests/CMakeFiles/psemaphore_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/psemaphore_test.dir/build.make tests/CMakeFiles/psemaphore_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/psemaphore_test.dir/build.make tests/CMakeFiles/psemaphore_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=83 "Built target psemaphore_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=83 "Built target psemaphore_test"
 .PHONY : tests/CMakeFiles/psemaphore_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/psemaphore_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 30
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/psemaphore_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/psemaphore_test.dir/rule
 
 # Convenience name for target.
@@ -628,14 +628,14 @@ tests/CMakeFiles/psemaphore_test.dir/clean:
 tests/CMakeFiles/pshmbuffer_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/pshmbuffer_test.dir/build.make tests/CMakeFiles/pshmbuffer_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/pshmbuffer_test.dir/build.make tests/CMakeFiles/pshmbuffer_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=86 "Built target pshmbuffer_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=86 "Built target pshmbuffer_test"
 .PHONY : tests/CMakeFiles/pshmbuffer_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/pshmbuffer_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 30
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pshmbuffer_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/pshmbuffer_test.dir/rule
 
 # Convenience name for target.
@@ -655,14 +655,14 @@ tests/CMakeFiles/pshmbuffer_test.dir/clean:
 tests/CMakeFiles/pshm_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/pshm_test.dir/build.make tests/CMakeFiles/pshm_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/pshm_test.dir/build.make tests/CMakeFiles/pshm_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=84,85 "Built target pshm_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=84,85 "Built target pshm_test"
 .PHONY : tests/CMakeFiles/pshm_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/pshm_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pshm_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/pshm_test.dir/rule
 
 # Convenience name for target.
@@ -682,14 +682,14 @@ tests/CMakeFiles/pshm_test.dir/clean:
 tests/CMakeFiles/psocket_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/psocket_test.dir/build.make tests/CMakeFiles/psocket_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/psocket_test.dir/build.make tests/CMakeFiles/psocket_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=87,88 "Built target psocket_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=87,88 "Built target psocket_test"
 .PHONY : tests/CMakeFiles/psocket_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/psocket_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/psocket_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/psocket_test.dir/rule
 
 # Convenience name for target.
@@ -709,14 +709,14 @@ tests/CMakeFiles/psocket_test.dir/clean:
 tests/CMakeFiles/pmem_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/pmem_test.dir/build.make tests/CMakeFiles/pmem_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/pmem_test.dir/build.make tests/CMakeFiles/pmem_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=77 "Built target pmem_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=77 "Built target pmem_test"
 .PHONY : tests/CMakeFiles/pmem_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/pmem_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 30
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pmem_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/pmem_test.dir/rule
 
 # Convenience name for target.
@@ -736,14 +736,14 @@ tests/CMakeFiles/pmem_test.dir/clean:
 tests/CMakeFiles/psocketaddress_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/psocketaddress_test.dir/build.make tests/CMakeFiles/psocketaddress_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/psocketaddress_test.dir/build.make tests/CMakeFiles/psocketaddress_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=89 "Built target psocketaddress_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=89 "Built target psocketaddress_test"
 .PHONY : tests/CMakeFiles/psocketaddress_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/psocketaddress_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 30
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/psocketaddress_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/psocketaddress_test.dir/rule
 
 # Convenience name for target.
@@ -763,14 +763,14 @@ tests/CMakeFiles/psocketaddress_test.dir/clean:
 tests/CMakeFiles/ptimeprofiler_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/ptimeprofiler_test.dir/build.make tests/CMakeFiles/ptimeprofiler_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/ptimeprofiler_test.dir/build.make tests/CMakeFiles/ptimeprofiler_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=95 "Built target ptimeprofiler_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=95 "Built target ptimeprofiler_test"
 .PHONY : tests/CMakeFiles/ptimeprofiler_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/ptimeprofiler_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 30
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/ptimeprofiler_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/ptimeprofiler_test.dir/rule
 
 # Convenience name for target.
@@ -790,14 +790,14 @@ tests/CMakeFiles/ptimeprofiler_test.dir/clean:
 tests/CMakeFiles/patomic_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/patomic_test.dir/build.make tests/CMakeFiles/patomic_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/patomic_test.dir/build.make tests/CMakeFiles/patomic_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=1 "Built target patomic_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=1 "Built target patomic_test"
 .PHONY : tests/CMakeFiles/patomic_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/patomic_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 30
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/patomic_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/patomic_test.dir/rule
 
 # Convenience name for target.
@@ -817,14 +817,14 @@ tests/CMakeFiles/patomic_test.dir/clean:
 tests/CMakeFiles/ptree_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/ptree_test.dir/build.make tests/CMakeFiles/ptree_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/ptree_test.dir/build.make tests/CMakeFiles/ptree_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=96,97 "Built target ptree_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=96,97 "Built target ptree_test"
 .PHONY : tests/CMakeFiles/ptree_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/ptree_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/ptree_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/ptree_test.dir/rule
 
 # Convenience name for target.
@@ -844,14 +844,14 @@ tests/CMakeFiles/ptree_test.dir/clean:
 tests/CMakeFiles/perror_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/perror_test.dir/build.make tests/CMakeFiles/perror_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/perror_test.dir/build.make tests/CMakeFiles/perror_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=6,7 "Built target perror_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=6,7 "Built target perror_test"
 .PHONY : tests/CMakeFiles/perror_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/perror_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/perror_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/perror_test.dir/rule
 
 # Convenience name for target.
@@ -871,14 +871,14 @@ tests/CMakeFiles/perror_test.dir/clean:
 tests/CMakeFiles/pspinlock_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/pspinlock_test.dir/build.make tests/CMakeFiles/pspinlock_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/pspinlock_test.dir/build.make tests/CMakeFiles/pspinlock_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=90,91 "Built target pspinlock_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=90,91 "Built target pspinlock_test"
 .PHONY : tests/CMakeFiles/pspinlock_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/pspinlock_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pspinlock_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/pspinlock_test.dir/rule
 
 # Convenience name for target.
@@ -898,14 +898,14 @@ tests/CMakeFiles/pspinlock_test.dir/clean:
 tests/CMakeFiles/pstdarg_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/pstdarg_test.dir/build.make tests/CMakeFiles/pstdarg_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/pstdarg_test.dir/build.make tests/CMakeFiles/pstdarg_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=92 "Built target pstdarg_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=92 "Built target pstdarg_test"
 .PHONY : tests/CMakeFiles/pstdarg_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/pstdarg_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 30
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/pstdarg_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/pstdarg_test.dir/rule
 
 # Convenience name for target.
@@ -925,14 +925,14 @@ tests/CMakeFiles/pstdarg_test.dir/clean:
 tests/CMakeFiles/plist_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/plist_test.dir/build.make tests/CMakeFiles/plist_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/plist_test.dir/build.make tests/CMakeFiles/plist_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=73 "Built target plist_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=73 "Built target plist_test"
 .PHONY : tests/CMakeFiles/plist_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/plist_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 30
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/plist_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/plist_test.dir/rule
 
 # Convenience name for target.
@@ -952,14 +952,14 @@ tests/CMakeFiles/plist_test.dir/clean:
 tests/CMakeFiles/ptypes_test.dir/all: src/CMakeFiles/plibsys.dir/all
 	$(MAKE) -f tests/CMakeFiles/ptypes_test.dir/build.make tests/CMakeFiles/ptypes_test.dir/depend
 	$(MAKE) -f tests/CMakeFiles/ptypes_test.dir/build.make tests/CMakeFiles/ptypes_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles --progress-num=98 "Built target ptypes_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles --progress-num=98 "Built target ptypes_test"
 .PHONY : tests/CMakeFiles/ptypes_test.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/ptypes_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 30
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/ptypes_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/plibsys/ubuntu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles 0
 .PHONY : tests/CMakeFiles/ptypes_test.dir/rule
 
 # Convenience name for target.

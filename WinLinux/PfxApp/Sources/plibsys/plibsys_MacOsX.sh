@@ -11,9 +11,9 @@ make
 cd ..
 prefix="./plibsys/src/"
 echo "" > "$prefix"plibsysconfig.h
-find "$prefix" -name "p*.h"
-#for file in "`find "$prefix" -name "p*.h"`"
-#do {
+for file in "`find "$prefix" -name "p*.h"`"
+do {
+	echo "$file"
 	#file=${file//$prefix/}
 	#for f in $file
 	#do {
@@ -21,6 +21,6 @@ find "$prefix" -name "p*.h"
 		#find "$prefix" -type f -exec sed -i "s+#include <perror.h>+#include \"perror.h\"+g" {} +
 		#find "$prefix" -type f -exec sed -i "s+#include <$f>+#include \"$f\"+g" {} +
 	#} done
-#} done
+} done
 
 cd "$curDir"

@@ -6,5 +6,6 @@
 #include <libssh/libssh.h>
 
 #include "libPfx/libPfx.h"
+#include "plibsys/plibsys/src/plibsys.h"
 
 #endif

@@ -19,7 +19,7 @@ do {
 	do {
 		echo "$f"
 		#find "$prefix" -type f -exec sed -i "s+#include <perror.h>+#include \"perror.h\"+g" {} +
-		find "$prefix" -type f -exec sed -i "s+#include <$f>+#include \"$f\"+g" {} +
+		find "$prefix" -type f -exec sed -i '' "s+#include <$f>+#include \"$f\"+g" {} +
 	} done
 } done
 

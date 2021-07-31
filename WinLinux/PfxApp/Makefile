@@ -5,9 +5,7 @@ VERBOSE = FALSE
 CC := gcc
 LD := gcc
 WINDRES := windres -i
-#CFLAGS := -lssh -lplibsys -I./Sources/plibsys/plibsys/src -L./Sources/plibsys/window
-#CFLAGS := -lssh -lplibsys -I./Sources/plibsys/plibsys/src -L./Sources/plibsys/ubuntu
-CFLAGS := -lssh -lplibsys -I./Sources/plibsys/plibsys/src -L./Sources/plibsys/macosx
+CFLAGS := -lssh -lplibsys
 RM := rm -rf
 RMDIR := rm -rf
 MKDIR := mkdir -p
@@ -19,7 +17,9 @@ OS_VER :=
 OS_DETAILS :=Window
 OS_TARGET :=win
 COPY_LIBS :=copy_libs_win
-CFLAGS := $(CFLAGS) -lws2_32 -L.
+ILIBSINC := -I./Sources/plibsys/plibsys/sr
+LLIBDIR := -L./Sources/plibsys/window
+CFLAGS := $(CFLAGS) $(ILIBSINC) $(LLIBDIR) -lws2_32 -L.
 
 else ifeq ($(shell lsb_release -si),Ubuntu)
 
@@ -28,7 +28,9 @@ OS_VER :=$(shell lsb_release -sr)
 OS_DETAILS :=$(OS_NAME)_$(OS_VER)
 OS_TARGET :=lnx
 COPY_LIBS :=copy_libs_lnx
-CFLAGS := $(CFLAGS) -lpthread -Wl,-R./libs/
+ILIBSINC := -I./Sources/plibsys/plibsys/sr
+LLIBDIR := -L./Sources/plibsys/ubuntu
+CFLAGS := $(CFLAGS) $(ILIBSINC) $(LLIBDIR) -lpthread -Wl,-R./libs/
 
 else ifeq ($(shell uname),Darwin)
 
@@ -37,9 +39,9 @@ OS_VER :=$(shell sw_vers -productVersion)
 OS_DETAILS :=$(OS_NAME)_$(OS_VER)
 OS_TARGET :=osx
 COPY_LIBS :=dylibbundler_osx
-ILIBSINC_OSX := -I/usr/local/include
-LLIBDIR_OSX := -L /usr/local/opt/libssh/lib
-CFLAGS := $(CFLAGS) $(ILIBSINC_OSX) $(LLIBDIR_OSX)
+ILIBSINC := -I/usr/local/include -I./Sources/plibsys/plibsys/sr
+LLIBDIR := -L/usr/local/opt/libssh/lib -L./Sources/plibsys/macosx
+CFLAGS := $(CFLAGS) -L./Sources/plibsys/macosx $(ILIBSINC) $(LLIBDIR)
 
 endif
 

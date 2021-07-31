@@ -11,7 +11,7 @@ make
 cd ..
 prefix="./plibsys/src"
 prefixx="./plibsys/src/"
-echo "" > "$prefix"plibsysconfig.h
+echo "" > "$prefixx"plibsysconfig.h
 for file in "`find "$prefix" -name "p*.h"`"
 do {
 	file=${file//$prefixx/}

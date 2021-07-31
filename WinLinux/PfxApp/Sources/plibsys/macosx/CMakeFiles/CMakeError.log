@@ -12,30 +12,30 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 Determining if the include file values.h exists failed with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_3701e/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_3701e.dir/build.make CMakeFiles/cmTC_3701e.dir/build
-Building C object CMakeFiles/cmTC_3701e.dir/CheckIncludeFile.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_3701e.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_3701e.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_3701e.dir/CheckIncludeFile.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_2a343/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_2a343.dir/build.make CMakeFiles/cmTC_2a343.dir/build
+Building C object CMakeFiles/cmTC_2a343.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_2a343.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_2a343.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_2a343.dir/CheckIncludeFile.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'values.h' file not found
 #include <values.h>
          ^~~~~~~~~~
 1 error generated.
-make[1]: *** [CMakeFiles/cmTC_3701e.dir/CheckIncludeFile.c.o] Error 1
-make: *** [cmTC_3701e/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_2a343.dir/CheckIncludeFile.c.o] Error 1
+make: *** [cmTC_2a343/fast] Error 2
 
 
 
 Performing C SOURCE FILE Test PLIBSYS_HAS_CLOCKNANOSLEEP failed with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_3c80d/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_3c80d.dir/build.make CMakeFiles/cmTC_3c80d.dir/build
-Building C object CMakeFiles/cmTC_3c80d.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_CLOCKNANOSLEEP -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_3c80d.dir/src.c.o -MF CMakeFiles/cmTC_3c80d.dir/src.c.o.d -o CMakeFiles/cmTC_3c80d.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_976ce/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_976ce.dir/build.make CMakeFiles/cmTC_976ce.dir/build
+Building C object CMakeFiles/cmTC_976ce.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_CLOCKNANOSLEEP -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_976ce.dir/src.c.o -MF CMakeFiles/cmTC_976ce.dir/src.c.o.d -o CMakeFiles/cmTC_976ce.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
 /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c:4:41: error: implicit declaration of function 'clock_nanosleep' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
                                         clock_nanosleep (CLOCK_MONOTONIC, 0, &time_sp, NULL);
                                         ^
 1 error generated.
-make[1]: *** [CMakeFiles/cmTC_3c80d.dir/src.c.o] Error 1
-make: *** [cmTC_3c80d/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_976ce.dir/src.c.o] Error 1
+make: *** [cmTC_976ce/fast] Error 2
 
 
 Source file was:
@@ -48,15 +48,15 @@ Source file was:
 Performing C SOURCE FILE Test PLIBSYS_HAS_PTHREAD_NP failed with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_b6492/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b6492.dir/build.make CMakeFiles/cmTC_b6492.dir/build
-Building C object CMakeFiles/cmTC_b6492.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_PTHREAD_NP -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_b6492.dir/src.c.o -MF CMakeFiles/cmTC_b6492.dir/src.c.o.d -o CMakeFiles/cmTC_b6492.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_42be0/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_42be0.dir/build.make CMakeFiles/cmTC_42be0.dir/build
+Building C object CMakeFiles/cmTC_42be0.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_PTHREAD_NP -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_42be0.dir/src.c.o -MF CMakeFiles/cmTC_42be0.dir/src.c.o.d -o CMakeFiles/cmTC_42be0.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
 /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c:2:36: fatal error: 'pthread_np.h' file not found
                           #include <pthread_np.h>
                                    ^~~~~~~~~~~~~~
 1 error generated.
-make[1]: *** [CMakeFiles/cmTC_b6492.dir/src.c.o] Error 1
-make: *** [cmTC_b6492/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_42be0.dir/src.c.o] Error 1
+make: *** [cmTC_42be0/fast] Error 2
 
 
 Source file was:
@@ -67,9 +67,9 @@ Source file was:
 Performing C SOURCE FILE Test PLIBSYS_HAS_GCC_VISIBILITY failed with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_3a071/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_3a071.dir/build.make CMakeFiles/cmTC_3a071.dir/build
-Building C object CMakeFiles/cmTC_3a071.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_GCC_VISIBILITY -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_3a071.dir/src.c.o -MF CMakeFiles/cmTC_3a071.dir/src.c.o.d -o CMakeFiles/cmTC_3a071.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e9a03/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e9a03.dir/build.make CMakeFiles/cmTC_e9a03.dir/build
+Building C object CMakeFiles/cmTC_e9a03.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_GCC_VISIBILITY -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_e9a03.dir/src.c.o -MF CMakeFiles/cmTC_e9a03.dir/src.c.o.d -o CMakeFiles/cmTC_e9a03.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
 /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c:8:45: error: token is not a valid binary operator in a preprocessor subexpression
                                             !defined(_AIX)   && !defined(__CYGWIN__) && !defined(__MSYS__)
                                             ^
@@ -77,8 +77,8 @@ Building C object CMakeFiles/cmTC_3a071.dir/src.c.o
                                         stop_compile_here
                                         ^
 2 errors generated.
-make[1]: *** [CMakeFiles/cmTC_3a071.dir/src.c.o] Error 1
-make: *** [cmTC_3a071/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_e9a03.dir/src.c.o] Error 1
+make: *** [cmTC_e9a03/fast] Error 2
 
 
 Source file was:
@@ -98,15 +98,15 @@ int main () {
 Performing C SOURCE FILE Test PLIBSYS_HAS_SUN_VISIBILITY failed with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_07213/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_07213.dir/build.make CMakeFiles/cmTC_07213.dir/build
-Building C object CMakeFiles/cmTC_07213.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_SUN_VISIBILITY -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_07213.dir/src.c.o -MF CMakeFiles/cmTC_07213.dir/src.c.o.d -o CMakeFiles/cmTC_07213.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_9c93e/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_9c93e.dir/build.make CMakeFiles/cmTC_9c93e.dir/build
+Building C object CMakeFiles/cmTC_9c93e.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_SUN_VISIBILITY -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_9c93e.dir/src.c.o -MF CMakeFiles/cmTC_9c93e.dir/src.c.o.d -o CMakeFiles/cmTC_9c93e.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
 /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c:6:41: error: use of undeclared identifier 'stop_compile_here'
                                         stop_compile_here
                                         ^
 1 error generated.
-make[1]: *** [CMakeFiles/cmTC_07213.dir/src.c.o] Error 1
-make: *** [cmTC_07213/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_9c93e.dir/src.c.o] Error 1
+make: *** [cmTC_9c93e/fast] Error 2
 
 
 Source file was:
@@ -121,15 +121,15 @@ int main () {
 Performing C SOURCE FILE Test PLIBSYS_HAS_XLC_VISIBILITY failed with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_328e0/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_328e0.dir/build.make CMakeFiles/cmTC_328e0.dir/build
-Building C object CMakeFiles/cmTC_328e0.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_XLC_VISIBILITY -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_328e0.dir/src.c.o -MF CMakeFiles/cmTC_328e0.dir/src.c.o.d -o CMakeFiles/cmTC_328e0.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_bb2cb/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_bb2cb.dir/build.make CMakeFiles/cmTC_bb2cb.dir/build
+Building C object CMakeFiles/cmTC_bb2cb.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_XLC_VISIBILITY -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_bb2cb.dir/src.c.o -MF CMakeFiles/cmTC_bb2cb.dir/src.c.o.d -o CMakeFiles/cmTC_bb2cb.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
 /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c:5:41: error: use of undeclared identifier 'stop_compile_here'
                                         stop_compile_here
                                         ^
 1 error generated.
-make[1]: *** [CMakeFiles/cmTC_328e0.dir/src.c.o] Error 1
-make: *** [cmTC_328e0/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_bb2cb.dir/src.c.o] Error 1
+make: *** [cmTC_bb2cb/fast] Error 2
 
 
 Source file was:
@@ -143,15 +143,15 @@ int main () {
 Performing C SOURCE FILE Test PLIBSYS_HAS_HP_VISIBILITY failed with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_a490c/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_a490c.dir/build.make CMakeFiles/cmTC_a490c.dir/build
-Building C object CMakeFiles/cmTC_a490c.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_HP_VISIBILITY -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_a490c.dir/src.c.o -MF CMakeFiles/cmTC_a490c.dir/src.c.o.d -o CMakeFiles/cmTC_a490c.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_1fd96/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_1fd96.dir/build.make CMakeFiles/cmTC_1fd96.dir/build
+Building C object CMakeFiles/cmTC_1fd96.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_HP_VISIBILITY -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_1fd96.dir/src.c.o -MF CMakeFiles/cmTC_1fd96.dir/src.c.o.d -o CMakeFiles/cmTC_1fd96.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
 /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c:6:41: error: use of undeclared identifier 'stop_compile_here'
                                         stop_compile_here
                                         ^
 1 error generated.
-make[1]: *** [CMakeFiles/cmTC_a490c.dir/src.c.o] Error 1
-make: *** [cmTC_a490c/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_1fd96.dir/src.c.o] Error 1
+make: *** [cmTC_1fd96/fast] Error 2
 
 
 Source file was:

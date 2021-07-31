@@ -17,10 +17,9 @@ do {
 	file=${file//$prefixx/}
 	for f in $file
 	do {
-		echo "$f hello..."
-		#echo "$f"
+		echo "$f"
 		#find "$prefix" -type f -exec sed -i "s+#include <perror.h>+#include \"perror.h\"+g" {} +
-		#find "$prefix" -type f -exec sed -i "s+#include <$f>+#include \"$f\"+g" {} +
+		find "$prefix" -type f -exec sed -i "s+#include <$f>+#include \"$f\"+g" {} +
 	} done
 } done
 

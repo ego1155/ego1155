@@ -105,7 +105,7 @@ copy_libs_win:
 	cp -v $(SRC_DIR)/plibsys/window/libplibsys.dll $(TARGET_DIR)/
 
 dylibbundler_osx:
-	$(HIDE)dylibbundler -od -b -x $(TARGET_DIR)/$(TARGET) -d $(TARGET_DIR)/libs/ -p @executable_path/libs/
+	$(HIDE)dylibbundler -od -b -x $(TARGET_DIR)/$(TARGET) -i ./Sources/plibsys/macosx -d $(TARGET_DIR)/libs/ -p @executable_path/libs/
 
 preHeader:
 	@echo ++++++++++++++++++ $(TARGET) ++++++++++++++++++

@@ -5,7 +5,9 @@ VERBOSE = FALSE
 CC := gcc
 LD := gcc
 WINDRES := windres -i
-CFLAGS := -lssh -lplibsys -I./Sources/plibsys/plibsys/src -L./Sources/plibsys/window
+#CFLAGS := -lssh -lplibsys -I./Sources/plibsys/plibsys/src -L./Sources/plibsys/window
+CFLAGS := -lssh -lplibsys -I./Sources/plibsys/plibsys/src -L./Sources/plibsys/ubuntu
+#CFLAGS := -lssh -lplibsys -I./Sources/plibsys/plibsys/src -L./Sources/plibsys/macosx
 RM := rm -rf
 RMDIR := rm -rf
 MKDIR := mkdir -p
@@ -96,6 +98,7 @@ clean:
 copy_libs_lnx:
 	$(HIDE)$(MKDIR) -p $(TARGET_DIR)/libs
 	$(HIDE)ldd $(TARGET_DIR)/$(TARGET) | grep "=> /" | awk '{print $$3}' | xargs -I '{}' cp -v '{}' $(TARGET_DIR)/libs/
+	cp -v $(SRC_DIR)/plibsys/ubuntu/libplibsys.so.0 $(TARGET_DIR)/libs/
 		
 copy_libs_win:
 	$(HIDE)ldd $(TARGET_DIR)/$(TARGET) | grep "=> /mingw64" | awk '{print $$3}' | xargs -I '{}' cp -v '{}' $(TARGET_DIR)/

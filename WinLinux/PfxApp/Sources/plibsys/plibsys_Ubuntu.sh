@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 curDir=$(pwd)
 
 rm -rf ./plibsys

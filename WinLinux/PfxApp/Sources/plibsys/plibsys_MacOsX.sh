@@ -10,10 +10,11 @@ cmake -DCMAKE_BUILD_TYPE=Release ../plibsys
 make
 cd ..
 prefix="./plibsys/src"
+prefixx="./plibsys/src/"
 echo "" > "$prefix"plibsysconfig.h
 for file in "`find "$prefix" -name "p*.h"`"
 do {
-	file=${file//$prefix//}
+	file=${file//$prefixx/}
 	for f in $file
 	do {
 		echo "$f hello..."

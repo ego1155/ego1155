@@ -10,5 +10,6 @@
 #include "ccronexpr/ccronexpr.h"
 #include "cronjob/cronjob.h"
 #include "mongoose/mongoose.h"
+#include "resources/resources.h"
 
 #endif

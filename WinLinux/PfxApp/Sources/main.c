@@ -8,6 +8,20 @@ int main(int argc, char *argv[])
 	printf("test ok...\n");
 	printf("test ok...\n");
 	
+	cresource* cresourceb = get_cresource("helloa/sun/computers.png");
+	printf("%s\n", (const char*) cresourceb->name);
+	printf("%lu\n", cresourceb->size);
+	printf("%s\n", (const char*) cresourceb->data);
+	free(cresourceb);
+	cresource* cresourcea = get_cresource("hello/computers/sun.png");
+	printf("%s\n", (const char*) cresourcea->name);
+	printf("%lu\n", cresourcea->size);
+	printf("%s\n", (const char*) cresourcea->data);
+	free(cresourcea);
+	printf("test ok...\n");
+	printf("test ok...\n");
+	printf("test ok...\n");
+	
 	const unsigned char data[] = { 65,66,67,0 }; // ASCII values for 'A', 'B', 'C'.
 	printf("%s\n", (const char *) data);
 	

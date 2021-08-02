@@ -21,13 +21,13 @@ void get_list_of_files_recusive(file** flist, int* dt, int* ft, char* path)
 		strcat(path, pDirEntry->name);
 		if (pDirEntry->type == P_DIR_ENTRY_TYPE_DIR && strcmp(pDirEntry->name,".") != 0 && strcmp(pDirEntry->name,"..") != 0)
 		{
-			//printf("DIR :: %s\n", path);
+			printf("DIR :: %s\n", path);
 			*dt = *dt + 1;
 			get_list_of_files_recusive(&*flist, dt, ft, path);
 		}
 		else if (pDirEntry->type == P_DIR_ENTRY_TYPE_FILE)
 		{
-			//printf("FILE :: %s\n", path);
+			printf("FILE :: %s\n", path);
 			if (*ft == 0)
 			{
 				*flist = (file*)malloc(sizeof(file));
@@ -48,16 +48,16 @@ void get_list_of_files_recusive(file** flist, int* dt, int* ft, char* path)
 
 int main(int argc, char *argv[])
 {
-	printf("test ok...\n");
-	printf("test ok...\n");
-	printf("test ok...\n");
+	printf("=========================================\n");
+	printf("=========================================\n");
 	
 	int dt = 0;
 	int ft = 0;
 	file* flist;
 	
 	char* path = (char*)malloc(1000 * sizeof(char));
-	strcpy(path, "C:\\Users\\nilesh\\Desktop\\ego1155\\WinLinux\\PfxApp");
+	//strcpy(path, "C:\\Users\\nilesh\\Desktop\\ego1155\\WinLinux\\PfxApp");
+	strcpy(path, "C:\\Users");
 	p_libsys_init();
 	get_list_of_files_recusive(&flist, &dt, &ft, path);
 	p_libsys_shutdown();
@@ -68,9 +68,8 @@ int main(int argc, char *argv[])
 	printf("Total Files :: %d\n",ft);
 	//free(flist);
 	
-	printf("test ok...\n");
-	printf("test ok...\n");
-	printf("test ok...\n");
+	printf("=========================================\n");
+	printf("=========================================\n");
 	
 	//cresource* cresourceb = get_cresource("helloa/sun/computers.png");
 	//printf("%s\n", (const char*) cresourceb->name);

@@ -1,24 +1,72 @@
 #include "main.h"
 
+typedef struct file_ {
+	char* path;
+} file;
+
+//void get_list_of_files_recusive(file** flist, int* ft, const char* dirname)
+void get_list_of_files_recusive(file** flist, int* dt, int* ft, char* path)
+{
+	PDir* pDir;
+	PDirEntry* pDirEntry;
+	
+	pDir = p_dir_new(path, NULL);
+	if (!pDir) return;
+	pchar* orig_path = p_dir_get_path(pDir);
+	
+	while ((pDirEntry = p_dir_get_next_entry(pDir, NULL)) != NULL) {
+		// Construct new path from our base path
+		strcpy(path, orig_path);
+		strcat(path, "\\");
+		strcat(path, pDirEntry->name);
+		if (pDirEntry->type == P_DIR_ENTRY_TYPE_DIR && strcmp(pDirEntry->name,".") != 0 && strcmp(pDirEntry->name,"..") != 0)
+		{
+			//printf("DIR :: %s\n", path);
+			*dt = *dt + 1;
+			get_list_of_files_recusive(&*flist, dt, ft, path);
+		}
+		else if (pDirEntry->type == P_DIR_ENTRY_TYPE_FILE)
+		{
+			//printf("FILE :: %s\n", path);
+			if (*ft == 0)
+			{
+				*flist = (file*)malloc(sizeof(file));
+				//(*flist+*ft)->path = (char*)malloc(10 * sizeof(char));
+			}
+			else
+			{
+				*flist = (file*)realloc(*flist, (*ft + 1) * sizeof(file));
+				//(*flist+*ft+1)->path = (char*)malloc(10 * sizeof(char));
+			}
+			*ft = *ft + 1;
+		}
+		p_dir_entry_free(pDirEntry);
+	}
+	p_free(orig_path);
+	p_dir_free(pDir);
+}
+
 int main(int argc, char *argv[])
 {
+	printf("test ok...\n");
+	printf("test ok...\n");
+	printf("test ok...\n");
+	
+	int dt = 0;
+	int ft = 0;
+	file* flist;
+	
+	char* path = (char*)malloc(1000 * sizeof(char));
+	strcpy(path, "C:\\Users\\nilesh\\Desktop\\ego1155\\WinLinux\\PfxApp");
 	p_libsys_init();
+	get_list_of_files_recusive(&flist, &dt, &ft, path);
+	p_libsys_shutdown();
+	free(path);
 	
-	printf("test ok...\n");
-	printf("test ok...\n");
-	printf("test ok...\n");
 	
-	PDir* pDir;
-	pDir = p_dir_new("C:\\Users\\nilesh\\Desktop\\ego1155\\WinLinux\\PfxApp\\Output\\Window", NULL);
-	if (pDir == NULL) {
-        return -1;
-	}
-	PDirEntry* pDirEntry = NULL;
-	while ((pDirEntry = p_dir_get_next_entry (pDir, NULL)) != NULL) {
-		printf("%s\n", pDirEntry->name);
-	}
-	p_dir_entry_free(pDirEntry);
-	p_dir_free(pDir);
+	printf("Total Dirs :: %d\n",dt);
+	printf("Total Files :: %d\n",ft);
+	//free(flist);
 	
 	printf("test ok...\n");
 	printf("test ok...\n");
@@ -105,7 +153,5 @@ int main(int argc, char *argv[])
 	//free(arr);
 	
 	free(buffer);
-	
-	p_libsys_shutdown();
 	return 0;
 }

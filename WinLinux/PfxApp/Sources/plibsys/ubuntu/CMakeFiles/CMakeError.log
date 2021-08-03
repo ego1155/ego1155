@@ -1,17 +1,17 @@
 Performing C SOURCE FILE Test PLIBSYS_HAS_PTHREAD_NP failed with the following output:
 Change Dir: /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_81c76/fast && /usr/bin/make -f CMakeFiles/cmTC_81c76.dir/build.make CMakeFiles/cmTC_81c76.dir/build
+Run Build Command(s):/usr/bin/make cmTC_fc497/fast && /usr/bin/make -f CMakeFiles/cmTC_fc497.dir/build.make CMakeFiles/cmTC_fc497.dir/build
 make[1]: Entering directory '/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_81c76.dir/src.c.o
-/usr/bin/cc -D_GNU_SOURCE -D_REENTRANT  -DPLIBSYS_HAS_PTHREAD_NP   -o CMakeFiles/cmTC_81c76.dir/src.c.o   -c /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_fc497.dir/src.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_REENTRANT  -DPLIBSYS_HAS_PTHREAD_NP   -o CMakeFiles/cmTC_fc497.dir/src.c.o   -c /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c
 /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c:2:36: fatal error: pthread_np.h: No such file or directory
     2 |                           #include <pthread_np.h>
       |                                    ^~~~~~~~~~~~~~
 compilation terminated.
-make[1]: *** [CMakeFiles/cmTC_81c76.dir/build.make:66: CMakeFiles/cmTC_81c76.dir/src.c.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_fc497.dir/build.make:66: CMakeFiles/cmTC_fc497.dir/src.c.o] Error 1
 make[1]: Leaving directory '/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_81c76/fast] Error 2
+make: *** [Makefile:121: cmTC_fc497/fast] Error 2
 
 
 Source file was:
@@ -22,10 +22,10 @@ Source file was:
 Performing C SOURCE FILE Test PLIBSYS_HAS_POSIX_SETNAME_NP_1 failed with the following output:
 Change Dir: /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_e4e6b/fast && /usr/bin/make -f CMakeFiles/cmTC_e4e6b.dir/build.make CMakeFiles/cmTC_e4e6b.dir/build
+Run Build Command(s):/usr/bin/make cmTC_c4c16/fast && /usr/bin/make -f CMakeFiles/cmTC_c4c16.dir/build.make CMakeFiles/cmTC_c4c16.dir/build
 make[1]: Entering directory '/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e4e6b.dir/src.c.o
-/usr/bin/cc -D_GNU_SOURCE -D_REENTRANT  -DPLIBSYS_HAS_POSIX_SETNAME_NP_1   -o CMakeFiles/cmTC_e4e6b.dir/src.c.o   -c /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_c4c16.dir/src.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_REENTRANT  -DPLIBSYS_HAS_POSIX_SETNAME_NP_1   -o CMakeFiles/cmTC_c4c16.dir/src.c.o   -c /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c
 /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
 /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c:5:45: warning: passing argument 1 of ‘pthread_setname_np’ makes integer from pointer without a cast [-Wint-conversion]
     5 |                         pthread_setname_np ("thread_name");
@@ -43,9 +43,9 @@ In file included from /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibs
 /usr/include/pthread.h:427:12: note: declared here
   427 | extern int pthread_setname_np (pthread_t __target_thread, const char *__name)
       |            ^~~~~~~~~~~~~~~~~~
-make[1]: *** [CMakeFiles/cmTC_e4e6b.dir/build.make:66: CMakeFiles/cmTC_e4e6b.dir/src.c.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_c4c16.dir/build.make:66: CMakeFiles/cmTC_c4c16.dir/src.c.o] Error 1
 make[1]: Leaving directory '/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_e4e6b/fast] Error 2
+make: *** [Makefile:121: cmTC_c4c16/fast] Error 2
 
 
 Source file was:
@@ -59,17 +59,17 @@ Source file was:
 Performing C SOURCE FILE Test PLIBSYS_SOCKADDR_HAS_SA_LEN failed with the following output:
 Change Dir: /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_1c246/fast && /usr/bin/make -f CMakeFiles/cmTC_1c246.dir/build.make CMakeFiles/cmTC_1c246.dir/build
+Run Build Command(s):/usr/bin/make cmTC_fa95d/fast && /usr/bin/make -f CMakeFiles/cmTC_fa95d.dir/build.make CMakeFiles/cmTC_fa95d.dir/build
 make[1]: Entering directory '/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1c246.dir/src.c.o
-/usr/bin/cc -D_GNU_SOURCE -D_REENTRANT  -DPLIBSYS_SOCKADDR_HAS_SA_LEN   -o CMakeFiles/cmTC_1c246.dir/src.c.o   -c /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_fa95d.dir/src.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_REENTRANT  -DPLIBSYS_SOCKADDR_HAS_SA_LEN   -o CMakeFiles/cmTC_fa95d.dir/src.c.o   -c /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c
 /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
 /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c:6:42: error: ‘struct sockaddr’ has no member named ‘sa_len’
     6 |                                 sock_addr.sa_len = 0;
       |                                          ^
-make[1]: *** [CMakeFiles/cmTC_1c246.dir/build.make:66: CMakeFiles/cmTC_1c246.dir/src.c.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_fa95d.dir/build.make:66: CMakeFiles/cmTC_fa95d.dir/src.c.o] Error 1
 make[1]: Leaving directory '/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_1c246/fast] Error 2
+make: *** [Makefile:121: cmTC_fa95d/fast] Error 2
 
 
 Source file was:
@@ -85,10 +85,10 @@ Source file was:
 Performing C SOURCE FILE Test PLIBSYS_HAS_GCC_VISIBILITY failed with the following output:
 Change Dir: /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_39fb3/fast && /usr/bin/make -f CMakeFiles/cmTC_39fb3.dir/build.make CMakeFiles/cmTC_39fb3.dir/build
+Run Build Command(s):/usr/bin/make cmTC_0eda6/fast && /usr/bin/make -f CMakeFiles/cmTC_0eda6.dir/build.make CMakeFiles/cmTC_0eda6.dir/build
 make[1]: Entering directory '/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_39fb3.dir/src.c.o
-/usr/bin/cc -D_GNU_SOURCE -D_REENTRANT  -DPLIBSYS_HAS_GCC_VISIBILITY   -o CMakeFiles/cmTC_39fb3.dir/src.c.o   -c /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_0eda6.dir/src.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_REENTRANT  -DPLIBSYS_HAS_GCC_VISIBILITY   -o CMakeFiles/cmTC_0eda6.dir/src.c.o   -c /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c
 /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
 /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c:8:45: error: missing binary operator before token "!"
     8 |                                             !defined(_AIX)   && !defined(__CYGWIN__) && !defined(__MSYS__)
@@ -104,9 +104,9 @@ Building C object CMakeFiles/cmTC_39fb3.dir/src.c.o
    12 |                                         #endif
    13 |                                  }
       |                                  ~                        
-make[1]: *** [CMakeFiles/cmTC_39fb3.dir/build.make:66: CMakeFiles/cmTC_39fb3.dir/src.c.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_0eda6.dir/build.make:66: CMakeFiles/cmTC_0eda6.dir/src.c.o] Error 1
 make[1]: Leaving directory '/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_39fb3/fast] Error 2
+make: *** [Makefile:121: cmTC_0eda6/fast] Error 2
 
 
 Source file was:
@@ -126,10 +126,10 @@ int main () {
 Performing C SOURCE FILE Test PLIBSYS_HAS_SUN_VISIBILITY failed with the following output:
 Change Dir: /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_093fc/fast && /usr/bin/make -f CMakeFiles/cmTC_093fc.dir/build.make CMakeFiles/cmTC_093fc.dir/build
+Run Build Command(s):/usr/bin/make cmTC_380bb/fast && /usr/bin/make -f CMakeFiles/cmTC_380bb.dir/build.make CMakeFiles/cmTC_380bb.dir/build
 make[1]: Entering directory '/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_093fc.dir/src.c.o
-/usr/bin/cc -D_GNU_SOURCE -D_REENTRANT  -DPLIBSYS_HAS_SUN_VISIBILITY   -o CMakeFiles/cmTC_093fc.dir/src.c.o   -c /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_380bb.dir/src.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_REENTRANT  -DPLIBSYS_HAS_SUN_VISIBILITY   -o CMakeFiles/cmTC_380bb.dir/src.c.o   -c /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c
 /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
 /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c:6:41: error: ‘stop_compile_here’ undeclared (first use in this function)
     6 |                                         stop_compile_here
@@ -142,9 +142,9 @@ Building C object CMakeFiles/cmTC_093fc.dir/src.c.o
     7 |                                         #endif
     8 |                                  }
       |                                  ~                        
-make[1]: *** [CMakeFiles/cmTC_093fc.dir/build.make:66: CMakeFiles/cmTC_093fc.dir/src.c.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_380bb.dir/build.make:66: CMakeFiles/cmTC_380bb.dir/src.c.o] Error 1
 make[1]: Leaving directory '/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_093fc/fast] Error 2
+make: *** [Makefile:121: cmTC_380bb/fast] Error 2
 
 
 Source file was:
@@ -159,10 +159,10 @@ int main () {
 Performing C SOURCE FILE Test PLIBSYS_HAS_XLC_VISIBILITY failed with the following output:
 Change Dir: /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_36f23/fast && /usr/bin/make -f CMakeFiles/cmTC_36f23.dir/build.make CMakeFiles/cmTC_36f23.dir/build
+Run Build Command(s):/usr/bin/make cmTC_5f061/fast && /usr/bin/make -f CMakeFiles/cmTC_5f061.dir/build.make CMakeFiles/cmTC_5f061.dir/build
 make[1]: Entering directory '/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_36f23.dir/src.c.o
-/usr/bin/cc -D_GNU_SOURCE -D_REENTRANT  -DPLIBSYS_HAS_XLC_VISIBILITY   -o CMakeFiles/cmTC_36f23.dir/src.c.o   -c /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_5f061.dir/src.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_REENTRANT  -DPLIBSYS_HAS_XLC_VISIBILITY   -o CMakeFiles/cmTC_5f061.dir/src.c.o   -c /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c
 /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
 /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c:5:41: error: ‘stop_compile_here’ undeclared (first use in this function)
     5 |                                         stop_compile_here
@@ -175,9 +175,9 @@ Building C object CMakeFiles/cmTC_36f23.dir/src.c.o
     6 |                                         #endif
     7 |                                  }
       |                                  ~                        
-make[1]: *** [CMakeFiles/cmTC_36f23.dir/build.make:66: CMakeFiles/cmTC_36f23.dir/src.c.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_5f061.dir/build.make:66: CMakeFiles/cmTC_5f061.dir/src.c.o] Error 1
 make[1]: Leaving directory '/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_36f23/fast] Error 2
+make: *** [Makefile:121: cmTC_5f061/fast] Error 2
 
 
 Source file was:
@@ -191,10 +191,10 @@ int main () {
 Performing C SOURCE FILE Test PLIBSYS_HAS_HP_VISIBILITY failed with the following output:
 Change Dir: /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_2fb3e/fast && /usr/bin/make -f CMakeFiles/cmTC_2fb3e.dir/build.make CMakeFiles/cmTC_2fb3e.dir/build
+Run Build Command(s):/usr/bin/make cmTC_b6a02/fast && /usr/bin/make -f CMakeFiles/cmTC_b6a02.dir/build.make CMakeFiles/cmTC_b6a02.dir/build
 make[1]: Entering directory '/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2fb3e.dir/src.c.o
-/usr/bin/cc -D_GNU_SOURCE -D_REENTRANT  -DPLIBSYS_HAS_HP_VISIBILITY   -o CMakeFiles/cmTC_2fb3e.dir/src.c.o   -c /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_b6a02.dir/src.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_REENTRANT  -DPLIBSYS_HAS_HP_VISIBILITY   -o CMakeFiles/cmTC_b6a02.dir/src.c.o   -c /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c
 /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
 /home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp/src.c:6:41: error: ‘stop_compile_here’ undeclared (first use in this function)
     6 |                                         stop_compile_here
@@ -207,9 +207,9 @@ Building C object CMakeFiles/cmTC_2fb3e.dir/src.c.o
     7 |                                         #endif
     8 |                                  }
       |                                  ~                        
-make[1]: *** [CMakeFiles/cmTC_2fb3e.dir/build.make:66: CMakeFiles/cmTC_2fb3e.dir/src.c.o] Error 1
+make[1]: *** [CMakeFiles/cmTC_b6a02.dir/build.make:66: CMakeFiles/cmTC_b6a02.dir/src.c.o] Error 1
 make[1]: Leaving directory '/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_2fb3e/fast] Error 2
+make: *** [Makefile:121: cmTC_b6a02/fast] Error 2
 
 
 Source file was:

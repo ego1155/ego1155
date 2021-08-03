@@ -94,7 +94,7 @@ int main(int argc, char *argv[])
     size_t size = ftell(fp);
 	fclose(fp);
 	
-	printf("\nSize is %d\n", size);
+	printf("\nSize is %ld\n", size);
 	
 	unsigned char* buffer = (unsigned char*)malloc(size * sizeof(char));
 	fp = fopen("data.bin","rb");	// r for read, b for binary

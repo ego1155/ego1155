@@ -30,7 +30,7 @@ OS_TARGET :=lnx
 COPY_LIBS :=copy_libs_lnx
 ILIBSINC := -I./Sources/plibsys/plibsys/sr
 LLIBDIR := -L./Sources/plibsys/ubuntu
-CFLAGS := $(CFLAGS) $(ILIBSINC) $(LLIBDIR) -lpthread -Wl,-R./libs/
+CFLAGS := $(CFLAGS) $(ILIBSINC) $(LLIBDIR) -lpthread -lm -Wl,-R./libs/
 
 else ifeq ($(shell uname),Darwin)
 

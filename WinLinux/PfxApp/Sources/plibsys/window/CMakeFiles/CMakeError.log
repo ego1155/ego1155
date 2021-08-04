@@ -1,34 +1,34 @@
 Determining if the include file values.h exists failed with the following output:
 Change Dir: C:/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/msys64/usr/bin/make.exe -f Makefile cmTC_71bb1/fast && /usr/bin/make  -f CMakeFiles/cmTC_71bb1.dir/build.make CMakeFiles/cmTC_71bb1.dir/build
+Run Build Command(s):C:/msys64/usr/bin/make.exe -f Makefile cmTC_9ae88/fast && /usr/bin/make  -f CMakeFiles/cmTC_9ae88.dir/build.make CMakeFiles/cmTC_9ae88.dir/build
 make[1]: Entering directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_71bb1.dir/CheckIncludeFile.c.obj
-/C/msys64/mingw64/bin/gcc.exe    -o CMakeFiles/cmTC_71bb1.dir/CheckIncludeFile.c.obj -c /C/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Building C object CMakeFiles/cmTC_9ae88.dir/CheckIncludeFile.c.obj
+/C/msys64/mingw64/bin/gcc.exe    -o CMakeFiles/cmTC_9ae88.dir/CheckIncludeFile.c.obj -c /C/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 C:/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: values.h: No such file or directory
     1 | #include <values.h>
       |          ^~~~~~~~~~
 compilation terminated.
-make[1]: *** [CMakeFiles/cmTC_71bb1.dir/build.make:78: CMakeFiles/cmTC_71bb1.dir/CheckIncludeFile.c.obj] Error 1
+make[1]: *** [CMakeFiles/cmTC_9ae88.dir/build.make:78: CMakeFiles/cmTC_9ae88.dir/CheckIncludeFile.c.obj] Error 1
 make[1]: Leaving directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
-make: *** [Makefile:127: cmTC_71bb1/fast] Error 2
+make: *** [Makefile:127: cmTC_9ae88/fast] Error 2
 
 
 
 Performing C SOURCE FILE Test PLIBSYS_HAS_PTHREAD_NP failed with the following output:
 Change Dir: C:/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/msys64/usr/bin/make.exe -f Makefile cmTC_b7140/fast && /usr/bin/make  -f CMakeFiles/cmTC_b7140.dir/build.make CMakeFiles/cmTC_b7140.dir/build
+Run Build Command(s):C:/msys64/usr/bin/make.exe -f Makefile cmTC_4b104/fast && /usr/bin/make  -f CMakeFiles/cmTC_4b104.dir/build.make CMakeFiles/cmTC_4b104.dir/build
 make[1]: Entering directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b7140.dir/src.c.obj
-/C/msys64/mingw64/bin/gcc.exe -DPLIBSYS_HAS_PTHREAD_NP   -o CMakeFiles/cmTC_b7140.dir/src.c.obj -c /C/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_4b104.dir/src.c.obj
+/C/msys64/mingw64/bin/gcc.exe -DPLIBSYS_HAS_PTHREAD_NP   -o CMakeFiles/cmTC_4b104.dir/src.c.obj -c /C/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/src.c
 C:/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/src.c:2:36: fatal error: pthread_np.h: No such file or directory
     2 |                           #include <pthread_np.h>
       |                                    ^~~~~~~~~~~~~~
 compilation terminated.
-make[1]: *** [CMakeFiles/cmTC_b7140.dir/build.make:78: CMakeFiles/cmTC_b7140.dir/src.c.obj] Error 1
+make[1]: *** [CMakeFiles/cmTC_4b104.dir/build.make:78: CMakeFiles/cmTC_4b104.dir/src.c.obj] Error 1
 make[1]: Leaving directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
-make: *** [Makefile:127: cmTC_b7140/fast] Error 2
+make: *** [Makefile:127: cmTC_4b104/fast] Error 2
 
 
 Source file was:
@@ -39,10 +39,10 @@ Source file was:
 Performing C SOURCE FILE Test PLIBSYS_HAS_POSIX_SETNAME_NP_1 failed with the following output:
 Change Dir: C:/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/msys64/usr/bin/make.exe -f Makefile cmTC_710fb/fast && /usr/bin/make  -f CMakeFiles/cmTC_710fb.dir/build.make CMakeFiles/cmTC_710fb.dir/build
+Run Build Command(s):C:/msys64/usr/bin/make.exe -f Makefile cmTC_70eaa/fast && /usr/bin/make  -f CMakeFiles/cmTC_70eaa.dir/build.make CMakeFiles/cmTC_70eaa.dir/build
 make[1]: Entering directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_710fb.dir/src.c.obj
-/C/msys64/mingw64/bin/gcc.exe -DPLIBSYS_HAS_POSIX_SETNAME_NP_1   -o CMakeFiles/cmTC_710fb.dir/src.c.obj -c /C/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_70eaa.dir/src.c.obj
+/C/msys64/mingw64/bin/gcc.exe -DPLIBSYS_HAS_POSIX_SETNAME_NP_1   -o CMakeFiles/cmTC_70eaa.dir/src.c.obj -c /C/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/src.c
 C:/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/src.c: In function 'main':
 C:/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/src.c:5:45: warning: passing argument 1 of 'pthread_setname_np' makes integer from pointer without a cast [-Wint-conversion]
     5 |                         pthread_setname_np ("thread_name");
@@ -60,9 +60,9 @@ In file included from C:/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/pl
 C:/msys64/mingw64/x86_64-w64-mingw32/include/pthread.h:304:26: note: declared here
   304 | int       WINPTHREAD_API pthread_setname_np(pthread_t thread, const char *name);
       |                          ^~~~~~~~~~~~~~~~~~
-make[1]: *** [CMakeFiles/cmTC_710fb.dir/build.make:78: CMakeFiles/cmTC_710fb.dir/src.c.obj] Error 1
+make[1]: *** [CMakeFiles/cmTC_70eaa.dir/build.make:78: CMakeFiles/cmTC_70eaa.dir/src.c.obj] Error 1
 make[1]: Leaving directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
-make: *** [Makefile:127: cmTC_710fb/fast] Error 2
+make: *** [Makefile:127: cmTC_70eaa/fast] Error 2
 
 
 Source file was:
@@ -76,17 +76,17 @@ Source file was:
 Performing C SOURCE FILE Test PLIBSYS_SOCKADDR_HAS_SA_LEN failed with the following output:
 Change Dir: C:/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/msys64/usr/bin/make.exe -f Makefile cmTC_726ae/fast && /usr/bin/make  -f CMakeFiles/cmTC_726ae.dir/build.make CMakeFiles/cmTC_726ae.dir/build
+Run Build Command(s):C:/msys64/usr/bin/make.exe -f Makefile cmTC_9e27d/fast && /usr/bin/make  -f CMakeFiles/cmTC_9e27d.dir/build.make CMakeFiles/cmTC_9e27d.dir/build
 make[1]: Entering directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_726ae.dir/src.c.obj
-/C/msys64/mingw64/bin/gcc.exe -DPLIBSYS_SOCKADDR_HAS_SA_LEN   -o CMakeFiles/cmTC_726ae.dir/src.c.obj -c /C/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_9e27d.dir/src.c.obj
+/C/msys64/mingw64/bin/gcc.exe -DPLIBSYS_SOCKADDR_HAS_SA_LEN   -o CMakeFiles/cmTC_9e27d.dir/src.c.obj -c /C/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/src.c
 C:/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/src.c: In function 'main':
 C:/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/src.c:6:42: error: 'struct sockaddr' has no member named 'sa_len'
     6 |                                 sock_addr.sa_len = 0;
       |                                          ^
-make[1]: *** [CMakeFiles/cmTC_726ae.dir/build.make:78: CMakeFiles/cmTC_726ae.dir/src.c.obj] Error 1
+make[1]: *** [CMakeFiles/cmTC_9e27d.dir/build.make:78: CMakeFiles/cmTC_9e27d.dir/src.c.obj] Error 1
 make[1]: Leaving directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
-make: *** [Makefile:127: cmTC_726ae/fast] Error 2
+make: *** [Makefile:127: cmTC_9e27d/fast] Error 2
 
 
 Source file was:

@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
 	
 	char* path = (char*)malloc(1000 * sizeof(char));
 	//strcpy(path, "C:\\Users\\nilesh\\Desktop\\ego1155\\WinLinux\\PfxApp");
-	strcpy(path, "C:\\Users");
+	strcpy(path, "C:\\Users\\nilesh\\Desktop\\ego1155\\WinLinux\\PfxApp\\Sources\\Resources");
 	p_libsys_init();
 	get_list_of_files_recusive(&flist, &dt, &ft, path);
 	p_libsys_shutdown();
@@ -66,8 +66,8 @@ int main(int argc, char *argv[])
 	
 	printf("Total Dirs :: %d\n",dt);
 	printf("Total Files :: %d\n",ft);
-	//free(flist);
-	
+	free(flist);
+
 	printf("=========================================\n");
 	printf("=========================================\n");
 	

@@ -17,7 +17,7 @@ OS_VER :=
 OS_DETAILS :=Window
 OS_TARGET :=win
 COPY_LIBS :=copy_libs_win
-ILIBSINC := -I./Sources/plibsys/plibsys/sr
+ILIBSINC := -I./Sources/plibsys/plibsys/src
 LLIBDIR := -L./Sources/plibsys/window
 CFLAGS := $(CFLAGS) $(ILIBSINC) $(LLIBDIR) -lws2_32 -L.
 
@@ -28,7 +28,7 @@ OS_VER :=$(shell lsb_release -sr)
 OS_DETAILS :=$(OS_NAME)_$(OS_VER)
 OS_TARGET :=lnx
 COPY_LIBS :=copy_libs_lnx
-ILIBSINC := -I./Sources/plibsys/plibsys/sr
+ILIBSINC := -I./Sources/plibsys/plibsys/src
 LLIBDIR := -L./Sources/plibsys/ubuntu
 CFLAGS := $(CFLAGS) $(ILIBSINC) $(LLIBDIR) -lpthread -lm -Wl,-R./libs/
 
@@ -39,7 +39,7 @@ OS_VER :=$(shell sw_vers -productVersion)
 OS_DETAILS :=$(OS_NAME)_$(OS_VER)
 OS_TARGET :=osx
 COPY_LIBS :=dylibbundler_osx
-ILIBSINC := -I/usr/local/include -I./Sources/plibsys/plibsys/sr
+ILIBSINC := -I/usr/local/include -I./Sources/plibsys/plibsys/src
 LLIBDIR := -L/usr/local/opt/libssh/lib -L./Sources/plibsys/macosx
 CFLAGS := $(CFLAGS) -L./Sources/plibsys/macosx $(ILIBSINC) $(LLIBDIR)
 

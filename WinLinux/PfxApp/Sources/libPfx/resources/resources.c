@@ -22,3 +22,7 @@ cresource* create_cresource(const char* name, unsigned long size, const unsigned
 	resource->data = data;
 	return resource;
 }
+void free_cresource(cresource* self)
+{
+	free(self);
+}

@@ -1,11 +1,10 @@
 #include "main.h"
 
-typedef struct file_ {
+typedef struct fileinfo_ {
 	char* path;
-} file;
+} FileInfo;
 
-//void get_list_of_files_recusive(file** flist, int* ft, const char* dirname)
-void get_list_of_files_recusive(file** flist, int* dt, int* ft, char* path)
+void get_list_of_files_recusive(FileInfo** fi, unsigned long* dirt, unsigned long* filet, char* path)
 {
 	PDir* pDir;
 	PDirEntry* pDirEntry;
@@ -21,24 +20,26 @@ void get_list_of_files_recusive(file** flist, int* dt, int* ft, char* path)
 		strcat(path, pDirEntry->name);
 		if (pDirEntry->type == P_DIR_ENTRY_TYPE_DIR && strcmp(pDirEntry->name,".") != 0 && strcmp(pDirEntry->name,"..") != 0)
 		{
-			printf("DIR :: %s\n", path);
-			*dt = *dt + 1;
-			get_list_of_files_recusive(&*flist, dt, ft, path);
+			//printf("DIR :: %s\n", path);
+			*dirt = *dirt + 1;
+			get_list_of_files_recusive(&*fi, dirt, filet, path);
 		}
 		else if (pDirEntry->type == P_DIR_ENTRY_TYPE_FILE)
 		{
-			printf("FILE :: %s\n", path);
-			if (*ft == 0)
+			//printf("FILE :: %s\n", path);
+			if (*filet == 0)
 			{
-				*flist = (file*)malloc(sizeof(file));
-				//(*flist+*ft)->path = (char*)malloc(10 * sizeof(char));
+				*fi = (FileInfo*)malloc(sizeof(FileInfo));
+				(*fi+*filet)->path=(char*)malloc((strlen(path)+1) * sizeof(char));
+				strcpy((*fi+*filet)->path, path);
 			}
 			else
 			{
-				*flist = (file*)realloc(*flist, (*ft + 1) * sizeof(file));
-				//(*flist+*ft+1)->path = (char*)malloc(10 * sizeof(char));
+				*fi = (FileInfo*)realloc(*fi, (*filet + 1) * sizeof(FileInfo));
+				(*fi+*filet)->path=(char*)malloc((strlen(path)+1) * sizeof(char));
+				strcpy((*fi+*filet)->path, path);
 			}
-			*ft = *ft + 1;
+			*filet = *filet + 1;
 		}
 		p_dir_entry_free(pDirEntry);
 	}
@@ -46,30 +47,89 @@ void get_list_of_files_recusive(file** flist, int* dt, int* ft, char* path)
 	p_dir_free(pDir);
 }
 
+void resources_generate(const char* source, const char* target)
+{
+	p_libsys_init();
+	FILE *fp;
+	fp = fopen("resources.h", "a");
+	fprintf(fp, "%s\n", "#ifndef RESOURCES_H");
+	fprintf(fp, "%s\n", "#define RESOURCES_H");
+	fprintf(fp, "%s\n", "");
+	fprintf(fp, "%s\n", "#include <stdio.h>");
+	fprintf(fp, "%s\n", "#include <stdlib.h>");
+	fprintf(fp, "%s\n", "#include <string.h>");
+	fprintf(fp, "%s\n", "");
+	fprintf(fp, "%s\n", "typedef struct cresource_ {");
+	fprintf(fp, "%s\n", "\tconst char* name;");
+	fprintf(fp, "%s\n", "\tunsigned long size;");
+	fprintf(fp, "%s\n", "\tconst unsigned char* data;");
+	fprintf(fp, "%s\n", "} cresource;");
+	fprintf(fp, "%s\n", "");
+	fprintf(fp, "%s\n", "cresource* get_cresource(const char* filename);");
+	fprintf(fp, "%s\n", "cresource* create_cresource(const char* name, unsigned long size, const unsigned char* data);");
+	fprintf(fp, "%s\n", "void free_cresource(cresource* self);");
+	fprintf(fp, "%s\n", "");
+	fprintf(fp, "%s\n", "#endif");
+	fclose(fp);
+	fp = fopen("resources.c", "a");
+	fprintf(fp, "%s\n", "#include \"resources.h\"");
+	fprintf(fp, "%s\n", "");
+	fprintf(fp, "%s\n", "");
+	fprintf(fp, "%s\n", "cresource* get_cresource(const char* filename)");
+	fprintf(fp, "%s\n", "{");
+	fprintf(fp, "%s\n", "}");
+	fprintf(fp, "%s\n", "cresource* create_cresource(const char* name, unsigned long size, const unsigned char* data)");
+	fprintf(fp, "%s\n", "{");
+	fprintf(fp, "%s\n", "\tcresource* resource = NULL;");
+	fprintf(fp, "%s\n", "\tresource = (cresource*)malloc(sizeof(cresource));");
+	fprintf(fp, "%s\n", "\tresource->name = name;");
+	fprintf(fp, "%s\n", "\tresource->size = size;");
+	fprintf(fp, "%s\n", "\tresource->data = data;");
+	fprintf(fp, "%s\n", "\treturn resource;");
+	fprintf(fp, "%s\n", "}");
+	fprintf(fp, "%s\n", "void free_cresource(cresource* self)");
+	fprintf(fp, "%s\n", "{");
+	fprintf(fp, "%s\n", "\tfree(self);");
+	fprintf(fp, "%s\n", "}");
+	fclose(fp);
+	p_libsys_shutdown();
+}
+
 int main(int argc, char *argv[])
 {
 	printf("=========================================\n");
 	printf("=========================================\n");
 	
-	int dt = 0;
-	int ft = 0;
-	file* flist;
+	resources_generate("C:\\Users\\nilesh\\Desktop\\ego1155\\WinLinux\\PfxApp\\Sources\\Resources", "./");
+
+	unsigned long dirt = 0;
+	unsigned long filet = 0;
+	FileInfo* fi;	
 	
 	char* path = (char*)malloc(1000 * sizeof(char));
-	//strcpy(path, "C:\\Users\\nilesh\\Desktop\\ego1155\\WinLinux\\PfxApp");
-	strcpy(path, "C:\\Users\\nilesh\\Desktop\\ego1155\\WinLinux\\PfxApp\\Sources\\Resources");
+	//strcpy(path, "C:\\Users\\nilesh\\Desktop\\ego1155\\WinLinux\\PfxApp\\Sources\\Resources");
+	strcpy(path, "C:\\");
 	p_libsys_init();
-	get_list_of_files_recusive(&flist, &dt, &ft, path);
+	get_list_of_files_recusive(&fi, &dirt, &filet, path);
 	p_libsys_shutdown();
 	free(path);
 	
+	//for(int i=0; i < filet; i++)
+	//{
+		//printf("FILE :: %s\n", (fi + i)->path);
+	//}
 	
-	printf("Total Dirs :: %d\n",dt);
-	printf("Total Files :: %d\n",ft);
-	free(flist);
+	for(int i=0; i < filet; i++)
+		free((fi + i)->path);
+	free(fi);
+	
+	printf("Total Dirs :: %lu\n",dirt);
+	printf("Total Files :: %lu\n",filet);
 
 	printf("=========================================\n");
 	printf("=========================================\n");
+	printf("Press Any Key to Continue\n");
+	system("pause");
 	
 	//cresource* cresourceb = get_cresource("helloa/sun/computers.png");
 	//printf("%s\n", (const char*) cresourceb->name);
@@ -82,7 +142,7 @@ int main(int argc, char *argv[])
 	//printf("%s\n", (const char*) cresourcea->data);
 	//free(cresourcea);
 	
-	const unsigned char data[] = { 65,66,67,0 }; // ASCII values for 'A', 'B', 'C'.
+	/* const unsigned char data[] = { 65,66,67,0 }; // ASCII values for 'A', 'B', 'C'.
 	printf("%s\n", (const char *) data);
 	
 	FILE* fp = fopen("data.bin","wb");	// w for write, b for binary
@@ -141,7 +201,7 @@ int main(int argc, char *argv[])
 	arrChar[idx] = '\0';
 	printf("idx : %d\n", idx);
 	printf("const unsigned char data[] = { %s };\n", (char*)arrChar);
-	free(arrChar);
+	free(arrChar); */
 
 	//int x = 12345;
     //int numOfDigits = log10(x) + 1;
@@ -151,6 +211,6 @@ int main(int argc, char *argv[])
 	//printf("%s\n", (char*)arr);
 	//free(arr);
 	
-	free(buffer);
+	//free(buffer);
 	return 0;
 }

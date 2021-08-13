@@ -66,6 +66,14 @@ extern "C" {
 #define MG_ENABLE_SOCKETPAIR 0
 #endif
 
+#ifndef MG_ENABLE_CUSTOM_RANDOM
+#define MG_ENABLE_CUSTOM_RANDOM 0
+#endif
+
+#ifndef MG_ENABLE_PACKED_FS
+#define MG_ENABLE_PACKED_FS 0
+#endif
+
 // Granularity of the send/recv IO buffer growth
 #ifndef MG_IO_SIZE
 #define MG_IO_SIZE 2048
@@ -317,7 +325,6 @@ struct timeval {
 #if MG_ARCH == MG_ARCH_UNIX
 
 #define _DARWIN_UNLIMITED_SELECT 1  // No limit on file descriptors
-#define _GNU_SOURCE                 // For fopencookie() on Linux
 
 #include <arpa/inet.h>
 #include <ctype.h>
@@ -517,23 +524,10 @@ void mg_timer_poll(unsigned long uptime_ms);
 
 
 
-// WEAK symbol makes it possible to define a "default" function implementation,
-// which could be overridden by the user who can define a function with the
-// same name without linking conflict
-#if !defined(WEAK)
-#if (defined(__GNUC__) || defined(__clang__) || \
-     defined(__TI_COMPILER_VERSION__)) &&       \
-    !defined(_WIN32) && !defined(__CYGWIN__)
-#define WEAK __attribute__((weak))
-#else
-#define WEAK
-#endif
-#endif
-
 char *mg_file_read(const char *path, size_t *size);
 bool mg_file_write(const char *path, const void *buf, size_t len);
 bool mg_file_printf(const char *path, const char *fmt, ...);
-void mg_random(void *buf, size_t len) WEAK;
+void mg_random(void *buf, size_t len);
 bool mg_globmatch(const char *pattern, size_t plen, const char *s, size_t n);
 bool mg_next_comma_entry(struct mg_str *s, struct mg_str *k, struct mg_str *v);
 uint16_t mg_ntohs(uint16_t net);
@@ -880,6 +874,7 @@ struct mg_connection *mg_ws_connect(struct mg_mgr *, const char *url,
 void mg_ws_upgrade(struct mg_connection *, struct mg_http_message *,
                    const char *fmt, ...);
 size_t mg_ws_send(struct mg_connection *, const char *buf, size_t len, int op);
+size_t mg_ws_wrap(struct mg_connection *, size_t len, int op);
 
 
 
@@ -937,6 +932,8 @@ struct mg_connection *mg_mqtt_connect(struct mg_mgr *, const char *url,
                                       mg_event_handler_t fn, void *fn_data);
 struct mg_connection *mg_mqtt_listen(struct mg_mgr *mgr, const char *url,
                                      mg_event_handler_t fn, void *fn_data);
+void mg_mqtt_login(struct mg_connection *c, const char *url,
+                   struct mg_mqtt_opts *opts);
 void mg_mqtt_pub(struct mg_connection *c, struct mg_str *topic,
                  struct mg_str *data, int qos, bool retain);
 void mg_mqtt_sub(struct mg_connection *, struct mg_str *topic, int qos);

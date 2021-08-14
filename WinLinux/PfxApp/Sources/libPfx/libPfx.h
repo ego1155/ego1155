@@ -13,6 +13,7 @@
 #define INI_IMPLEMENTATION
 #include "ini.h"
 
+#include "sc_str/sc_str.h"
 #include "ccronexpr/ccronexpr.h"
 #include "cronjob/cronjob.h"
 #include "mongoose/mongoose.h"

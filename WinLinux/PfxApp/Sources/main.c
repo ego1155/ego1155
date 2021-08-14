@@ -178,8 +178,7 @@ void resources_generate(const char* source, const char* target)
 		int idx = 0;
 		for (int k=0; k < size; k++)
 		{
-			int x = (int)*(buf+k);
-			printf("%02x\n", x);
+			int x = (int)((unsigned char)*(buf+k));
 			int numOfDigits = log10(x) + 1;
 			if (numOfDigits < 1) numOfDigits=1;
 			int ext = (k==(size-1))?0:1;
@@ -212,6 +211,9 @@ void resources_generate(const char* source, const char* target)
 		free( buf );
 		
 		sc_str_destroy(&src);
+		
+		printf("Press Any Key to Continue\n");
+		system("pause");
 	}
 	for(int i=0; i < filet; i++)
 		//free((fi + i)->path);
@@ -256,6 +258,7 @@ int main(int argc, char *argv[])
 	printf("=========================================\n");
 	
 	const char* src_path = "C:\\Users\\nilesh\\Desktop\\ego1155\\WinLinux\\PfxApp\\Sources\\Resources";
+	//const char* src_path = "/C/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/Resources";
 	
 	resources_generate(src_path, "./");
 
@@ -341,9 +344,36 @@ int main(int argc, char *argv[])
 	// printf("Total Dirs :: %lu\n",dirt);
 	// printf("Total Files :: %lu\n",filet);
 	
-	cresource* cresourceb = get_cresource("HelloWorld.txt");
-	FILE* fp = fopen("HelloWorld.txt","wb");	// w for write, b for binary
-	fwrite(cresourceb->data,sizeof(cresourceb->data),1,fp);
+	cresource* cresourceb = get_cresource("index.jpg");
+	FILE* fp = fopen("index.jpg","wb");	// w for write, b for binary
+	fwrite(cresourceb->data,cresourceb->size,1,fp);
+	fclose(fp);
+	printf("%s\n", (const char*) cresourceb->name);
+	printf("%lu\n", cresourceb->size);
+	printf("%s\n", (const char*) cresourceb->data);
+	free(cresourceb);
+	
+	cresourceb = get_cresource("m.jpg");
+	fp = fopen("m.jpg","wb");	// w for write, b for binary
+	fwrite(cresourceb->data,cresourceb->size,1,fp);
+	fclose(fp);
+	printf("%s\n", (const char*) cresourceb->name);
+	printf("%lu\n", cresourceb->size);
+	printf("%s\n", (const char*) cresourceb->data);
+	free(cresourceb);
+	
+	cresourceb = get_cresource("ssh_tunnel.c");
+	fp = fopen("ssh_tunnel.c","wb");	// w for write, b for binary
+	fwrite(cresourceb->data,cresourceb->size,1,fp);
+	fclose(fp);
+	printf("%s\n", (const char*) cresourceb->name);
+	printf("%lu\n", cresourceb->size);
+	printf("%s\n", (const char*) cresourceb->data);
+	free(cresourceb);
+	
+	cresourceb = get_cresource("HelloWorld.txt");
+	fp = fopen("HelloWorld.txt","wb");	// w for write, b for binary
+	fwrite(cresourceb->data,cresourceb->size,1,fp);
 	fclose(fp);
 	printf("%s\n", (const char*) cresourceb->name);
 	printf("%lu\n", cresourceb->size);

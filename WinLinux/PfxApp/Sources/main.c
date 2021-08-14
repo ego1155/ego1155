@@ -1,108 +1,72 @@
 #include "main.h"
 
-#define CHUNK 1024
+#define CHUNK_SIZE 1024
 
-unsigned long read_file(FILE *fp, char **buf) 
+size_t read_file_binary(FILE *fp, char **buf)
 {
-  unsigned long n, np;
-  char *b, *b2;
-  size_t r;
-
-  n = CHUNK;
-  np = n;
-  b = malloc(sizeof(char)*n);
-  while ((r = fread(b, sizeof(char), CHUNK, fp)) > 0) {
-    n += r;
-	//printf("r %d\n", n);
-    if (np - n < CHUNK) { 
-      np *= 2;                      // buffer is too small, the next read could overflow!
-      b2 = malloc(np*sizeof(char));
-      memcpy(b2, b, n * sizeof(char));
-      free(b);
-      b = b2;
-    }
-  }
-  printf("r %lu\n", n);
-  *buf = b;
-  return n;
+	size_t n, r;
+	char* b = NULL;
+	char* b2 = NULL;
+	n = 0;
+	b = (char*)malloc(sizeof(char) * CHUNK_SIZE);
+	while ((r = fread(b, sizeof(char), CHUNK_SIZE, fp)) > 0)
+	{
+		n += r;
+		if (!b2)
+		{
+			b2 = (char*)malloc(sizeof(char) * n);
+			for (int i=0; i < r; i++)
+				b2[n-r+i]=b[i];
+		}
+		else
+		{
+			b2 = (char*)realloc(b2, sizeof(char) * n);
+			for (int i=0; i < r; i++)
+				b2[n-r+i]=b[i];
+		}
+	}
+	free(b);
+	*buf = b2;
+	return n;
 }
 
-int copy_file( const char* srcfilename, const char* dstfilename )
+int copy_file_binary( const char* srcfilename, const char* dstfilename )
 {
 	char* buf = NULL;
 	FILE* fp  = NULL;
 	
-	printf("ddd %d\n", 1111);
-	
-	fp = fopen64( srcfilename, "rb" );
-	if (!fp) return 1;
-	
-	printf("ddd %lu\n", read_file(fp,&buf));
-	
-	fclose( fp );
-	free( buf );
-	return 0;
-}
-
-/* int copy_file( const char* srcfilename, const char* dstfilename )
-{
-	long  len;
-	char* buf = NULL;
-	FILE* fp  = NULL;
-	
-	// Open the source file
 	fp = fopen( srcfilename, "rb" );
-	if (!fp) return 0;
+	if (!fp) return -1;
 	
-	// Get its length (in bytes)
-	if (fseek( fp, 0, SEEK_END ) != 0)  // This should typically succeed
-	{                                 // (beware the 2Gb limitation, though)
-		fclose( fp );
-		return 0;
-	}
+	size_t size = read_file_binary( fp, &buf );
 	
-	len = ftell( fp );
-	rewind( fp );
-	
-	// Get a buffer big enough to hold it entirely
-	buf = (char*)malloc( len );
-	if (!buf)
+	if (size == 0)
 	{
 		fclose( fp );
-		return 0;
-	}
-	
-	// Read the entire file into the buffer
-	if (!fread( buf, len, 1, fp ))
-	{
 		free( buf );
-		fclose( fp );
-		return 0;
+		return -1;
 	}
 	
 	fclose( fp );
 	
-	// Open the destination file
 	fp = fopen( dstfilename, "wb" );
 	if (!fp)
 	{
 		free( buf );
-		return 0;
+		return -1;
 	}
 	
-	// Write the entire buffer to file
-	if (!fwrite( buf, len, 1, fp ))
+	if (!fwrite( buf, size, 1, fp ))
 	{
 		free( buf );
 		fclose( fp );
-		return 0;
+		return -1;
 	}
-	
-	// All done -- return success
+
 	fclose( fp );
 	free( buf );
-	return 1;
-} */
+	return 0;
+}
 
 typedef struct fileinfo_ {
 	char* path;
@@ -182,9 +146,92 @@ void resources_generate(const char* source, const char* target)
 	fp = fopen("resources.c", "a");
 	fprintf(fp, "%s\n", "#include \"resources.h\"");
 	fprintf(fp, "%s\n", "");
+	
+	unsigned long dirt = 0;
+	unsigned long filet = 0;
+	FileInfo* fi;	
+	char* path = (char*)malloc(1000 * sizeof(char));
+	strcpy(path, source);
+	p_libsys_init();
+	get_list_of_files_recusive(&fi, &dirt, &filet, path);
+	p_libsys_shutdown();
+	free(path);
+	for(int i=0; i < filet; i++)
+	{
+		char* src = sc_str_create((fi + i)->path);
+		
+		sc_str_replace(&(fi + i)->path, source, "XXX");
+		sc_str_replace(&(fi + i)->path, "XXX\\", "XXX");
+		sc_str_trim(&(fi + i)->path, "XXX");
+		sc_str_replace(&(fi + i)->path, "\\", "/");
+		fprintf(fp, "const char name%d[] = \"%s\";\n", i, (fi + i)->path);
+		
+		char* buf = NULL;
+		FILE* fpp  = NULL;
+		
+		fpp = fopen( src, "rb" );
+		size_t size = read_file_binary( fpp, &buf );
+		fclose( fpp );
+		//printf("\nSize is %ld\n", size);
+		
+		char* arrChar = NULL;
+		int idx = 0;
+		for (int k=0; k < size; k++)
+		{
+			int x = (int)*(buf+k);
+			printf("%02x\n", x);
+			int numOfDigits = log10(x) + 1;
+			if (numOfDigits < 1) numOfDigits=1;
+			int ext = (k==(size-1))?0:1;
+			if (!arrChar)
+			{
+				arrChar = malloc((numOfDigits + ext) * sizeof(char));
+				char* arr = calloc(numOfDigits, sizeof(char));
+				sprintf(arr, "%d", x);
+				for (int j=0; j < numOfDigits; j++)
+					arrChar[idx + j] = arr[j];
+				free( arr );
+				if (ext != 0) arrChar[idx + numOfDigits] = ',';
+			}
+			else
+			{
+				arrChar = realloc(arrChar, (idx + numOfDigits + ext) * sizeof(char));
+				char* arr = calloc(numOfDigits, sizeof(char));
+				sprintf(arr, "%d", x);
+				for (int j=0; j < numOfDigits; j++)
+					arrChar[idx + j] = arr[j];
+				free( arr );
+				if (ext != 0) arrChar[idx + numOfDigits] = ',';
+			}
+			idx += numOfDigits + ext;
+		}
+		arrChar = realloc(arrChar, (idx) * sizeof(char));
+		arrChar[idx] = '\0';
+		fprintf(fp, "const unsigned char data%d[] = { %s };\n", i, (char*)arrChar);
+		free( arrChar );
+		free( buf );
+		
+		sc_str_destroy(&src);
+	}
+	for(int i=0; i < filet; i++)
+		//free((fi + i)->path);
+		sc_str_destroy(&(fi + i)->path);
+	free(fi);
+	
 	fprintf(fp, "%s\n", "");
 	fprintf(fp, "%s\n", "cresource* get_cresource(const char* filename)");
 	fprintf(fp, "%s\n", "{");
+	
+	for(int i=0; i < filet; i++)
+	{
+		if (i == 0)
+			fprintf(fp, "\tif (strcmp(filename,name%d) == 0)\n", i);
+		else
+			fprintf(fp, "\telse if (strcmp(filename,name%d) == 0)\n", i);
+		fprintf(fp, "\t\treturn create_cresource(name%d, sizeof(data%d)/sizeof(data%d[0]), data%d);\n", i, i, i, i);
+	}
+	
+	fprintf(fp, "%s\n", "\treturn NULL;");
 	fprintf(fp, "%s\n", "}");
 	fprintf(fp, "%s\n", "cresource* create_cresource(const char* name, unsigned long size, const unsigned char* data)");
 	fprintf(fp, "%s\n", "{");
@@ -212,43 +259,33 @@ int main(int argc, char *argv[])
 	
 	resources_generate(src_path, "./");
 
-	unsigned long dirt = 0;
-	unsigned long filet = 0;
-	FileInfo* fi;	
+	// unsigned long dirt = 0;
+	// unsigned long filet = 0;
+	// FileInfo* fi;	
 	
-	char* path = (char*)malloc(1000 * sizeof(char));
-	strcpy(path, src_path);
-	//strcpy(path, "C:\\");
-	p_libsys_init();
-	get_list_of_files_recusive(&fi, &dirt, &filet, path);
-	p_libsys_shutdown();
-	free(path);
+	// char* path = (char*)malloc(1000 * sizeof(char));
+	// strcpy(path, src_path);
+	// //strcpy(path, "C:\\");
+	// p_libsys_init();
+	// get_list_of_files_recusive(&fi, &dirt, &filet, path);
+	// p_libsys_shutdown();
+	// free(path);
 	
-	for(int i=0; i < filet; i++)
-	{
-		//FILE* fp = fopen((fi + i)->path,"r+");
-		//fseek(fp, 0, SEEK_END);
-		//size_t size = ftell(fp);
-		//fclose(fp);
+	// for(int i=0; i < filet; i++)
+	// {
+		// char* buf = NULL;
+		// FILE* fp  = NULL;
 		
-		//printf("\nSize is %ld\n", size);
-		
-		//unsigned char* buffer = (unsigned char*)malloc(size * sizeof(char));
-		//char* buffer = (char*)malloc(size);
-		//fp = fopen((fi + i)->path,"rb");	// r for read, b for binary
-		//fread(buffer,sizeof(buffer),1,fp);
-		//fclose(fp);
-		//printf("%s\n", (const char *) buffer);
-		
-		//for (int i=0; i < size; i++)
-			//printf("%d", (int)*(buffer+i));
-		//printf("\n");
+		// fp = fopen( (fi + i)->path, "rb" );
+		// size_t size = read_file_binary( fp, &buf );
+		// fclose( fp );
+		// printf("\nSize is %ld\n", size);
 		
 		// char* arrChar = NULL;
 		// int idx = 0;
 		// for (int i=0; i < size; i++)
 		// {
-			// int x = (int)*(buffer+i);
+			// int x = (int)*(buf+i);
 			// //printf("%d\n", x);
 			// int numOfDigits = log10(x) + 1;
 			// if (numOfDigits < 1) numOfDigits=1;
@@ -278,38 +315,41 @@ int main(int argc, char *argv[])
 		// arrChar = realloc(arrChar, (idx) * sizeof(char));
 		// arrChar[idx] = '\0';
 		// printf("idx : %d\n", idx);
-		//printf("const unsigned char data[] = { %s };\n", (char*)arrChar);
+		// printf("const unsigned char data[] = { %s };\n", (char*)arrChar);
+		// free(arrChar);
 		
-		//char* fname;
-		//asprintf(&fname, "%i.txt", i);
-		//fp = fopen("hello.jpg","wb");	// w for write, b for binary
-		//fwrite(buffer,sizeof(buffer),1,fp);
-		//fwrite(buffer,size,1,fp);
-		//fclose(fp);
-		//free(fname);
-		
-		//free(arrChar);
+		// free( buf );
 
-		//free(buffer);
 		
-		//copy_file((fi + i)->path, "sample.iso");
-		printf("ret %d\n", copy_file((fi + i)->path, "sample.iso"));
+		// char* src = sc_str_create((fi + i)->path);
 	
-		sc_str_replace(&(fi + i)->path, src_path, "XXX");
-		sc_str_replace(&(fi + i)->path, "XXX\\", "XXX");
-		sc_str_trim(&(fi + i)->path, "XXX");
-		sc_str_replace(&(fi + i)->path, "\\", "/");
-		printf("FILE :: %s\n", (fi + i)->path);
-	}
+		// sc_str_replace(&(fi + i)->path, src_path, "XXX");
+		// sc_str_replace(&(fi + i)->path, "XXX\\", "XXX");
+		// sc_str_trim(&(fi + i)->path, "XXX");
+		// sc_str_replace(&(fi + i)->path, "\\", "/");
+		// printf("FILE :: %s\n", (fi + i)->path);
 	
-	for(int i=0; i < filet; i++)
-		//free((fi + i)->path);
-		sc_str_destroy(&(fi + i)->path);
-	free(fi);
+		// printf("ret %d\n", copy_file_binary(src, (fi + i)->path));
+		// sc_str_destroy(&src);
+	// }
 	
-	printf("Total Dirs :: %lu\n",dirt);
-	printf("Total Files :: %lu\n",filet);
-
+	// for(int i=0; i < filet; i++)
+		// //free((fi + i)->path);
+		// sc_str_destroy(&(fi + i)->path);
+	// free(fi);
+	
+	// printf("Total Dirs :: %lu\n",dirt);
+	// printf("Total Files :: %lu\n",filet);
+	
+	cresource* cresourceb = get_cresource("HelloWorld.txt");
+	FILE* fp = fopen("HelloWorld.txt","wb");	// w for write, b for binary
+	fwrite(cresourceb->data,sizeof(cresourceb->data),1,fp);
+	fclose(fp);
+	printf("%s\n", (const char*) cresourceb->name);
+	printf("%lu\n", cresourceb->size);
+	printf("%s\n", (const char*) cresourceb->data);
+	free(cresourceb);
+	
 	printf("=========================================\n");
 	printf("=========================================\n");
 	printf("Press Any Key to Continue\n");

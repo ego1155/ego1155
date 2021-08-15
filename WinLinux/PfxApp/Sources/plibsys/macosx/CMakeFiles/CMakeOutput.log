@@ -15,15 +15,15 @@ The C compiler identification is AppleClang, found in "/Users/nilesh/Desktop/ego
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_fdaa6/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_fdaa6.dir/build.make CMakeFiles/cmTC_fdaa6.dir/build
-Building C object CMakeFiles/cmTC_fdaa6.dir/CMakeCCompilerABI.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_fdaa6.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_fdaa6.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_fdaa6.dir/CMakeCCompilerABI.c.o -c /usr/local/Cellar/cmake/3.21.1/share/cmake/Modules/CMakeCCompilerABI.c
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_4ace9/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_4ace9.dir/build.make CMakeFiles/cmTC_4ace9.dir/build
+Building C object CMakeFiles/cmTC_4ace9.dir/CMakeCCompilerABI.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_4ace9.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_4ace9.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_4ace9.dir/CMakeCCompilerABI.c.o -c /usr/local/Cellar/cmake/3.21.1/share/cmake/Modules/CMakeCCompilerABI.c
 Apple clang version 12.0.5 (clang-1205.0.22.11)
 Target: x86_64-apple-darwin20.6.0
 Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
- "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx11.0.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -fno-rounding-math -munwind-tables -target-sdk-version=11.3 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -debugger-tuning=lldb -target-linker-version 650.9 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5 -dependency-file CMakeFiles/cmTC_fdaa6.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_fdaa6.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdebug-compilation-dir /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -mllvm -disable-aligned-alloc-awareness=1 -o CMakeFiles/cmTC_fdaa6.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.21.1/share/cmake/Modules/CMakeCCompilerABI.c
+ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx11.0.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -fno-rounding-math -munwind-tables -target-sdk-version=11.3 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -debugger-tuning=lldb -target-linker-version 650.9 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5 -dependency-file CMakeFiles/cmTC_4ace9.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_4ace9.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdebug-compilation-dir /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -mllvm -disable-aligned-alloc-awareness=1 -o CMakeFiles/cmTC_4ace9.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.21.1/share/cmake/Modules/CMakeCCompilerABI.c
 clang -cc1 version 12.0.5 (clang-1205.0.22.11) default target x86_64-apple-darwin20.6.0
 ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/local/include"
 ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/Library/Frameworks"
@@ -34,14 +34,14 @@ ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX1
  /Library/Developer/CommandLineTools/usr/include
  /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/System/Library/Frameworks (framework directory)
 End of search list.
-Linking C executable cmTC_fdaa6
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fdaa6.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_fdaa6.dir/CMakeCCompilerABI.c.o -o cmTC_fdaa6 
+Linking C executable cmTC_4ace9
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4ace9.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_4ace9.dir/CMakeCCompilerABI.c.o -o cmTC_4ace9 
 Apple clang version 12.0.5 (clang-1205.0.22.11)
 Target: x86_64-apple-darwin20.6.0
 Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
- "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 11.0.0 11.3 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o cmTC_fdaa6 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_fdaa6.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/lib/darwin/libclang_rt.osx.a
+ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 11.0.0 11.3 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o cmTC_4ace9 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_4ace9.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/lib/darwin/libclang_rt.osx.a
 @(#)PROGRAM:ld  PROJECT:ld64-650.9
 BUILD 13:09:02 May 28 2021
 configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -69,15 +69,15 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make -f Makefile cmTC_fdaa6/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_fdaa6.dir/build.make CMakeFiles/cmTC_fdaa6.dir/build]
-  ignore line: [Building C object CMakeFiles/cmTC_fdaa6.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_fdaa6.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_fdaa6.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_fdaa6.dir/CMakeCCompilerABI.c.o -c /usr/local/Cellar/cmake/3.21.1/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [Run Build Command(s):/usr/bin/make -f Makefile cmTC_4ace9/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_4ace9.dir/build.make CMakeFiles/cmTC_4ace9.dir/build]
+  ignore line: [Building C object CMakeFiles/cmTC_4ace9.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_4ace9.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_4ace9.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_4ace9.dir/CMakeCCompilerABI.c.o -c /usr/local/Cellar/cmake/3.21.1/share/cmake/Modules/CMakeCCompilerABI.c]
   ignore line: [Apple clang version 12.0.5 (clang-1205.0.22.11)]
   ignore line: [Target: x86_64-apple-darwin20.6.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
   ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
-  ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx11.0.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -fno-rounding-math -munwind-tables -target-sdk-version=11.3 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -debugger-tuning=lldb -target-linker-version 650.9 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5 -dependency-file CMakeFiles/cmTC_fdaa6.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_fdaa6.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdebug-compilation-dir /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -mllvm -disable-aligned-alloc-awareness=1 -o CMakeFiles/cmTC_fdaa6.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.21.1/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx11.0.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -fno-rounding-math -munwind-tables -target-sdk-version=11.3 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -debugger-tuning=lldb -target-linker-version 650.9 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5 -dependency-file CMakeFiles/cmTC_4ace9.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_4ace9.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdebug-compilation-dir /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -mllvm -disable-aligned-alloc-awareness=1 -o CMakeFiles/cmTC_4ace9.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.21.1/share/cmake/Modules/CMakeCCompilerABI.c]
   ignore line: [clang -cc1 version 12.0.5 (clang-1205.0.22.11) default target x86_64-apple-darwin20.6.0]
   ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/local/include"]
   ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/Library/Frameworks"]
@@ -88,14 +88,14 @@ Parsed C implicit link information from above output:
   ignore line: [ /Library/Developer/CommandLineTools/usr/include]
   ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/System/Library/Frameworks (framework directory)]
   ignore line: [End of search list.]
-  ignore line: [Linking C executable cmTC_fdaa6]
-  ignore line: [/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fdaa6.dir/link.txt --verbose=1]
-  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names  -v -Wl -v CMakeFiles/cmTC_fdaa6.dir/CMakeCCompilerABI.c.o -o cmTC_fdaa6 ]
+  ignore line: [Linking C executable cmTC_4ace9]
+  ignore line: [/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4ace9.dir/link.txt --verbose=1]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names  -v -Wl -v CMakeFiles/cmTC_4ace9.dir/CMakeCCompilerABI.c.o -o cmTC_4ace9 ]
   ignore line: [Apple clang version 12.0.5 (clang-1205.0.22.11)]
   ignore line: [Target: x86_64-apple-darwin20.6.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
-  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 11.0.0 11.3 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o cmTC_fdaa6 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_fdaa6.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/lib/darwin/libclang_rt.osx.a]
+  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 11.0.0 11.3 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o cmTC_4ace9 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_4ace9.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/lib/darwin/libclang_rt.osx.a]
     arg [/Library/Developer/CommandLineTools/usr/bin/ld] ==> ignore
     arg [-demangle] ==> ignore
     arg [-lto_library] ==> ignore, skip following value
@@ -110,11 +110,11 @@ Parsed C implicit link information from above output:
     arg [-syslibroot] ==> ignore
     arg [/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_fdaa6] ==> ignore
+    arg [cmTC_4ace9] ==> ignore
     arg [-search_paths_first] ==> ignore
     arg [-headerpad_max_install_names] ==> ignore
     arg [-v] ==> ignore
-    arg [CMakeFiles/cmTC_fdaa6.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_4ace9.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lSystem] ==> lib [System]
     arg [/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/lib/darwin/libclang_rt.osx.a] ==> lib [/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/lib/darwin/libclang_rt.osx.a]
   Library search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/lib]
@@ -132,84 +132,84 @@ Parsed C implicit link information from above output:
 Determining if the include file sys/types.h exists passed with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_d4f70/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d4f70.dir/build.make CMakeFiles/cmTC_d4f70.dir/build
-Building C object CMakeFiles/cmTC_d4f70.dir/CheckIncludeFile.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_d4f70.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_d4f70.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_d4f70.dir/CheckIncludeFile.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_d4f70
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d4f70.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d4f70.dir/CheckIncludeFile.c.o -o cmTC_d4f70 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_fe1eb/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_fe1eb.dir/build.make CMakeFiles/cmTC_fe1eb.dir/build
+Building C object CMakeFiles/cmTC_fe1eb.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_fe1eb.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_fe1eb.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_fe1eb.dir/CheckIncludeFile.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_fe1eb
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fe1eb.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_fe1eb.dir/CheckIncludeFile.c.o -o cmTC_fe1eb 
 
 
 
 Determining if the include file stdint.h exists passed with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_51e58/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_51e58.dir/build.make CMakeFiles/cmTC_51e58.dir/build
-Building C object CMakeFiles/cmTC_51e58.dir/CheckIncludeFile.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_51e58.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_51e58.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_51e58.dir/CheckIncludeFile.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_51e58
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51e58.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_51e58.dir/CheckIncludeFile.c.o -o cmTC_51e58 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_5e758/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_5e758.dir/build.make CMakeFiles/cmTC_5e758.dir/build
+Building C object CMakeFiles/cmTC_5e758.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_5e758.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_5e758.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_5e758.dir/CheckIncludeFile.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_5e758
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5e758.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_5e758.dir/CheckIncludeFile.c.o -o cmTC_5e758 
 
 
 
 Determining if the include file stddef.h exists passed with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_e5082/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e5082.dir/build.make CMakeFiles/cmTC_e5082.dir/build
-Building C object CMakeFiles/cmTC_e5082.dir/CheckIncludeFile.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_e5082.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_e5082.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_e5082.dir/CheckIncludeFile.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_e5082
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e5082.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_e5082.dir/CheckIncludeFile.c.o -o cmTC_e5082 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_8c0e1/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_8c0e1.dir/build.make CMakeFiles/cmTC_8c0e1.dir/build
+Building C object CMakeFiles/cmTC_8c0e1.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_8c0e1.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_8c0e1.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_8c0e1.dir/CheckIncludeFile.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_8c0e1
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c0e1.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_8c0e1.dir/CheckIncludeFile.c.o -o cmTC_8c0e1 
 
 
 
 Determining size of void * passed with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_602b7/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_602b7.dir/build.make CMakeFiles/cmTC_602b7.dir/build
-Building C object CMakeFiles/cmTC_602b7.dir/PLIBSYS_SIZEOF_VOID_P.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_602b7.dir/PLIBSYS_SIZEOF_VOID_P.c.o -MF CMakeFiles/cmTC_602b7.dir/PLIBSYS_SIZEOF_VOID_P.c.o.d -o CMakeFiles/cmTC_602b7.dir/PLIBSYS_SIZEOF_VOID_P.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CheckTypeSize/PLIBSYS_SIZEOF_VOID_P.c
-Linking C executable cmTC_602b7
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_602b7.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_602b7.dir/PLIBSYS_SIZEOF_VOID_P.c.o -o cmTC_602b7 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_48a4a/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_48a4a.dir/build.make CMakeFiles/cmTC_48a4a.dir/build
+Building C object CMakeFiles/cmTC_48a4a.dir/PLIBSYS_SIZEOF_VOID_P.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_48a4a.dir/PLIBSYS_SIZEOF_VOID_P.c.o -MF CMakeFiles/cmTC_48a4a.dir/PLIBSYS_SIZEOF_VOID_P.c.o.d -o CMakeFiles/cmTC_48a4a.dir/PLIBSYS_SIZEOF_VOID_P.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CheckTypeSize/PLIBSYS_SIZEOF_VOID_P.c
+Linking C executable cmTC_48a4a
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_48a4a.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_48a4a.dir/PLIBSYS_SIZEOF_VOID_P.c.o -o cmTC_48a4a 
 
 
 
 Determining size of size_t passed with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_08933/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_08933.dir/build.make CMakeFiles/cmTC_08933.dir/build
-Building C object CMakeFiles/cmTC_08933.dir/PLIBSYS_SIZEOF_SIZE_T.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_08933.dir/PLIBSYS_SIZEOF_SIZE_T.c.o -MF CMakeFiles/cmTC_08933.dir/PLIBSYS_SIZEOF_SIZE_T.c.o.d -o CMakeFiles/cmTC_08933.dir/PLIBSYS_SIZEOF_SIZE_T.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CheckTypeSize/PLIBSYS_SIZEOF_SIZE_T.c
-Linking C executable cmTC_08933
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08933.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_08933.dir/PLIBSYS_SIZEOF_SIZE_T.c.o -o cmTC_08933 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ecef7/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_ecef7.dir/build.make CMakeFiles/cmTC_ecef7.dir/build
+Building C object CMakeFiles/cmTC_ecef7.dir/PLIBSYS_SIZEOF_SIZE_T.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_ecef7.dir/PLIBSYS_SIZEOF_SIZE_T.c.o -MF CMakeFiles/cmTC_ecef7.dir/PLIBSYS_SIZEOF_SIZE_T.c.o.d -o CMakeFiles/cmTC_ecef7.dir/PLIBSYS_SIZEOF_SIZE_T.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CheckTypeSize/PLIBSYS_SIZEOF_SIZE_T.c
+Linking C executable cmTC_ecef7
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ecef7.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ecef7.dir/PLIBSYS_SIZEOF_SIZE_T.c.o -o cmTC_ecef7 
 
 
 
 Determining size of long passed with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_c8ddc/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_c8ddc.dir/build.make CMakeFiles/cmTC_c8ddc.dir/build
-Building C object CMakeFiles/cmTC_c8ddc.dir/PLIBSYS_SIZEOF_LONG.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_c8ddc.dir/PLIBSYS_SIZEOF_LONG.c.o -MF CMakeFiles/cmTC_c8ddc.dir/PLIBSYS_SIZEOF_LONG.c.o.d -o CMakeFiles/cmTC_c8ddc.dir/PLIBSYS_SIZEOF_LONG.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CheckTypeSize/PLIBSYS_SIZEOF_LONG.c
-Linking C executable cmTC_c8ddc
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c8ddc.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_c8ddc.dir/PLIBSYS_SIZEOF_LONG.c.o -o cmTC_c8ddc 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_8a4f5/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_8a4f5.dir/build.make CMakeFiles/cmTC_8a4f5.dir/build
+Building C object CMakeFiles/cmTC_8a4f5.dir/PLIBSYS_SIZEOF_LONG.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_8a4f5.dir/PLIBSYS_SIZEOF_LONG.c.o -MF CMakeFiles/cmTC_8a4f5.dir/PLIBSYS_SIZEOF_LONG.c.o.d -o CMakeFiles/cmTC_8a4f5.dir/PLIBSYS_SIZEOF_LONG.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CheckTypeSize/PLIBSYS_SIZEOF_LONG.c
+Linking C executable cmTC_8a4f5
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8a4f5.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_8a4f5.dir/PLIBSYS_SIZEOF_LONG.c.o -o cmTC_8a4f5 
 
 
 
 Performing C SOURCE FILE Test PLIBSYS_ATOMIC_IMPL_GCCSYNC succeeded with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_b8fee/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b8fee.dir/build.make CMakeFiles/cmTC_b8fee.dir/build
-Building C object CMakeFiles/cmTC_b8fee.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_ATOMIC_IMPL_GCCSYNC -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_b8fee.dir/src.c.o -MF CMakeFiles/cmTC_b8fee.dir/src.c.o.d -o CMakeFiles/cmTC_b8fee.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_b8fee
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b8fee.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_b8fee.dir/src.c.o -o cmTC_b8fee 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_b6492/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b6492.dir/build.make CMakeFiles/cmTC_b6492.dir/build
+Building C object CMakeFiles/cmTC_b6492.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_ATOMIC_IMPL_GCCSYNC -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_b6492.dir/src.c.o -MF CMakeFiles/cmTC_b6492.dir/src.c.o.d -o CMakeFiles/cmTC_b6492.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b6492
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b6492.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_b6492.dir/src.c.o -o cmTC_b6492 
 
 
 Source file was:
@@ -223,36 +223,36 @@ int main () {
 Determining if the include file float.h exists passed with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_4396f/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_4396f.dir/build.make CMakeFiles/cmTC_4396f.dir/build
-Building C object CMakeFiles/cmTC_4396f.dir/CheckIncludeFile.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_4396f.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_4396f.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_4396f.dir/CheckIncludeFile.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_4396f
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4396f.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_4396f.dir/CheckIncludeFile.c.o -o cmTC_4396f 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e3809/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e3809.dir/build.make CMakeFiles/cmTC_e3809.dir/build
+Building C object CMakeFiles/cmTC_e3809.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_e3809.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_e3809.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_e3809.dir/CheckIncludeFile.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_e3809
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3809.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_e3809.dir/CheckIncludeFile.c.o -o cmTC_e3809 
 
 
 
 Determining if the include file limits.h exists passed with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_92d8e/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_92d8e.dir/build.make CMakeFiles/cmTC_92d8e.dir/build
-Building C object CMakeFiles/cmTC_92d8e.dir/CheckIncludeFile.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_92d8e.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_92d8e.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_92d8e.dir/CheckIncludeFile.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_92d8e
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_92d8e.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_92d8e.dir/CheckIncludeFile.c.o -o cmTC_92d8e 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_3966e/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_3966e.dir/build.make CMakeFiles/cmTC_3966e.dir/build
+Building C object CMakeFiles/cmTC_3966e.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_3966e.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_3966e.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_3966e.dir/CheckIncludeFile.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_3966e
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3966e.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_3966e.dir/CheckIncludeFile.c.o -o cmTC_3966e 
 
 
 
 Performing C SOURCE FILE Test PLIBSYS_MMAP_HAS_MAP_ANON succeeded with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_11e45/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_11e45.dir/build.make CMakeFiles/cmTC_11e45.dir/build
-Building C object CMakeFiles/cmTC_11e45.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_MMAP_HAS_MAP_ANON -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_11e45.dir/src.c.o -MF CMakeFiles/cmTC_11e45.dir/src.c.o.d -o CMakeFiles/cmTC_11e45.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_11e45
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11e45.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_11e45.dir/src.c.o -o cmTC_11e45 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_b48b7/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b48b7.dir/build.make CMakeFiles/cmTC_b48b7.dir/build
+Building C object CMakeFiles/cmTC_b48b7.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_MMAP_HAS_MAP_ANON -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_b48b7.dir/src.c.o -MF CMakeFiles/cmTC_b48b7.dir/src.c.o.d -o CMakeFiles/cmTC_b48b7.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b48b7
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b48b7.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_b48b7.dir/src.c.o -o cmTC_b48b7 
 
 
 Source file was:
@@ -265,12 +265,12 @@ Source file was:
 Performing C SOURCE FILE Test PLIBSYS_MMAP_HAS_MAP_ANONYMOUS succeeded with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_6a061/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_6a061.dir/build.make CMakeFiles/cmTC_6a061.dir/build
-Building C object CMakeFiles/cmTC_6a061.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_MMAP_HAS_MAP_ANONYMOUS -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_6a061.dir/src.c.o -MF CMakeFiles/cmTC_6a061.dir/src.c.o.d -o CMakeFiles/cmTC_6a061.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_6a061
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6a061.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_6a061.dir/src.c.o -o cmTC_6a061 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_631af/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_631af.dir/build.make CMakeFiles/cmTC_631af.dir/build
+Building C object CMakeFiles/cmTC_631af.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_MMAP_HAS_MAP_ANONYMOUS -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_631af.dir/src.c.o -MF CMakeFiles/cmTC_631af.dir/src.c.o.d -o CMakeFiles/cmTC_631af.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_631af
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_631af.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_631af.dir/src.c.o -o cmTC_631af 
 
 
 Source file was:
@@ -283,12 +283,12 @@ Source file was:
 Performing C SOURCE FILE Test PLIBSYS_HAS_NANOSLEEP succeeded with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_7b04b/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_7b04b.dir/build.make CMakeFiles/cmTC_7b04b.dir/build
-Building C object CMakeFiles/cmTC_7b04b.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_NANOSLEEP -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_7b04b.dir/src.c.o -MF CMakeFiles/cmTC_7b04b.dir/src.c.o.d -o CMakeFiles/cmTC_7b04b.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_7b04b
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7b04b.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_7b04b.dir/src.c.o -o cmTC_7b04b 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_77ab1/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_77ab1.dir/build.make CMakeFiles/cmTC_77ab1.dir/build
+Building C object CMakeFiles/cmTC_77ab1.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_NANOSLEEP -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_77ab1.dir/src.c.o -MF CMakeFiles/cmTC_77ab1.dir/src.c.o.d -o CMakeFiles/cmTC_77ab1.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_77ab1
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_77ab1.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_77ab1.dir/src.c.o -o cmTC_77ab1 
 
 
 Source file was:
@@ -301,12 +301,12 @@ Source file was:
 Performing C SOURCE FILE Test PLIBSYS_HAS_GETADDRINFO succeeded with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_9c1d7/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_9c1d7.dir/build.make CMakeFiles/cmTC_9c1d7.dir/build
-Building C object CMakeFiles/cmTC_9c1d7.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_GETADDRINFO -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_9c1d7.dir/src.c.o -MF CMakeFiles/cmTC_9c1d7.dir/src.c.o.d -o CMakeFiles/cmTC_9c1d7.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_9c1d7
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9c1d7.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_9c1d7.dir/src.c.o -o cmTC_9c1d7 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_4e90b/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_4e90b.dir/build.make CMakeFiles/cmTC_4e90b.dir/build
+Building C object CMakeFiles/cmTC_4e90b.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_GETADDRINFO -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_4e90b.dir/src.c.o -MF CMakeFiles/cmTC_4e90b.dir/src.c.o.d -o CMakeFiles/cmTC_4e90b.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_4e90b
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4e90b.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_4e90b.dir/src.c.o -o cmTC_4e90b 
 
 
 Source file was:
@@ -321,12 +321,12 @@ Source file was:
 Performing C SOURCE FILE Test PLIBSYS_HAS_POSIX_SCHEDULING succeeded with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_32ae4/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_32ae4.dir/build.make CMakeFiles/cmTC_32ae4.dir/build
-Building C object CMakeFiles/cmTC_32ae4.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_POSIX_SCHEDULING -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_32ae4.dir/src.c.o -MF CMakeFiles/cmTC_32ae4.dir/src.c.o.d -o CMakeFiles/cmTC_32ae4.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_32ae4
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_32ae4.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_32ae4.dir/src.c.o -o cmTC_32ae4 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_66da6/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_66da6.dir/build.make CMakeFiles/cmTC_66da6.dir/build
+Building C object CMakeFiles/cmTC_66da6.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_POSIX_SCHEDULING -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_66da6.dir/src.c.o -MF CMakeFiles/cmTC_66da6.dir/src.c.o.d -o CMakeFiles/cmTC_66da6.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_66da6
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66da6.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_66da6.dir/src.c.o -o cmTC_66da6 
 
 
 Source file was:
@@ -346,12 +346,12 @@ Source file was:
 Performing C SOURCE FILE Test PLIBSYS_HAS_POSIX_STACKSIZE succeeded with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_9e6fa/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_9e6fa.dir/build.make CMakeFiles/cmTC_9e6fa.dir/build
-Building C object CMakeFiles/cmTC_9e6fa.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_POSIX_STACKSIZE -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_9e6fa.dir/src.c.o -MF CMakeFiles/cmTC_9e6fa.dir/src.c.o.d -o CMakeFiles/cmTC_9e6fa.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_9e6fa
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9e6fa.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_9e6fa.dir/src.c.o -o cmTC_9e6fa 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_6d805/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_6d805.dir/build.make CMakeFiles/cmTC_6d805.dir/build
+Building C object CMakeFiles/cmTC_6d805.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_POSIX_STACKSIZE -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_6d805.dir/src.c.o -MF CMakeFiles/cmTC_6d805.dir/src.c.o.d -o CMakeFiles/cmTC_6d805.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_6d805
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d805.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_6d805.dir/src.c.o -o cmTC_6d805 
 
 
 Source file was:
@@ -366,12 +366,12 @@ Source file was:
 Performing C SOURCE FILE Test PLIBSYS_HAS_POSIX_RWLOCK succeeded with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_5d2bd/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_5d2bd.dir/build.make CMakeFiles/cmTC_5d2bd.dir/build
-Building C object CMakeFiles/cmTC_5d2bd.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_POSIX_RWLOCK -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_5d2bd.dir/src.c.o -MF CMakeFiles/cmTC_5d2bd.dir/src.c.o.d -o CMakeFiles/cmTC_5d2bd.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_5d2bd
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5d2bd.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_5d2bd.dir/src.c.o -o cmTC_5d2bd 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_21e07/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_21e07.dir/build.make CMakeFiles/cmTC_21e07.dir/build
+Building C object CMakeFiles/cmTC_21e07.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_POSIX_RWLOCK -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_21e07.dir/src.c.o -MF CMakeFiles/cmTC_21e07.dir/src.c.o.d -o CMakeFiles/cmTC_21e07.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_21e07
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_21e07.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_21e07.dir/src.c.o -o cmTC_21e07 
 
 
 Source file was:
@@ -387,12 +387,12 @@ Source file was:
 Performing C SOURCE FILE Test PLIBSYS_HAS_POSIX_SETNAME_NP_1 succeeded with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_faba2/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_faba2.dir/build.make CMakeFiles/cmTC_faba2.dir/build
-Building C object CMakeFiles/cmTC_faba2.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_POSIX_SETNAME_NP_1 -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_faba2.dir/src.c.o -MF CMakeFiles/cmTC_faba2.dir/src.c.o.d -o CMakeFiles/cmTC_faba2.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_faba2
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_faba2.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_faba2.dir/src.c.o -o cmTC_faba2 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_cde1e/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_cde1e.dir/build.make CMakeFiles/cmTC_cde1e.dir/build
+Building C object CMakeFiles/cmTC_cde1e.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_POSIX_SETNAME_NP_1 -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_cde1e.dir/src.c.o -MF CMakeFiles/cmTC_cde1e.dir/src.c.o.d -o CMakeFiles/cmTC_cde1e.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_cde1e
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cde1e.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_cde1e.dir/src.c.o -o cmTC_cde1e 
 
 
 Source file was:
@@ -406,12 +406,12 @@ Source file was:
 Performing C SOURCE FILE Test PLIBSYS_HAS_SOCKLEN_T succeeded with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_8f1a4/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_8f1a4.dir/build.make CMakeFiles/cmTC_8f1a4.dir/build
-Building C object CMakeFiles/cmTC_8f1a4.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_SOCKLEN_T -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_8f1a4.dir/src.c.o -MF CMakeFiles/cmTC_8f1a4.dir/src.c.o.d -o CMakeFiles/cmTC_8f1a4.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_8f1a4
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8f1a4.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_8f1a4.dir/src.c.o -o cmTC_8f1a4 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_549ff/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_549ff.dir/build.make CMakeFiles/cmTC_549ff.dir/build
+Building C object CMakeFiles/cmTC_549ff.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_SOCKLEN_T -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_549ff.dir/src.c.o -MF CMakeFiles/cmTC_549ff.dir/src.c.o.d -o CMakeFiles/cmTC_549ff.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_549ff
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_549ff.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_549ff.dir/src.c.o -o cmTC_549ff 
 
 
 Source file was:
@@ -425,12 +425,12 @@ Source file was:
 Performing C SOURCE FILE Test PLIBSYS_HAS_SOCKADDR_STORAGE succeeded with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_f89a3/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_f89a3.dir/build.make CMakeFiles/cmTC_f89a3.dir/build
-Building C object CMakeFiles/cmTC_f89a3.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_SOCKADDR_STORAGE -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_f89a3.dir/src.c.o -MF CMakeFiles/cmTC_f89a3.dir/src.c.o.d -o CMakeFiles/cmTC_f89a3.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_f89a3
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f89a3.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_f89a3.dir/src.c.o -o cmTC_f89a3 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_d7574/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d7574.dir/build.make CMakeFiles/cmTC_d7574.dir/build
+Building C object CMakeFiles/cmTC_d7574.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_SOCKADDR_STORAGE -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_d7574.dir/src.c.o -MF CMakeFiles/cmTC_d7574.dir/src.c.o.d -o CMakeFiles/cmTC_d7574.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_d7574
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d7574.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d7574.dir/src.c.o -o cmTC_d7574 
 
 
 Source file was:
@@ -446,12 +446,12 @@ Source file was:
 Performing C SOURCE FILE Test PLIBSYS_SOCKADDR_HAS_SA_LEN succeeded with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_319af/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_319af.dir/build.make CMakeFiles/cmTC_319af.dir/build
-Building C object CMakeFiles/cmTC_319af.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_SOCKADDR_HAS_SA_LEN -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_319af.dir/src.c.o -MF CMakeFiles/cmTC_319af.dir/src.c.o.d -o CMakeFiles/cmTC_319af.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_319af
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_319af.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_319af.dir/src.c.o -o cmTC_319af 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_98840/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_98840.dir/build.make CMakeFiles/cmTC_98840.dir/build
+Building C object CMakeFiles/cmTC_98840.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_SOCKADDR_HAS_SA_LEN -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_98840.dir/src.c.o -MF CMakeFiles/cmTC_98840.dir/src.c.o.d -o CMakeFiles/cmTC_98840.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_98840
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_98840.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_98840.dir/src.c.o -o cmTC_98840 
 
 
 Source file was:
@@ -467,12 +467,12 @@ Source file was:
 Performing C SOURCE FILE Test PLIBSYS_SOCKADDR_IN6_HAS_SCOPEID succeeded with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_24fea/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_24fea.dir/build.make CMakeFiles/cmTC_24fea.dir/build
-Building C object CMakeFiles/cmTC_24fea.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_SOCKADDR_IN6_HAS_SCOPEID -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_24fea.dir/src.c.o -MF CMakeFiles/cmTC_24fea.dir/src.c.o.d -o CMakeFiles/cmTC_24fea.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_24fea
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24fea.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_24fea.dir/src.c.o -o cmTC_24fea 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_8c230/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_8c230.dir/build.make CMakeFiles/cmTC_8c230.dir/build
+Building C object CMakeFiles/cmTC_8c230.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_SOCKADDR_IN6_HAS_SCOPEID -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_8c230.dir/src.c.o -MF CMakeFiles/cmTC_8c230.dir/src.c.o.d -o CMakeFiles/cmTC_8c230.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_8c230
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c230.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_8c230.dir/src.c.o -o cmTC_8c230 
 
 
 Source file was:
@@ -488,12 +488,12 @@ Source file was:
 Performing C SOURCE FILE Test PLIBSYS_SOCKADDR_IN6_HAS_FLOWINFO succeeded with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_d4e39/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d4e39.dir/build.make CMakeFiles/cmTC_d4e39.dir/build
-Building C object CMakeFiles/cmTC_d4e39.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_SOCKADDR_IN6_HAS_FLOWINFO -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_d4e39.dir/src.c.o -MF CMakeFiles/cmTC_d4e39.dir/src.c.o.d -o CMakeFiles/cmTC_d4e39.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_d4e39
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d4e39.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d4e39.dir/src.c.o -o cmTC_d4e39 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e443a/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e443a.dir/build.make CMakeFiles/cmTC_e443a.dir/build
+Building C object CMakeFiles/cmTC_e443a.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_SOCKADDR_IN6_HAS_FLOWINFO -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_e443a.dir/src.c.o -MF CMakeFiles/cmTC_e443a.dir/src.c.o.d -o CMakeFiles/cmTC_e443a.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e443a
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e443a.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_e443a.dir/src.c.o -o cmTC_e443a 
 
 
 Source file was:
@@ -509,24 +509,24 @@ Source file was:
 Determining size of ((struct sockaddr *) 0)->sa_family passed with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_55168/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_55168.dir/build.make CMakeFiles/cmTC_55168.dir/build
-Building C object CMakeFiles/cmTC_55168.dir/PLIBSYS_SIZEOF_SAFAMILY_T.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_55168.dir/PLIBSYS_SIZEOF_SAFAMILY_T.c.o -MF CMakeFiles/cmTC_55168.dir/PLIBSYS_SIZEOF_SAFAMILY_T.c.o.d -o CMakeFiles/cmTC_55168.dir/PLIBSYS_SIZEOF_SAFAMILY_T.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CheckTypeSize/PLIBSYS_SIZEOF_SAFAMILY_T.c
-Linking C executable cmTC_55168
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55168.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_55168.dir/PLIBSYS_SIZEOF_SAFAMILY_T.c.o -o cmTC_55168 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_9ddf0/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_9ddf0.dir/build.make CMakeFiles/cmTC_9ddf0.dir/build
+Building C object CMakeFiles/cmTC_9ddf0.dir/PLIBSYS_SIZEOF_SAFAMILY_T.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_9ddf0.dir/PLIBSYS_SIZEOF_SAFAMILY_T.c.o -MF CMakeFiles/cmTC_9ddf0.dir/PLIBSYS_SIZEOF_SAFAMILY_T.c.o.d -o CMakeFiles/cmTC_9ddf0.dir/PLIBSYS_SIZEOF_SAFAMILY_T.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CheckTypeSize/PLIBSYS_SIZEOF_SAFAMILY_T.c
+Linking C executable cmTC_9ddf0
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ddf0.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_9ddf0.dir/PLIBSYS_SIZEOF_SAFAMILY_T.c.o -o cmTC_9ddf0 
 
 
 
 Performing C SOURCE FILE Test PLIBSYS_HAS_LLDIV succeeded with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_6bc37/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_6bc37.dir/build.make CMakeFiles/cmTC_6bc37.dir/build
-Building C object CMakeFiles/cmTC_6bc37.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_LLDIV -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_6bc37.dir/src.c.o -MF CMakeFiles/cmTC_6bc37.dir/src.c.o.d -o CMakeFiles/cmTC_6bc37.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_6bc37
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6bc37.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_6bc37.dir/src.c.o -o cmTC_6bc37 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_cfeac/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_cfeac.dir/build.make CMakeFiles/cmTC_cfeac.dir/build
+Building C object CMakeFiles/cmTC_cfeac.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_LLDIV -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_cfeac.dir/src.c.o -MF CMakeFiles/cmTC_cfeac.dir/src.c.o.d -o CMakeFiles/cmTC_cfeac.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_cfeac
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cfeac.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_cfeac.dir/src.c.o -o cmTC_cfeac 
 
 
 Source file was:
@@ -542,12 +542,12 @@ Source file was:
 Performing C SOURCE FILE Test PLIBSYS_HAS_CLANG_VISIBILITY succeeded with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_bde1e/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_bde1e.dir/build.make CMakeFiles/cmTC_bde1e.dir/build
-Building C object CMakeFiles/cmTC_bde1e.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_CLANG_VISIBILITY -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_bde1e.dir/src.c.o -MF CMakeFiles/cmTC_bde1e.dir/src.c.o.d -o CMakeFiles/cmTC_bde1e.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_bde1e
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bde1e.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_bde1e.dir/src.c.o -o cmTC_bde1e 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_eacab/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_eacab.dir/build.make CMakeFiles/cmTC_eacab.dir/build
+Building C object CMakeFiles/cmTC_eacab.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_HAS_CLANG_VISIBILITY -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_eacab.dir/src.c.o -MF CMakeFiles/cmTC_eacab.dir/src.c.o.d -o CMakeFiles/cmTC_eacab.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_eacab
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eacab.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_eacab.dir/src.c.o -o cmTC_eacab 
 
 
 Source file was:
@@ -561,24 +561,24 @@ int main () {
 Determining if the include file stdarg.h exists passed with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_46617/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_46617.dir/build.make CMakeFiles/cmTC_46617.dir/build
-Building C object CMakeFiles/cmTC_46617.dir/CheckIncludeFile.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_46617.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_46617.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_46617.dir/CheckIncludeFile.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_46617
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_46617.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_46617.dir/CheckIncludeFile.c.o -o cmTC_46617 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c846f/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_c846f.dir/build.make CMakeFiles/cmTC_c846f.dir/build
+Building C object CMakeFiles/cmTC_c846f.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_c846f.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_c846f.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_c846f.dir/CheckIncludeFile.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_c846f
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c846f.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_c846f.dir/CheckIncludeFile.c.o -o cmTC_c846f 
 
 
 
 Performing C SOURCE FILE Test PLIBSYS_va_copy succeeded with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_78929/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_78929.dir/build.make CMakeFiles/cmTC_78929.dir/build
-Building C object CMakeFiles/cmTC_78929.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_va_copy -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_78929.dir/src.c.o -MF CMakeFiles/cmTC_78929.dir/src.c.o.d -o CMakeFiles/cmTC_78929.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_78929
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78929.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_78929.dir/src.c.o -o cmTC_78929 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_41d0e/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_41d0e.dir/build.make CMakeFiles/cmTC_41d0e.dir/build
+Building C object CMakeFiles/cmTC_41d0e.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DPLIBSYS_va_copy -D_REENTRANT  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_41d0e.dir/src.c.o -MF CMakeFiles/cmTC_41d0e.dir/src.c.o.d -o CMakeFiles/cmTC_41d0e.dir/src.c.o -c /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_41d0e
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_41d0e.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_41d0e.dir/src.c.o -o cmTC_41d0e 
 
 
 Source file was:
@@ -619,15 +619,15 @@ The CXX compiler identification is AppleClang, found in "/Users/nilesh/Desktop/e
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_2daca/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_2daca.dir/build.make CMakeFiles/cmTC_2daca.dir/build
-Building CXX object CMakeFiles/cmTC_2daca.dir/CMakeCXXCompilerABI.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/c++   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_2daca.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_2daca.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_2daca.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.21.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_2a5c0/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_2a5c0.dir/build.make CMakeFiles/cmTC_2a5c0.dir/build
+Building CXX object CMakeFiles/cmTC_2a5c0.dir/CMakeCXXCompilerABI.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/c++   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_2a5c0.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_2a5c0.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_2a5c0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.21.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp
 Apple clang version 12.0.5 (clang-1205.0.22.11)
 Target: x86_64-apple-darwin20.6.0
 Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
- "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx11.0.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -fno-rounding-math -munwind-tables -target-sdk-version=11.3 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -debugger-tuning=lldb -target-linker-version 650.9 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5 -dependency-file CMakeFiles/cmTC_2daca.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_2daca.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -stdlib=libc++ -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdeprecated-macro -fdebug-compilation-dir /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -mllvm -disable-aligned-alloc-awareness=1 -o CMakeFiles/cmTC_2daca.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/Cellar/cmake/3.21.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx11.0.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -fno-rounding-math -munwind-tables -target-sdk-version=11.3 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -debugger-tuning=lldb -target-linker-version 650.9 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5 -dependency-file CMakeFiles/cmTC_2a5c0.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_2a5c0.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -stdlib=libc++ -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdeprecated-macro -fdebug-compilation-dir /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -mllvm -disable-aligned-alloc-awareness=1 -o CMakeFiles/cmTC_2a5c0.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/Cellar/cmake/3.21.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp
 clang -cc1 version 12.0.5 (clang-1205.0.22.11) default target x86_64-apple-darwin20.6.0
 ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/local/include"
 ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/Library/Frameworks"
@@ -639,14 +639,14 @@ ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX1
  /Library/Developer/CommandLineTools/usr/include
  /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/System/Library/Frameworks (framework directory)
 End of search list.
-Linking CXX executable cmTC_2daca
-/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2daca.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_2daca.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_2daca 
+Linking CXX executable cmTC_2a5c0
+/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a5c0.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_2a5c0.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_2a5c0 
 Apple clang version 12.0.5 (clang-1205.0.22.11)
 Target: x86_64-apple-darwin20.6.0
 Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
- "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 11.0.0 11.3 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o cmTC_2daca -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_2daca.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/lib/darwin/libclang_rt.osx.a
+ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 11.0.0 11.3 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o cmTC_2a5c0 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_2a5c0.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/lib/darwin/libclang_rt.osx.a
 @(#)PROGRAM:ld  PROJECT:ld64-650.9
 BUILD 13:09:02 May 28 2021
 configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -676,15 +676,15 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make -f Makefile cmTC_2daca/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_2daca.dir/build.make CMakeFiles/cmTC_2daca.dir/build]
-  ignore line: [Building CXX object CMakeFiles/cmTC_2daca.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/Library/Developer/CommandLineTools/usr/bin/c++   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_2daca.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_2daca.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_2daca.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.21.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Run Build Command(s):/usr/bin/make -f Makefile cmTC_2a5c0/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_2a5c0.dir/build.make CMakeFiles/cmTC_2a5c0.dir/build]
+  ignore line: [Building CXX object CMakeFiles/cmTC_2a5c0.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/c++   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_2a5c0.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_2a5c0.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_2a5c0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.21.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [Apple clang version 12.0.5 (clang-1205.0.22.11)]
   ignore line: [Target: x86_64-apple-darwin20.6.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
   ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
-  ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx11.0.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -fno-rounding-math -munwind-tables -target-sdk-version=11.3 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -debugger-tuning=lldb -target-linker-version 650.9 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5 -dependency-file CMakeFiles/cmTC_2daca.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_2daca.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -stdlib=libc++ -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdeprecated-macro -fdebug-compilation-dir /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -mllvm -disable-aligned-alloc-awareness=1 -o CMakeFiles/cmTC_2daca.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/Cellar/cmake/3.21.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx11.0.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -fno-rounding-math -munwind-tables -target-sdk-version=11.3 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -debugger-tuning=lldb -target-linker-version 650.9 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5 -dependency-file CMakeFiles/cmTC_2a5c0.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_2a5c0.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -stdlib=libc++ -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdeprecated-macro -fdebug-compilation-dir /Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -mllvm -disable-aligned-alloc-awareness=1 -o CMakeFiles/cmTC_2a5c0.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/Cellar/cmake/3.21.1/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [clang -cc1 version 12.0.5 (clang-1205.0.22.11) default target x86_64-apple-darwin20.6.0]
   ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/local/include"]
   ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/Library/Frameworks"]
@@ -696,14 +696,14 @@ Parsed CXX implicit link information from above output:
   ignore line: [ /Library/Developer/CommandLineTools/usr/include]
   ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/System/Library/Frameworks (framework directory)]
   ignore line: [End of search list.]
-  ignore line: [Linking CXX executable cmTC_2daca]
-  ignore line: [/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2daca.dir/link.txt --verbose=1]
-  ignore line: [/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names  -v -Wl -v CMakeFiles/cmTC_2daca.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_2daca ]
+  ignore line: [Linking CXX executable cmTC_2a5c0]
+  ignore line: [/usr/local/Cellar/cmake/3.21.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a5c0.dir/link.txt --verbose=1]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names  -v -Wl -v CMakeFiles/cmTC_2a5c0.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_2a5c0 ]
   ignore line: [Apple clang version 12.0.5 (clang-1205.0.22.11)]
   ignore line: [Target: x86_64-apple-darwin20.6.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
-  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 11.0.0 11.3 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o cmTC_2daca -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_2daca.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/lib/darwin/libclang_rt.osx.a]
+  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 11.0.0 11.3 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o cmTC_2a5c0 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_2a5c0.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/lib/darwin/libclang_rt.osx.a]
     arg [/Library/Developer/CommandLineTools/usr/bin/ld] ==> ignore
     arg [-demangle] ==> ignore
     arg [-lto_library] ==> ignore, skip following value
@@ -718,11 +718,11 @@ Parsed CXX implicit link information from above output:
     arg [-syslibroot] ==> ignore
     arg [/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_2daca] ==> ignore
+    arg [cmTC_2a5c0] ==> ignore
     arg [-search_paths_first] ==> ignore
     arg [-headerpad_max_install_names] ==> ignore
     arg [-v] ==> ignore
-    arg [CMakeFiles/cmTC_2daca.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_2a5c0.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lc++] ==> lib [c++]
     arg [-lSystem] ==> lib [System]
     arg [/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/lib/darwin/libclang_rt.osx.a] ==> lib [/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/lib/darwin/libclang_rt.osx.a]

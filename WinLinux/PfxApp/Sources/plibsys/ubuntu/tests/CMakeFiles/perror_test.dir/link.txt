@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/perror_test.dir/perror_test.cpp.o  -o ../perror_test  -Wl,-rpath,/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu ../libplibsys.so.0 -pthread -lrt -ldl 

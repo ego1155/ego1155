@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/puthread_test.dir/puthread_test.cpp.o  -o ../puthread_test  -Wl,-rpath,/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu ../libplibsys.so.0 -pthread -lrt -ldl 

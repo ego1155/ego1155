@@ -20,6 +20,7 @@ COPY_LIBS :=copy_libs_win
 ILIBSINC := -I./Sources/plibsys/plibsys/src
 LLIBDIR := -L./Sources/plibsys/window
 CFLAGS := $(CFLAGS) $(ILIBSINC) $(LLIBDIR) -lws2_32 -L.
+PLIBSYS := ./Sources/plibsys/plibsys_Window.sh
 
 else ifeq ($(shell lsb_release -si),Ubuntu)
 
@@ -31,6 +32,7 @@ COPY_LIBS :=copy_libs_lnx
 ILIBSINC := -I./Sources/plibsys/plibsys/src
 LLIBDIR := -L./Sources/plibsys/ubuntu
 CFLAGS := $(CFLAGS) $(ILIBSINC) $(LLIBDIR) -lpthread -lm -Wl,-R./libs/
+PLIBSYS := ./Sources/plibsys/plibsys_Ubuntu.sh
 
 else ifeq ($(shell uname),Darwin)
 
@@ -42,6 +44,7 @@ COPY_LIBS :=dylibbundler_osx
 ILIBSINC := -I/usr/local/include -I./Sources/plibsys/plibsys/src
 LLIBDIR := -L/usr/local/opt/libssh/lib -L./Sources/plibsys/macosx
 CFLAGS := $(CFLAGS) -L./Sources/plibsys/macosx $(ILIBSINC) $(LLIBDIR)
+PLIBSYS := ./Sources/plibsys/plibsys_MacOsX.sh
 
 endif
 
@@ -114,6 +117,9 @@ preHeader:
 
 postHeader:
 	@echo ++++++++++++++++++ $(TARGET) ++++++++++++++++++
+
+plibsys:
+	$(PLIBSYS)
 	
 touch:
 	find $(SRC_DIR) -exec touch {} \;

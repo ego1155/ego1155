@@ -1,4 +1,7 @@
 #!/bin/bash
+BASEDIR=$(dirname "$0")
+cd $BASEDIR
+
 curDir=$(pwd)
 
 rm -rf ./plibsys

@@ -177,10 +177,7 @@ void resources_generate(const char* source, const char* target)
 #else
 		sc_str_replace(&(fi + i)->path, "XXX/", "XXX");
 #endif
-		//sc_str_replace(&(fi + i)->path, "XXX\\", "XXX");
-		//sc_str_replace(&(fi + i)->path, "XXX/", "XXX");
 		sc_str_trim(&(fi + i)->path, "XXX");
-		//sc_str_replace(&(fi + i)->path, "\\", "/");
 		fprintf(fp, "const char name%d[] = \"%s\";\n", i, (fi + i)->path);
 		
 		char* buf = NULL;

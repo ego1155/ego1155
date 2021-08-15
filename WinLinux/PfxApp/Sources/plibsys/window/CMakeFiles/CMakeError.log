@@ -1,18 +1,18 @@
 Determining if the include file values.h exists failed with the following output:
 Change Dir: C:/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/msys64/usr/bin/make.exe -f Makefile cmTC_a3d68/fast && make[1]: Entering directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
-/usr/bin/make  -f CMakeFiles/cmTC_a3d68.dir/build.make CMakeFiles/cmTC_a3d68.dir/build
+Run Build Command(s):C:/msys64/usr/bin/make.exe -f Makefile cmTC_96a41/fast && make[1]: Entering directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_96a41.dir/build.make CMakeFiles/cmTC_96a41.dir/build
 make[2]: Entering directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a3d68.dir/CheckIncludeFile.c.obj
-/C/msys64/mingw64/bin/gcc.exe    -o CMakeFiles/cmTC_a3d68.dir/CheckIncludeFile.c.obj -c /C/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Building C object CMakeFiles/cmTC_96a41.dir/CheckIncludeFile.c.obj
+/C/msys64/mingw64/bin/gcc.exe    -o CMakeFiles/cmTC_96a41.dir/CheckIncludeFile.c.obj -c /C/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 C:/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: values.h: No such file or directory
     1 | #include <values.h>
       |          ^~~~~~~~~~
 compilation terminated.
-make[2]: *** [CMakeFiles/cmTC_a3d68.dir/build.make:78: CMakeFiles/cmTC_a3d68.dir/CheckIncludeFile.c.obj] Error 1
+make[2]: *** [CMakeFiles/cmTC_96a41.dir/build.make:78: CMakeFiles/cmTC_96a41.dir/CheckIncludeFile.c.obj] Error 1
 make[2]: Leaving directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
-make[1]: *** [Makefile:127: cmTC_a3d68/fast] Error 2
+make[1]: *** [Makefile:127: cmTC_96a41/fast] Error 2
 make[1]: Leaving directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
 
 
@@ -20,18 +20,18 @@ make[1]: Leaving directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sour
 Performing C SOURCE FILE Test PLIBSYS_HAS_PTHREAD_NP failed with the following output:
 Change Dir: C:/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/msys64/usr/bin/make.exe -f Makefile cmTC_c6204/fast && make[1]: Entering directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
-/usr/bin/make  -f CMakeFiles/cmTC_c6204.dir/build.make CMakeFiles/cmTC_c6204.dir/build
+Run Build Command(s):C:/msys64/usr/bin/make.exe -f Makefile cmTC_6da6c/fast && make[1]: Entering directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_6da6c.dir/build.make CMakeFiles/cmTC_6da6c.dir/build
 make[2]: Entering directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c6204.dir/src.c.obj
-/C/msys64/mingw64/bin/gcc.exe -DPLIBSYS_HAS_PTHREAD_NP   -o CMakeFiles/cmTC_c6204.dir/src.c.obj -c /C/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_6da6c.dir/src.c.obj
+/C/msys64/mingw64/bin/gcc.exe -DPLIBSYS_HAS_PTHREAD_NP   -o CMakeFiles/cmTC_6da6c.dir/src.c.obj -c /C/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/src.c
 C:/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/src.c:2:36: fatal error: pthread_np.h: No such file or directory
     2 |                           #include <pthread_np.h>
       |                                    ^~~~~~~~~~~~~~
 compilation terminated.
-make[2]: *** [CMakeFiles/cmTC_c6204.dir/build.make:78: CMakeFiles/cmTC_c6204.dir/src.c.obj] Error 1
+make[2]: *** [CMakeFiles/cmTC_6da6c.dir/build.make:78: CMakeFiles/cmTC_6da6c.dir/src.c.obj] Error 1
 make[2]: Leaving directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
-make[1]: *** [Makefile:127: cmTC_c6204/fast] Error 2
+make[1]: *** [Makefile:127: cmTC_6da6c/fast] Error 2
 make[1]: Leaving directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
 
 
@@ -43,11 +43,11 @@ Source file was:
 Performing C SOURCE FILE Test PLIBSYS_HAS_POSIX_SETNAME_NP_1 failed with the following output:
 Change Dir: C:/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/msys64/usr/bin/make.exe -f Makefile cmTC_16f16/fast && make[1]: Entering directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
-/usr/bin/make  -f CMakeFiles/cmTC_16f16.dir/build.make CMakeFiles/cmTC_16f16.dir/build
+Run Build Command(s):C:/msys64/usr/bin/make.exe -f Makefile cmTC_5956b/fast && make[1]: Entering directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_5956b.dir/build.make CMakeFiles/cmTC_5956b.dir/build
 make[2]: Entering directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_16f16.dir/src.c.obj
-/C/msys64/mingw64/bin/gcc.exe -DPLIBSYS_HAS_POSIX_SETNAME_NP_1   -o CMakeFiles/cmTC_16f16.dir/src.c.obj -c /C/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_5956b.dir/src.c.obj
+/C/msys64/mingw64/bin/gcc.exe -DPLIBSYS_HAS_POSIX_SETNAME_NP_1   -o CMakeFiles/cmTC_5956b.dir/src.c.obj -c /C/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/src.c
 C:/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/src.c: In function 'main':
 C:/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/src.c:5:45: warning: passing argument 1 of 'pthread_setname_np' makes integer from pointer without a cast [-Wint-conversion]
     5 |                         pthread_setname_np ("thread_name");
@@ -65,9 +65,9 @@ In file included from C:/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/pl
 C:/msys64/mingw64/x86_64-w64-mingw32/include/pthread.h:304:26: note: declared here
   304 | int       WINPTHREAD_API pthread_setname_np(pthread_t thread, const char *name);
       |                          ^~~~~~~~~~~~~~~~~~
-make[2]: *** [CMakeFiles/cmTC_16f16.dir/build.make:78: CMakeFiles/cmTC_16f16.dir/src.c.obj] Error 1
+make[2]: *** [CMakeFiles/cmTC_5956b.dir/build.make:78: CMakeFiles/cmTC_5956b.dir/src.c.obj] Error 1
 make[2]: Leaving directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
-make[1]: *** [Makefile:127: cmTC_16f16/fast] Error 2
+make[1]: *** [Makefile:127: cmTC_5956b/fast] Error 2
 make[1]: Leaving directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
 
 
@@ -82,18 +82,18 @@ Source file was:
 Performing C SOURCE FILE Test PLIBSYS_SOCKADDR_HAS_SA_LEN failed with the following output:
 Change Dir: C:/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/msys64/usr/bin/make.exe -f Makefile cmTC_40faa/fast && make[1]: Entering directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
-/usr/bin/make  -f CMakeFiles/cmTC_40faa.dir/build.make CMakeFiles/cmTC_40faa.dir/build
+Run Build Command(s):C:/msys64/usr/bin/make.exe -f Makefile cmTC_685a4/fast && make[1]: Entering directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_685a4.dir/build.make CMakeFiles/cmTC_685a4.dir/build
 make[2]: Entering directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_40faa.dir/src.c.obj
-/C/msys64/mingw64/bin/gcc.exe -DPLIBSYS_SOCKADDR_HAS_SA_LEN   -o CMakeFiles/cmTC_40faa.dir/src.c.obj -c /C/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_685a4.dir/src.c.obj
+/C/msys64/mingw64/bin/gcc.exe -DPLIBSYS_SOCKADDR_HAS_SA_LEN   -o CMakeFiles/cmTC_685a4.dir/src.c.obj -c /C/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/src.c
 C:/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/src.c: In function 'main':
 C:/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp/src.c:6:42: error: 'struct sockaddr' has no member named 'sa_len'
     6 |                                 sock_addr.sa_len = 0;
       |                                          ^
-make[2]: *** [CMakeFiles/cmTC_40faa.dir/build.make:78: CMakeFiles/cmTC_40faa.dir/src.c.obj] Error 1
+make[2]: *** [CMakeFiles/cmTC_685a4.dir/build.make:78: CMakeFiles/cmTC_685a4.dir/src.c.obj] Error 1
 make[2]: Leaving directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
-make[1]: *** [Makefile:127: cmTC_40faa/fast] Error 2
+make[1]: *** [Makefile:127: cmTC_685a4/fast] Error 2
 make[1]: Leaving directory '/c/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/window/CMakeFiles/CMakeTmp'
 
 

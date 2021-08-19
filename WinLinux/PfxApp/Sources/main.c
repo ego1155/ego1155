@@ -7,11 +7,11 @@ int main(int argc, char *argv[])
 		if (strcmp("resources",argv[1]) == 0)
 		{
 #if defined (P_OS_WIN64)
-			const char* src_path = ".\\..\\Resources";
-			const char* dest_path = ".\\..\\libPfx\\resources";
+			const char* src_path = ".\\Sources\\Resources";
+			const char* dest_path = ".\\Sources\\libPfx\\resources";
 #else
-			const char* src_path = "./../Resources";
-			const char* dest_path = "./../libPfx/resources";
+			const char* src_path = "./Sources/Resources";
+			const char* dest_path = "./Sources/libPfx/resources";
 #endif
 			resources_generate(src_path, dest_path);
 		}

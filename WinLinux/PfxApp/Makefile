@@ -77,7 +77,17 @@ else
 	FAVICON_OBJ =
 endif
 
-all: preHeader $(TARGET) clean $(COPY_LIBS) postHeader
+all: preHeader exec resourcesgen postHeader
+
+exec: $(TARGET) clean $(COPY_LIBS)
+
+resourcesgen:
+	$(HIDE)$(MKDIR) -p $(SRC_DIR)/ResourcesGen
+	$(HIDE)cp -vr $(TARGET_DIR)/* $(SRC_DIR)/ResourcesGen
+	chmod a+x $(SRC_DIR)/ResourcesGen/$(TARGET)
+	$(SRC_DIR)/ResourcesGen/$(TARGET) resources
+	$(HIDE)$(RMDIR) $(SRC_DIR)/ResourcesGen
+	#$(MAKE) exec
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@echo + CC $<

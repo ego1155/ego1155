@@ -180,6 +180,8 @@ void resources_generate(const char* source, const char* target)
 		sc_str_trim(&(fi + i)->path, "XXX");
 		fprintf(fp, "const char name%d[] = \"%s\";\n", i, (fi + i)->path);
 		
+		fprintf(fp, "//%s\n", src);
+		
 		char* buf = NULL;
 		FILE* fpp  = NULL;
 		
@@ -198,28 +200,30 @@ void resources_generate(const char* source, const char* target)
 			if (!arrChar)
 			{
 				arrChar = malloc((numOfDigits + ext) * sizeof(char));
-				char* arr = calloc(numOfDigits, sizeof(char));
-				sprintf(arr, "%d", x);
-				for (int j=0; j < numOfDigits; j++)
-					arrChar[idx + j] = arr[j];
+				char* arr = (char*)calloc(numOfDigits, sizeof(char));
+				//char* arr = calloc(numOfDigits, sizeof(char));
+				//sprintf(arr, "%d", x);
+				//for (int j=0; j < numOfDigits; j++)
+					//arrChar[idx + j] = arr[j];
 				free( arr );
-				if (ext != 0) arrChar[idx + numOfDigits] = ',';
+				//if (ext != 0) arrChar[idx + numOfDigits] = ',';
 			}
 			else
 			{
 				arrChar = realloc(arrChar, (idx + numOfDigits + ext) * sizeof(char));
-				char* arr = calloc(numOfDigits, sizeof(char));
-				sprintf(arr, "%d", x);
-				for (int j=0; j < numOfDigits; j++)
-					arrChar[idx + j] = arr[j];
+				char* arr = (char*)calloc(numOfDigits, sizeof(char));
+				//char* arr = calloc(numOfDigits, sizeof(char));
+				//sprintf(arr, "%d", x);
+				//for (int j=0; j < numOfDigits; j++)
+					//arrChar[idx + j] = arr[j];
 				free( arr );
-				if (ext != 0) arrChar[idx + numOfDigits] = ',';
+				//if (ext != 0) arrChar[idx + numOfDigits] = ',';
 			}
 			idx += numOfDigits + ext;
 		}
 		arrChar = realloc(arrChar, (idx) * sizeof(char));
 		arrChar[idx] = '\0';
-		fprintf(fp, "const unsigned char data%d[] = { %s };\n", i, (char*)arrChar);
+		//fprintf(fp, "const unsigned char data%d[] = { %s };\n", i, (char*)arrChar);
 		free( arrChar );
 		free( buf );
 		
@@ -234,14 +238,14 @@ void resources_generate(const char* source, const char* target)
 	fprintf(fp, "%s\n", "cresource* get_cresource(const char* filename)");
 	fprintf(fp, "%s\n", "{");
 	
-	for(int i=0; i < filet; i++)
+	/* for(int i=0; i < filet; i++)
 	{
 		if (i == 0)
 			fprintf(fp, "\tif (strcmp(filename,name%d) == 0)\n", i);
 		else
 			fprintf(fp, "\telse if (strcmp(filename,name%d) == 0)\n", i);
 		fprintf(fp, "\t\treturn create_cresource(name%d, sizeof(data%d)/sizeof(data%d[0]), data%d);\n", i, i, i, i);
-	}
+	} */
 	
 	fprintf(fp, "%s\n", "\treturn NULL;");
 	fprintf(fp, "%s\n", "}");

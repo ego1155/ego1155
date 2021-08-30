@@ -6,6 +6,40 @@ filewatch_t* filewatch = NULL;
 bool isShutdown=false;
 bool isRestart=false;
 
+
+void log_write(const char *msg)
+{
+	FILE *fp;
+	fp = fopen("c:\\dataprotection_log.txt", "a");
+	if (fp != NULL)
+	{
+		time_t t;
+		time(&t);
+		char str[1024];
+		sprintf(str,"%s%s\n",ctime(&t), msg);
+		fputs(str, fp);
+		fclose(fp);
+	}
+}
+
+/**
+ * Function to check whether a directory exists or not.
+ * It returns 1 if given path is directory and  exists 
+ * otherwise returns 0.
+ */
+int isDirectoryExists(const char *path)
+{
+    struct stat stats;
+
+    stat(path, &stats);
+
+    // Check for file existence
+    if (S_ISDIR(stats.st_mode))
+        return 1;
+
+    return 0;
+}
+
 void watch_callback(filewatch_update_t change, const char* virtual_path, void* udata)
 {
 	const char* change_string = 0;
@@ -33,19 +67,8 @@ void watch_callback(filewatch_update_t change, const char* virtual_path, void* u
 	printf( "%s at %s\n", change_string, fName );
 	sc_str_destroy(&fName);
 	
-	time_t t;
-    time(&t);
+	log_write("Virus attack occured...");
 	
-	char* path = (char*)malloc(1000 * sizeof(char));
-	sprintf(path, "log_dataprotection_%s", ctime(&t));
-	char* path2 = (char*)malloc(1000 * sizeof(char));
-	sprintf(path2, "log_dataprotection_latest_%s", ctime(&t));
-	sc_log_init();
-	sc_log_set_file(path, path2);
-	sc_log_info("Virus attack occured...at $s\n", ctime(&t));
-	sc_log_term();
-	free(path);
-	free(path2);
 	if (isShutdown)
 		system("c:\\windows\\system32\\shutdown /s /t 0");
 	if (isRestart)
@@ -129,17 +152,29 @@ int main(int argc, char *argv[])
 					assetsys = assetsys_create(0);
 					filewatch = filewatch_create(assetsys, 0);
 					
+					//sc_log_init();
+					//sc_log_set_file("log.txt", "log_latest.txt");
 					for(i=0; i<count; i++)
 					{
 						char const* field = ini_property_value( ini, section, i );
 						char* fdName = sc_str_create(field);
 						strip_trailing_slashes(fdName);
 						printf( "%s=%s\n", "Folder", fdName );
-						filewatch_mount(filewatch, fdName, fdName);
-						filewatch_start_watching(filewatch, fdName, watch_callback, 0);
+						if (isDirectoryExists(fdName))
+						{
+							filewatch_mount(filewatch, fdName, "/data");
+						}
+						else
+						{
+							char str[1024];
+							sprintf(str, "%s does not exit!", fdName);
+							log_write(str);
+						}
 						sc_str_destroy(&fdName);
 					}
+					//sc_log_term();
 					ini_destroy( ini );
+					filewatch_start_watching(filewatch, "/data", watch_callback, 0);
 					while (!GetAsyncKeyState(VK_ESCAPE))
 					{
 						filewatch_update(filewatch);

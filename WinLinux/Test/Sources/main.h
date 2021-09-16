@@ -5,7 +5,7 @@
 #define PATH_SIZE (1024)
 #define BUFSIZE (256)
 
-#define AES256 1
+#define AES128 1
 
 #include "libPfx/libPfx.h"
 

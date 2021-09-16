@@ -7,12 +7,10 @@
 #include <sys/stat.h>
 #include <string.h>
 #include <utime.h>
-
-#include <windows.h>
+#include <time.h>
 
 //#include <unistd.h>
 //#include <math.h>
-//#include <time.h>
 //#include <stdbool.h>
 
 #endif

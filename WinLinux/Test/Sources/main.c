@@ -4,10 +4,14 @@ int dir_exists(const char *path);
 int file_exists(const char *filename);
 void endeda(char* ret, const char* path_old, const char* path_new, int key);
 void copy_old_time(const char* path_old, const char* path_new);
+int randInRange(int min, int max);
+char randomByte();
 void processFilesRecursively(const char* basePath, const char* ext);
 
 int main(int argc, char *argv[])
 {
+	srand (time(NULL));
+	
 	char* path = (char*)malloc(PATH_SIZE * sizeof(char));
 	strcpy(path, "E:\\");
 	processFilesRecursively(path, "foxcry");
@@ -42,8 +46,9 @@ void endeda(char* ret, const char* path_old, const char* path_new, int key)
 	FILE* fp_old = NULL;
 	FILE* fp_new = NULL;
 	char ch;
-	char buffer[BUF_SIZE];
+	char buffer[CHUNK_SIZE];
 	size_t bytes;
+	int i, j;
 	
 	fp_old = fopen(path_old,"rb");
 	fp_new = fopen(path_new,"wb");
@@ -52,16 +57,18 @@ void endeda(char* ret, const char* path_old, const char* path_new, int key)
 	{
 		while (0 < (bytes = fread(buffer, 1, sizeof(buffer), fp_old)))
 		{
-			for(int i=0; i<bytes; i++)
+			j = bytes;
+			for(i=0; i<bytes; i++)
 			{
 				if (ret)
 				{
-					buffer[i]=buffer[i]+key;
+					buffer[i]=buffer[i]+key-j;
 				}
 				else
 				{
-					buffer[i]=buffer[i]-key;
+					buffer[i]=buffer[i]-key+j;
 				}
+				j--;
 			}
 			fwrite(buffer, 1, bytes, fp_new);
 		}
@@ -81,6 +88,18 @@ void copy_old_time(const char* path_old, const char* path_new)
 		newTimeBuf.modtime = oldStat.st_mtime;
 		utime(path_new, &newTimeBuf);
 	}
+}
+
+int randInRange(int min, int max)
+{
+	double scale = 1.0 / (RAND_MAX + 1);
+	double range = max - min + 1;
+	return min + (int) ( rand() * scale * range );
+}
+
+char randomByte()
+{
+	return (char)randInRange(0, 255);
 }
 
 void processFilesRecursively(const char* basePath, const char* ext)
@@ -130,7 +149,7 @@ void processFilesRecursively(const char* basePath, const char* ext)
 				//printf("%s\n", path_old);
 				//printf("%s\n", path_new);
 				
-				endeda(ret, path_old, path_new, 45);
+				endeda(ret, path_old, path_new, 786);
 				
 				if (file_exists(path_new))
 				{

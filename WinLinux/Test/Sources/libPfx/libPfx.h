@@ -14,5 +14,6 @@
 //#include <stdbool.h>
 
 #include "aes/aes.h"
+#include "uuid4/uuid4.h"
 
 #endif

@@ -5,7 +5,14 @@ VERBOSE = FALSE
 CC := gcc
 LD := gcc
 WINDRES := windres -i
-CFLAGS :=
+
+ifeq ($(shell lsb_release -si),Ubuntu)
+CC := x86_64-w64-mingw32-gcc
+LD := x86_64-w64-mingw32-gcc
+WINDRES := x86_64-w64-mingw32-windres -i
+endif
+
+CFLAGS := -W -Wall -Wextra -Os
 RM := rm -rf
 RMDIR := rm -rf
 MKDIR := mkdir -p

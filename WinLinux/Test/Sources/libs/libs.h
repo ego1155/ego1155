@@ -9,8 +9,9 @@
 #include <utime.h>
 #include <time.h>
 #include <math.h>
+#include <pthread.h>
 
-//#include <unistd.h>
+#include <unistd.h>
 //#include <stdbool.h>
 
 #include "aes/aes.h"

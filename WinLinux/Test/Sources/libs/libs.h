@@ -11,10 +11,11 @@
 #include <math.h>
 #include <pthread.h>
 
-#include <unistd.h>
+//#include <unistd.h>
 //#include <stdbool.h>
 
 #include "aes/aes.h"
 #include "uuid4/uuid4.h"
+#include "queue/queue.h"
 
 #endif

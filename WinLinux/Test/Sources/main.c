@@ -1,5 +1,10 @@
 #include "main.h"
 
+typedef struct PathInfo {
+   char basePath[PATH_SIZE];
+   char name[FILENAME_SIZE];
+} PathInfo;
+
 struct FileInfo {
    char name[FILENAME_SIZE];
 };
@@ -29,6 +34,47 @@ const char* exts = ",exe,rar,bat,txt,ps1,";
 
 int main(int argc, char *argv[])
 {
+	queue *q = queue_init();
+	
+	PathInfo *pi = (PathInfo *)malloc(sizeof(PathInfo));
+	strcpy(pi->basePath, "Hello");
+	strcpy(pi->name, "HelloName");
+	q->push(q, (void *)pi);
+	
+	PathInfo *pi1 = (PathInfo *)malloc(sizeof(PathInfo));
+	strcpy(pi1->basePath, "Hello1");
+	strcpy(pi1->name, "Hello1Name");
+	q->push(q, (void *)pi1);
+	
+	PathInfo *pi2 = (PathInfo *)malloc(sizeof(PathInfo));
+	strcpy(pi2->basePath, "Hello2");
+	strcpy(pi2->name, "Hello2Name");
+	q->push(q, (void *)pi2);
+	
+	PathInfo *pi3 = (PathInfo *)malloc(sizeof(PathInfo));
+	strcpy(pi3->basePath, "Hello3");
+	strcpy(pi3->name, "Hello3Name");
+	q->push(q, (void *)pi3);
+	
+	while(true)
+	{
+		PathInfo *pi = q->pop(q);
+		if (pi != NULL)
+		{
+			printf("%s\n", pi->basePath);
+			printf("%s\n", pi->name);
+			free(pi);
+		}
+		else
+		{
+			break;
+		}
+	}
+	
+	queue_deinit(q);
+	
+	return EXIT_SUCCESS;
+	
 	if (argc != 2) return EXIT_SUCCESS;
 	
 	int mode = 0;

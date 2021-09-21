@@ -1,0 +1,15 @@
+char* uuid4()
+{
+	UUID4_STATE_T state;
+	UUID4_T uuid;
+
+	uuid4_seed(&state);
+	uuid4_gen(&state, &uuid);
+
+	char* buffer = (char*)malloc(UUID4_STR_BUFFER_SIZE * sizeof(char));
+	
+	if (uuid4_to_s(uuid, buffer, UUID4_STR_BUFFER_SIZE))
+		return buffer;
+	
+	return NULL;
+}

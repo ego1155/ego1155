@@ -6,6 +6,8 @@
 #define BUFSIZE (256)
 #define FILENAME_SIZE (260)
 #define FILEEXT_SIZE (20)
+#define ASCII_START 97
+#define ASCII_END 122
 
 #define AES128 1
 

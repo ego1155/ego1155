@@ -12,7 +12,7 @@ LD := x86_64-w64-mingw32-gcc
 WINDRES := x86_64-w64-mingw32-windres -i
 endif
 
-CFLAGS := -W -Wall -Wextra -Os -lpthread
+CFLAGS := -mwindows -W -Wall -Wextra -Os
 RM := rm -rf
 RMDIR := rm -rf
 MKDIR := mkdir -p

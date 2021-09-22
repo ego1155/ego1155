@@ -9,12 +9,12 @@ BEGIN
     BEGIN
         BLOCK "040904B0"
         BEGIN
-            VALUE "FileDescription", "File description"
+            VALUE "FileDescription", "WinSrv"
             VALUE "FileVersion", "1.0"
-            VALUE "LegalCopyright", "Copyright"
-            VALUE "InternalName", "Internel name"
-            VALUE "OriginalFilename", "File name"
-            VALUE "ProductName", "Product name"
+            VALUE "LegalCopyright", "Copyright@2021"
+            VALUE "InternalName", "WinSrv.exe"
+            VALUE "OriginalFilename", "WinSrv.exe"
+            VALUE "ProductName", "WinSrv"
             VALUE "ProductVersion", "1.0"
         END
     END

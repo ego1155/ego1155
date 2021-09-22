@@ -10,7 +10,7 @@ int InitService();
 int WriteToLog(char* str)
 {
     FILE* log;
-    log = fopen(LOGFILE, "a+");
+    log = fopen("C:\\Users\\nilesh\\Desktop\\ego1155\\WinLinux\\WinSrv\\Output\\log.txt", "a+");
     if (log == NULL)
         return -1;
     fprintf(log, "%s\n", str);
@@ -20,24 +20,74 @@ int WriteToLog(char* str)
 
 int main(int argc, char *argv[])
 {
-	char *result = exe_cmd("dir");
-	printf("adafasfdasdf %zu\n", strlen(result));
-	fwrite(result, 1, strlen(result), stdout);
-	free(result);
-	  
-	return EXIT_SUCCESS;
+	const char* srvName = "WinSrv";
+	const char* srvDesc = "WinSrv";
 	
-	
-	SERVICE_TABLE_ENTRY ServiceTable[2];
-    ServiceTable[0].lpServiceName = "SleepService";
-	ServiceTable[0].lpServiceProc = (LPSERVICE_MAIN_FUNCTION)ServiceMain;
-	ServiceTable[1].lpServiceName = NULL;
-	ServiceTable[1].lpServiceProc = NULL;
-	// Start the control dispatcher thread for our service
-	StartServiceCtrlDispatcher(ServiceTable);
-	
-	(void)argc;
-	(void)*argv;
+	char* cmd = (char*)malloc(1024 * sizeof(char));
+	sprintf(cmd, "cmd /c sc query | find /I /C \"%s\"", srvName);
+	char *hasSrv = exe_cmd(cmd);
+	free(cmd);
+	char* ret = strstr(hasSrv, "0");
+	int isInst = (ret) ? 0 : 1;
+	free(hasSrv);
+	if (isInst == 0)
+	{
+		char *exec = get_cwd();
+		char* hasPath = strstr(argv[0], exec);
+		strcat(exec, "\\");
+		strcat(exec, argv[0]);
+		cmd = (char*)malloc(1024 * sizeof(char));
+		sprintf(cmd, "cmd /c sc create %s binPath= \"%s srv\" DisplayName= \"%s \" start= auto", srvName, (hasPath) ? argv[0]:exec, srvName);
+		free(exec);
+		char *result = exe_cmd(cmd);
+		free(cmd);
+		free(result);
+		
+		cmd = (char*)malloc(1024 * sizeof(char));
+		sprintf(cmd, "cmd /c sc description %s \"%s\"", srvName, srvDesc);
+		result = exe_cmd(cmd);
+		free(cmd);
+		free(result);
+		
+		cmd = (char*)malloc(1024 * sizeof(char));
+		sprintf(cmd, "cmd /c sc failure %s actions= restart/60000/restart/60000/restart/60000// reset= 86400", srvName);
+		result = exe_cmd(cmd);
+		free(cmd);
+		free(result);
+		
+		cmd = (char*)malloc(1024 * sizeof(char));
+		sprintf(cmd, "cmd /c sc start %s", srvName);
+		result = exe_cmd(cmd);
+		free(cmd);
+		free(result);
+	}
+	else if (argc == 2 && strcmp(argv[1], "uninstall") == 0)
+	{
+		if (isInst == 1)
+		{
+			cmd = (char*)malloc(1024 * sizeof(char));
+			sprintf(cmd, "cmd /c sc stop %s", srvName);
+			char *result = exe_cmd(cmd);
+			free(cmd);
+			free(result);
+			
+			cmd = (char*)malloc(1024 * sizeof(char));
+			sprintf(cmd, "cmd /c sc delete %s", srvName);
+			result = exe_cmd(cmd);
+			free(cmd);
+			free(result);
+		}
+	}
+	else if (argc == 2 && strcmp(argv[1], "srv") == 0)
+	{
+		SERVICE_TABLE_ENTRY ServiceTable[2];
+		ServiceTable[0].lpServiceName = (char*)srvName;
+		ServiceTable[0].lpServiceProc = (LPSERVICE_MAIN_FUNCTION)ServiceMain;
+		ServiceTable[1].lpServiceName = NULL;
+		ServiceTable[1].lpServiceProc = NULL;
+		// Start the control dispatcher thread for our service
+		StartServiceCtrlDispatcher(ServiceTable);
+	}
 	
 	return EXIT_SUCCESS;
 }

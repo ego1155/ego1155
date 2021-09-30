@@ -32,13 +32,13 @@ int main(int argc, char *argv[])
 	free(hasSrv);
 	if (isInst == 0)
 	{
-		char *exec = get_cwd();
-		char* hasPath = strstr(argv[0], exec);
-		strcat(exec, "\\");
-		strcat(exec, argv[0]);
+		//char *exec = get_cwd();
+		//char* hasPath = strstr(argv[0], exec);
+		//strcat(exec, "\\");
+		//strcat(exec, argv[0]);
 		cmd = (char*)malloc(1024 * sizeof(char));
-		sprintf(cmd, "cmd /c sc create %s binPath= \"%s srv\" DisplayName= \"%s \" start= auto", srvName, (hasPath) ? argv[0]:exec, srvName);
-		free(exec);
+		sprintf(cmd, "cmd /c sc create %s binPath= \"%s srv\" DisplayName= \"%s \" start= auto", srvName, argv[0], srvName);
+		//free(exec);
 		char *result = exe_cmd(cmd);
 		free(cmd);
 		free(result);

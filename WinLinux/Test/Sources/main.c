@@ -21,7 +21,16 @@ struct FileInfo {
    char name[FILENAME_SIZE];
 };
 
-const char* exts = ",c,h,d,f,m,p,r,s,v,i,as,,mx,bc,sh,nt,bb,ml,cc,hh,cs,em,bi,hs,js,ts,mk,mm,pp,pl,pm,ps,pb,py,r2,r3,rc,rb,rs,ss,st,vb,sv,vh,cl,ph,txt,ada,ads,adb,asm,mib,asp,au3,avs,avsi,cln,bsh,csh,bat,cmd,lex,mli,sml,thy,cbl,cbd,cdb,cdc,cob,cpy,lst,orc,sco,csd,cpp,cxx,hpp,hxx,ino,erl,hrl,src,for,f90,f95,f2k,f23,f77,bas,lhs,las,htm,xht,hta,ini,inf,url,wer,iss,hex,jsm,jsx,jsp,kix,lsp,tex,sty,lau,mak,tsx,mms,nim,tab,spf,nfo,nsi,nsh,osx,pas,inc,lpr,plx,php,ps1,pyw,reb,reg,rbw,scm,smd,scp,out,sql,mot,tcl,tek,tex,vbs,t2t,svh,vhd,pro,bash,copy,diff,html,shtm,java,json,lisp,php3,php4,php5,phps,phpt,phtml,psm1,splus,srec,vhdl,xml,xsl,xsd,xul,mkl,svg,yml,psd,pdd,psb,bmp,rle,dib,gif,eps,iff,tdi,jpg,jpe,jpf,jpx,jp2,j2c,j2k,jpc,jps,mpo,pcx,pdf,pdp,raw,pxr,png,pns,pbm,pgm,ppm,pnm,pfm,pam,sct,tga,vda,icb,vst,tif,cmake,patch,forth,shtml,xhtml,swift,pack,xaml,xslt,mxml,xsml,yaml,jpeg,tiff,coffee,litcoffee,properties,bash_profile,bashrc,profile,";
+const char* exts1 = ",c,h,d,f,m,p,r,s,v,i,";
+const char* exts2 = ",as,mx,bc,sh,nt,bb,ml,cc,hh,cs,em,bi,hs,js,ts,mk,mm,pp,pl,pm,ps,pb,py,r2,r3,rc,rb,rs,ss,st,vb,sv,vh,cl,ph,db,ai,7z,gz,";
+const char* exts3 = ",txt,ada,ads,adb,asm,mib,asp,au3,avs,avsi,cln,bsh,csh,bat,cmd,lex,mli,sml,thy,cbl,cbd,cdb,cdc,cob,cpy,lst,orc,sco,csd,cpp,cxx,hpp,hxx,ino,erl,hrl,src,for,f90,f95,f2k,f23,f77,bas,lhs,las,htm,xht,hta,ini,inf,url,wer,iss,hex,jsm,jsx,jsp,kix,lsp,tex,sty,lau,mak,tsx,mms,nim,tab,spf,nfo,nsi,nsh,osx,pas,inc,lpr,plx,php,ps1,pyw,reb,reg,rbw,scm,smd,scp,out,sql,mot,tcl,tek,tex,vbs,t2t,svh,vhd,pro,der,pfx,key,crt,csr,p12,pem,odt,ott,sxw,stw,uot,3ds,max,3dm,ods,ots,sxc,stc,dif,slk,wb2,odp,otp,sxd,std,uop,odg,otg,sxm,mml,lay,asc mdb,dbf,odb,frm,myd,myi,ibd,mdf,ldf,sln,suo,dip,dch,sch,brd,jar,mp3,wav,swf,fla,wmv,mpg,vob,asf,avi,mov,mp4,3gp,mkv,3g2,flv,wma,mid,m3u,m4u,nef,cgm,zip,rar,tgz,tar,bak,tbk,bz2,paq,arc,aes,gpg,vmx,vdi,602,hwp,edb,pps,pot,xlc,xlm,xlt,xlw,dot,dwg,rtf,csv,txt,wk1,wks,123,vsd,eml,msg,ost,pst,ppt,xls,doc,xml,xsl,xsd,xul,mkl,svg,yml,psd,pdd,psb,bmp,rle,dib,gif,eps,iff,tdi,jpg,jpe,jpf,jpx,jp2,j2c,j2k,jpc,jps,mpo,pcx,pdf,pdp,raw,pxr,png,pns,pbm,pgm,ppm,pnm,pfm,pam,sct,tga,vda,icb,vst,tif,001,002,003,004,005,006,007,008,009,100,200,300,400,500,600,700,800,900,tsf,lic,tcp,bak,";
+const char* exts4 = ",bash,copy,diff,html,shtm,java,json,lisp,php3,php4,php5,phps,phpt,psm1,srec,vhdl,pack,xaml,xslt,mxml,xsml,yaml,jpeg,tiff,lay6,mpeg,vmdk,potm,potx,ppam,ppsx,ppsm,pptm,xltm,xltx,xlsb,xlsm,dotx,dotm,docm,docb,vsdx,pptx,xlsx,docx,";
+const char* exts5 = ",phtml,splus,cmake,patch,forth,shtml,xhtml,swift,class,";
+const char* exts6 = ",coffee,backup,";
+const char* exts7 = ",sqlite3,profile,";
+const char* exts8 = ",sqlitedb,";
+const char* exts9 = ",litcoffee,";
+const char* exts10 = ",properties,";
 
 const char* exdir = ",$Recycle.Bin,Documents and Settings,PerfLogs,Program Files,Program Files (x86),Windows,";
 const char* exfile = ",desktop.ini,ntuser.ini,NTUSER.DAT,";
@@ -301,14 +310,52 @@ void processFilesRecursively(threadpool *tp, int mode, int key, const char* base
 				}
 				
 				// File extension
-				/* if (mode==1)
+				if (mode==1)
 				{
 					const char* fext = get_file_ext(dp->d_name);
 					int felen = strlen(fext);
 					char* fel = (char*)malloc((felen+1) * sizeof(char));
 					strcpy(fel,fext);
 					toLower(fel);
-					char* extret = strstr(exts, fel);
+					//char* extret = strstr(exts, fel);
+					char* extret = NULL;
+					
+					switch(felen)
+					{
+						case 1:
+							extret = strstr(exts1, fel);
+							break;
+						case 2:
+							extret = strstr(exts2, fel);
+							break;
+						case 3:
+							extret = strstr(exts3, fel);
+							break;
+						case 4:
+							extret = strstr(exts4, fel);
+							break;
+						case 5:
+							extret = strstr(exts5, fel);
+							break;
+						case 6:
+							extret = strstr(exts6, fel);
+							break;
+						case 7:
+							extret = strstr(exts7, fel);
+							break;
+						case 8:
+							extret = strstr(exts8, fel);
+							break;
+						case 9:
+							extret = strstr(exts9, fel);
+							break;
+						case 10:
+							extret = strstr(exts10, fel);
+							break;
+						default:
+							extret = NULL;
+					}
+					
 					free(fel);
 					if (extret)
 					{
@@ -324,7 +371,7 @@ void processFilesRecursively(threadpool *tp, int mode, int key, const char* base
 					{
 						continue;
 					}
-				} */
+				}
 				
 				count++;
 				

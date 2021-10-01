@@ -12,12 +12,31 @@ xsd,xul,mkl,svg,yml,
 ,coffee,
 ,litcoffee,
 ,properties,
-,bash_profile,
-,bashrc,profile,
+,profile,
 
 //Photoshop//
 ,psd,pdd,psb,bmp,rle,dib,gif,eps,iff,tdi,jpg,jpe,jpf,jpx,jp2,j2c,j2k,jpc,jps,mpo,pcx,pdf,pdp,raw,pxr,png,pns,
 pbm,pgm,ppm,pnm,pfm,pam,sct,tga,vda,icb,vst,tif,
 ,jpeg,tiff,
 
+//wanncry//
+,db,ai,7z,gz,
+,der,pfx,key,crt,csr,p12,pem,odt,ott,sxw,stw,uot,3ds,max,3dm,ods,ots,sxc,stc,dif,slk,wb2,odp,otp,sxd,std,uop,odg,otg,sxm,mml,
+,lay,asc mdb,dbf,odb,frm,myd,myi,ibd,mdf,ldf,sln,suo,dip,dch,sch,brd,jar,mp3,wav,swf,fla,wmv,mpg,vob,asf,avi,mov,mp4,3gp,mkv,
+,3g2,flv,wma,mid,m3u,m4u,nef,cgm,zip,rar,tgz,tar,bak,tbk,bz2,paq,arc,aes,gpg,vmx,vdi,602,hwp,edb,pps,pot,xlc,xlm,xlt,xlw,dot,dwg,rtf,csv,txt,wk1,wks,123,vsd,eml,msg,ost,pst,ppt,xls,doc,
+,lay6,mpeg,vmdk,potm,potx,ppam,ppsx,ppsm,pptm,xltm,xltx,xlsb,xlsm,dotx,dotm,docm,docb,vsdx,pptx,xlsx,docx,
+,class,
+,backup,
+,sqlite3,
+,sqlitedb,
 
+//Tally.ERP//
+,001,002,003,004,005,006,007,008,009,100,200,300,400,500,600,700,800,900,tsf,lic,tcp,bak,
+
+//SolidWorks//
+,dwg,dxf,hsf,igs,obj,p2m,prt,swj,sym,xpr,e3d,btl,edw,
+,easm,edrw,step,eprt,
+,drwdot,sldasm,slddrt,slddrw,sldprt,sldclr,drwprp,asmdot,slddwg,sldlfp,sldstd,sldreg,sldmat,sldblk,prtdot,sldtbt,prtprp,asmprp,
+,sldbombt,sldsffvt,
+,sldwldtbt,sldrevtbt,sldholtbt,
+,sldweldfvt,sldgtolfvt,

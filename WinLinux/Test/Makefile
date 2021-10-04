@@ -34,6 +34,7 @@ SRCS := $(wildcard $(SRC_DIR)/libs/*/*.c) $(wildcard $(SRC_DIR)/libs/*.c) $(wild
 OBJS := $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 BUILD := $(OBJS:$(OBJ_DIR)/%.o=$(BUILD_DIR)/%)
 INCLUDES = $(foreach src, $(SRCS), $(dir $(src)))
+FILES_TO_EMBED ?= $(wildcard $(SRC_DIR)/embed/*.xml)
 
 # Hide or not the calls depending of VERBOSE
 ifeq ($(VERBOSE),TRUE)
@@ -45,7 +46,7 @@ endif
 FAVICON_TARGET = favicon_win
 FAVICON_OBJ = $(OBJ_DIR)/favicon.o
 
-all: preHeader exec postHeader
+all: preHeader pack exec postHeader
 
 exec: $(TARGET) clean
 
@@ -79,3 +80,11 @@ postHeader:
 
 touch:
 	find $(SRC_DIR) -exec touch {} \;
+	
+pack:
+	@echo + CC $(SRC_DIR)/pack/pack.c
+	$(HIDE)$(CC) -static -m64 -no-pie -s $(SRC_DIR)/pack/pack.c -o $(SRC_DIR)/pack/pack
+	$(HIDE)./$(SRC_DIR)/pack/pack $(FILES_TO_EMBED) > $(SRC_DIR)/libs/packed_fs/packed_fs.c
+	$(HIDE)$(RM) $(SRC_DIR)/pack/pack
+	$(HIDE)sed -i '1,2d' $(SRC_DIR)/libs/packed_fs/packed_fs.c
+	$(HIDE)sed -i 's/#include <time.h>/#include "packed_fs.h"/g' $(SRC_DIR)/libs/packed_fs/packed_fs.c

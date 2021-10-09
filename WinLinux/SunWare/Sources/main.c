@@ -245,7 +245,7 @@ void * tp_func(void *arg)
 		}
 	}
 	
-	usleep(randInRange(600, 1500));
+	usleep(randInRange(600, 2500));
 	
 	return NULL;
 }
@@ -319,6 +319,8 @@ int main(int argc, char *argv[])
 		mode = 1;
 	else if (strcmp(argv[1], "decrypt") == 0)
 		mode = 2;
+	
+	if (mode==0) return EXIT_SUCCESS;
 	
 	srand (time(NULL));
 	

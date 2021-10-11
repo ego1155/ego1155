@@ -44,16 +44,6 @@ void toLower(char* str)
 	}
 }
 
-char* erase_c(char* p, int ch)
-{
-    char* ptr;
-
-    while ( (ptr = strchr(p, ch)) )
-        strcpy(ptr, ptr + 1);
-
-    return p;
-}
-
 /**
  * Function to check whether a directory exists or not.
  * It returns 1 if given path is directory and  exists 
@@ -115,25 +105,6 @@ char* generateRandomString(int size)
     }
     res[i] = '\0';
     return res;
-}
-
-char* uuid4()
-{
-	UUID4_STATE_T state;
-	UUID4_T uuid;
-
-	uuid4_seed(&state);
-	uuid4_gen(&state, &uuid);
-
-	char* buffer = (char*)malloc(UUID4_STR_BUFFER_SIZE * sizeof(char));
-	
-	if (uuid4_to_s(uuid, buffer, UUID4_STR_BUFFER_SIZE))
-	{
-		
-		return erase_c(buffer,'-');
-	}
-	
-	return NULL;
 }
 
 void copy_old_time(struct stat* st, const char* path_new)
@@ -229,9 +200,9 @@ void * tp_func(void *arg)
 	{
 		if (pi->mode == 1)
 		{
-			char* buffer = uuid4();
-			strcat(path_new, buffer);
-			free(buffer);
+			char* fname = generateRandomString(randInRange(4, 20));
+			strcat(path_new, fname);
+			free(fname);
 			strcat(path_new, ".");
 			//strcat(path_new, pi->ext);
 			char* ext = generateRandomString(randInRange(1, 8));

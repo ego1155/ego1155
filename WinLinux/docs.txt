@@ -62,3 +62,5 @@ x86_64-w64-mingw32-gcc -o simple-example.exe simple-example.c `pkg-config --cfla
 xfreerdp /u:user2 /p:s@123456 /w:800 /h:600 /v:127.0.0.1:5000
 
 cmake  -G "MSYS Makefiles" -DCMAKE_BUILD_TYPE=Release ../plibsys
+
+pkg-config --define-prefix --static --libs libcurl

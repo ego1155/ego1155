@@ -24,6 +24,4 @@ BEGIN
     END
 END
 
-1 ICON "favicon.ico"
-
 1 24 "resources.manifest"

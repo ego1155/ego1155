@@ -12,7 +12,9 @@ LD := x86_64-w64-mingw32-gcc
 WINDRES := x86_64-w64-mingw32-windres -i
 endif
 
-CFLAGS := -mwindows -W -Wall -Wextra -Os
+CFLAGS_MONGOOSE := -lwsock32 -DMG_ENABLE_IPV6
+CFLAGS := -W -Wall -Wextra -Os $(CFLAGS_MONGOOSE)
+#CFLAGS := -mwindows -W -Wall -Wextra -Os $(CFLAGS_MONGOOSE)
 RM := rm -rf
 RMDIR := rm -rf
 MKDIR := mkdir -p

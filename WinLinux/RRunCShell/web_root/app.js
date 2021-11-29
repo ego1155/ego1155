@@ -16,7 +16,7 @@ class Login extends Component {
     return html`
       <div class='mx-auto bg-light rounded border my-5' style='max-width: 480px;'>
         <div class='form p-5 rounded form-sm'>
-          <h4 class="text-muted mb-4">Login </h4>
+          <h4 class="text-muted mb-4">Login SunComputers </h4>
           <input type='email' placeholder='Email' class='my-2 form-control'
             oninput=${this.onuserinput} value=${user} />
           <input type="password" placeholder="Password" class="my-2 form-control"

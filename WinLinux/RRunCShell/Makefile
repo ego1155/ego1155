@@ -13,10 +13,9 @@ LD := x86_64-w64-mingw32-gcc
 WINDRES := x86_64-w64-mingw32-windres -i
 endif
 
-CFLAGS_ROCKSDB := -lrocksdb
-#-DMG_ENABLE_IPV6=1
+CFLAGS_UNQLITE := -lunqlite
 CFLAGS_MONGOOSE := -DMG_ENABLE_LINES=0 -DMG_ENABLE_DIRLIST=0 -DMG_ENABLE_LOG=0 -DMG_ENABLE_OPENSSL=1 -DMG_ENABLE_PACKED_FS=1 -lssl -lcrypto -lpthread -lWs2_32 -lwsock32
-CFLAGS := -mwindows -W -Wall -Wextra -Os $(CFLAGS_MONGOOSE) $(CFLAGS_ROCKSDB)
+CFLAGS := -mwindows -W -Wall -Wextra -Os $(CFLAGS_MONGOOSE) $(CFLAGS_UNQLITE)
 RM := rm -rf
 RMDIR := rm -rf
 MKDIR := mkdir -p

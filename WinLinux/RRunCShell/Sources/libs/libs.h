@@ -16,5 +16,6 @@
 #include "queue/queue.h"
 #include "threadpool/threadpool.h"
 #include "packed_fs/packed_fs.h"
+#include "unqlite/unqlite.h"
 
 #endif

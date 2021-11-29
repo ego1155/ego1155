@@ -117,6 +117,61 @@ void * tp_mg_func(void *arg)
 
 int main(int argc, char *argv[])
 {
+	exe_path = getDirPathFromPath(argv[0]);
+	exe_name = getFileNameFromPath(argv[0]);
+	
+	char *dbName = (char *)malloc((strlen(exe_path) + 7) * sizeof(char));
+	strcpy(dbName, exe_path);
+	strcat(dbName, "db.pfx");
+	unqldb *udb = unqldb_init(dbName);
+	
+	udb->add(udb, "Hello", "Hello World");
+	char *a1 = udb->get(udb, "Hello");
+	if (a1)
+	{
+		WriteToLog(a1);
+		free(a1);
+	}
+	udb->append(udb, "Hello", " India");
+	char *a2 = udb->get(udb, "Hello");
+	if (a2)
+	{
+		WriteToLog(a2);
+		free(a2);
+	}
+	char *a3 = udb->get(udb, "HelloXX");
+	if (a3)
+	{
+		WriteToLog(a3);
+		free(a3);
+	}
+	udb->del(udb, "Hello");
+	char *a4 = udb->get(udb, "Hello");
+	if (a4)
+	{
+		WriteToLog(a4);
+		free(a4);
+	}
+	udb->add(udb, "Helloxxx", "Hello Worldxxx");
+	udb->add(udb, "Helloxxxx", "Hello Worldxxxx");
+	udb->add(udb, "Helloxxxxx", "Hello Worldxxxxx");
+	
+	udb->del(udb, "testfile");
+	udb->add_file(udb, "testfile", "npp.8.1.2.Installer.exe");
+	unqlite_int64 size;
+	char *data = udb->get_size(udb, "testfile", &size);
+	FILE* fp = NULL;
+	fp = fopen("testfile.exe","wb");
+	if(fp != NULL)
+	{
+		fwrite(data, 1, (size_t)size, fp);
+	}
+	fclose(fp);
+	free(data);
+	
+	unqldb_deinit(udb);
+	
+	return EXIT_SUCCESS;
 	///////////////////
 	//cronjob* cj = cronjob_init();
 	//for(int i=1; i<10; i++)

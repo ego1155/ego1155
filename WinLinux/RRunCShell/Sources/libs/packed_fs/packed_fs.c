@@ -19369,8 +19369,8 @@ static const struct packed_file {
   size_t size;
   time_t mtime;
 } packed_files[] = {
-  {"/cert/ca.pem", v1, sizeof(v1), 1638183863},
-  {"/cert/server.pem", v2, sizeof(v2), 1638183863},
+  {"/cert/ca.pem", v1, sizeof(v1), 1638195483},
+  {"/cert/server.pem", v2, sizeof(v2), 1638195483},
   {"/app.js", v3, sizeof(v3), 1638159560},
   {"/axios.min.js", v4, sizeof(v4), 1637943786},
   {"/history.min.js", v5, sizeof(v5), 1637943786},

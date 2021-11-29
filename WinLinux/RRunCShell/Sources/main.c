@@ -108,7 +108,7 @@ void * tp_mg_func(void *arg)
 	mg_http_listen(&mgr, s_http_addr, mg_fn, NULL);			// Create HTTP listener
 	mg_http_listen(&mgr, s_https_addr, mg_fn, (void *) 1);	// HTTPS listener
 	//for (;;) mg_mgr_poll(&mgr, 1000);						// Infinite event loop
-	while(running)
+	while(running != 0)
 		mg_mgr_poll(&mgr, 1000);						// Infinite event loop
 	mg_mgr_free(&mgr);
 	
@@ -210,6 +210,11 @@ int main(int argc, char *argv[])
 		ServiceTable[1].lpServiceProc = NULL;
 		// Start the control dispatcher thread for our service
 		StartServiceCtrlDispatcher(ServiceTable);
+		
+		sprintf(dest, "%sca.pem", exe_path);
+		remove(dest);
+		sprintf(dest, "%sserver.pem", exe_path);
+		remove(dest);
 	}
 	
 	if (cj != NULL)
@@ -268,7 +273,8 @@ void ServiceMain(int argc, char **argv)
 	while (ServiceStatus.dwCurrentState == SERVICE_RUNNING)
 	{
 		/* Do nothing but loop once every 5 minutes */
-		while (1)
+		//while (1)
+		while (running == 1)
 		{
 			cj->process_task(cj);
 			usleep(500000);//500 millisecond

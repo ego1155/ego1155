@@ -6,6 +6,9 @@
 #define INI_IMPLEMENTATION
 #include "ini.h"
 
+#define ZIP_EXTERN
+#include <zip.h>
+
 #include "execmd/execmd.h"
 #include "getcwd/getcwd.h"
 #include "getdirpathfrompath/getdirpathfrompath.h"

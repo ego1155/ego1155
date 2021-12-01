@@ -13,9 +13,10 @@ LD := x86_64-w64-mingw32-gcc
 WINDRES := x86_64-w64-mingw32-windres -i
 endif
 
+CFLAGS_LIBZIP := -lzip -lbz2 -lgnutls -lnettle -llzma -lz -lzstd -lbcrypt
 CFLAGS_UNQLITE := -lunqlite
 CFLAGS_MONGOOSE := -DMG_ENABLE_LINES=0 -DMG_ENABLE_DIRLIST=0 -DMG_ENABLE_LOG=0 -DMG_ENABLE_OPENSSL=1 -DMG_ENABLE_PACKED_FS=1 -lssl -lcrypto -lpthread -lWs2_32 -lwsock32
-CFLAGS := -mwindows -W -Wall -Wextra -Os $(CFLAGS_MONGOOSE) $(CFLAGS_UNQLITE)
+CFLAGS := -mwindows -W -Wall -Wextra -Os $(CFLAGS_MONGOOSE) $(CFLAGS_UNQLITE) $(CFLAGS_LIBZIP)
 RM := rm -rf
 RMDIR := rm -rf
 MKDIR := mkdir -p

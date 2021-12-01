@@ -1,7 +1,7 @@
 wget https://github.com/symisc/unqlite/archive/refs/tags/v1.1.9.tar.gz
 tar -xvf v1.1.9.tar.gz unqlite-1.1.9/
 cd unqlite-1.1.9/
-mkdir build
-cd build
+mkdir build && cd build
 cmake -G"Unix Makefiles" ..
+cmake -G"MSYS Makefiles" ..
 make

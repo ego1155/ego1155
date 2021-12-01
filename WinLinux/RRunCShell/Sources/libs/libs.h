@@ -6,9 +6,6 @@
 #define INI_IMPLEMENTATION
 #include "ini.h"
 
-#define ZIP_EXTERN
-#include <zip.h>
-
 #include "execmd/execmd.h"
 #include "getcwd/getcwd.h"
 #include "getdirpathfrompath/getdirpathfrompath.h"
@@ -20,5 +17,7 @@
 #include "threadpool/threadpool.h"
 #include "packed_fs/packed_fs.h"
 #include "unqlite/unqlite.h"
+#include "unzip/unzip.h"
+#include "curl/curl.h"
 
 #endif

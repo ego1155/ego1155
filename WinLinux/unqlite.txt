@@ -5,3 +5,7 @@ mkdir build && cd build
 cmake -G"Unix Makefiles" ..
 cmake -G"MSYS Makefiles" ..
 make
+
+
+cmake -G"MSYS Makefiles" .. -DWITH_OPENSSL=OFF -DWITH_GCRYPT=OFF -DWITH_WEBSOCKETS=ON -DWITH_IPv6=OFF
+cmake --build .

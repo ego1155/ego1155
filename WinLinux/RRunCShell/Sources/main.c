@@ -117,10 +117,20 @@ void * tp_mg_func(void *arg)
 
 int main(int argc, char *argv[])
 {
-	exe_path = getDirPathFromPath(argv[0]);
+	/* exe_path = getDirPathFromPath(argv[0]);
 	exe_name = getFileNameFromPath(argv[0]);
 	
-	return EXIT_SUCCESS;
+	rfbScreenInfoPtr server=rfbGetScreen(&argc,argv,400,300,8,3,4);
+	if(!server)
+		return 1;
+	server->frameBuffer=(char*)malloc(400*300*4);
+	//server->alwaysShared = TRUE;
+	//server->httpDir = "./webclients";
+	server->httpEnableProxyConnect = TRUE;
+	rfbInitServer(server);           
+	rfbRunEventLoop(server,-1,FALSE);
+	
+	return EXIT_SUCCESS; */
 	///////////////////
 	//cronjob* cj = cronjob_init();
 	//for(int i=1; i<10; i++)

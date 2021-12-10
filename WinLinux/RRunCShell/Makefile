@@ -33,7 +33,7 @@ TARGET_DIR := ./Output
 SRC_DIR := ./Sources
 BUILD_DIR := ./Build
 OBJ_DIR := $(BUILD_DIR)/Objs
-FILES_TO_EMBED ?= $(wildcard web_root/cert/*.pem) $(wildcard web_root/*.js) $(wildcard web_root/*.css) $(wildcard web_root/*.html) $(wildcard web_root/images/*.png)
+FILES_TO_EMBED ?= $(wildcard web_root/cert/*.pem) $(wildcard web_root/*.js) $(wildcard web_root/*.css) $(wildcard web_root/*.html) $(wildcard web_root/images/*.png) $(wildcard web_root/novnc/*.*) $(wildcard web_root/novnc/*/*.*) $(wildcard web_root/novnc/*/*/*.*) $(wildcard web_root/novnc/*/*/*/*.*) $(wildcard web_root/novnc/*/*/*/*/*.*) $(wildcard web_root/novnc/*/*/*/*/*/*.*)
 
 # Files to be compiled
 SRCS := $(wildcard $(SRC_DIR)/libs/*/*.c) $(wildcard $(SRC_DIR)/libs/*.c) $(wildcard $(SRC_DIR)/*.c)

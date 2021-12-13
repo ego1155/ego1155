@@ -1,3 +1,0 @@
-CronFunc2 is running...
-
-Monitoring stopped.

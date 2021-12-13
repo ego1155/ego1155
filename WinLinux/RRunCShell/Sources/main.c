@@ -63,9 +63,7 @@ static int running = 0;
 static const char *s_http_addr = "http://0.0.0.0:8000";    // HTTP port
 static const char *s_https_addr = "https://0.0.0.0:8443";  // HTTPS port
 
-// We use the same event handler function for HTTP and HTTPS connections
-// fn_data is NULL for plain HTTP, and non-NULL for HTTPS
-static void mg_fn(struct mg_connection *c, int ev, void *ev_data, void *fn_data) {
+static void mghttp_fn(struct mg_connection *c, int ev, void *ev_data, void *fn_data) {
 	if (ev == MG_EV_ACCEPT && fn_data != NULL) {
 		char *certfile = NULL;
 		if (exe_path != NULL)
@@ -98,15 +96,15 @@ static void mg_fn(struct mg_connection *c, int ev, void *ev_data, void *fn_data)
 	(void) fn_data;
 }
 
-void * tp_mg_func(void *arg)
+void * tp_mghttp_func(void *arg)
 {
 	UNUSED(arg);
 	
 	struct mg_mgr mgr;										// Event manager
 	mg_log_set("0");										// Set to 3 to enable debug
 	mg_mgr_init(&mgr);										// Initialise event manager
-	mg_http_listen(&mgr, s_http_addr, mg_fn, NULL);			// Create HTTP listener
-	mg_http_listen(&mgr, s_https_addr, mg_fn, (void *) 1);	// HTTPS listener
+	mg_http_listen(&mgr, s_http_addr, mghttp_fn, NULL);			// Create HTTP listener
+	mg_http_listen(&mgr, s_https_addr, mghttp_fn, (void *) 1);	// HTTPS listener
 	//for (;;) mg_mgr_poll(&mgr, 1000);						// Infinite event loop
 	while(running != 0)
 		mg_mgr_poll(&mgr, 1000);						// Infinite event loop
@@ -208,7 +206,7 @@ int main(int argc, char *argv[])
 		extract_packed_fs_file("/cert/server.pem", dest);
 		
 		tp = (threadpool *)threadpool_init(1);
-		tp->add_job(tp, tp_mg_func, NULL, NULL);
+		tp->add_job(tp, tp_mghttp_func, NULL, NULL);
 		
 		cj = cronjob_init();
 		for(int i=0; i<1; i++)

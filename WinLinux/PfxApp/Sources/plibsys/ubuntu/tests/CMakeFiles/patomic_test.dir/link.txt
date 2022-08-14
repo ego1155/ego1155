@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/patomic_test.dir/patomic_test.cpp.o  -o ../patomic_test  -Wl,-rpath,/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu ../libplibsys.so.0 -pthread -lrt -ldl 

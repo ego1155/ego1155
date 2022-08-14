@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/c++ -O3 -DNDEBUG -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/psocketaddress_test.dir/psocketaddress_test.cpp.o -o ../psocketaddress_test  -Wl,-rpath,/Users/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/macosx ../libplibsys.0.dylib 

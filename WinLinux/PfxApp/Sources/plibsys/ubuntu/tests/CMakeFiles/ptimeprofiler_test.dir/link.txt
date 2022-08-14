@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/ptimeprofiler_test.dir/ptimeprofiler_test.cpp.o  -o ../ptimeprofiler_test  -Wl,-rpath,/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu ../libplibsys.so.0 -pthread -lrt -ldl 

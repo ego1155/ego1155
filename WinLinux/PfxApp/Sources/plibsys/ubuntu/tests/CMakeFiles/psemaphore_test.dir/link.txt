@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/psemaphore_test.dir/psemaphore_test.cpp.o  -o ../psemaphore_test  -Wl,-rpath,/home/nilesh/Desktop/ego1155/WinLinux/PfxApp/Sources/plibsys/ubuntu ../libplibsys.so.0 -pthread -lrt -ldl 
